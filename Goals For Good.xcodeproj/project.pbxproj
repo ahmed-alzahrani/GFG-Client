@@ -7,14 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00B465CAD63E8100C4DF307C /* Pods_Goals_For_Good.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F74311942C73164F5DD5DE05 /* Pods_Goals_For_Good.framework */; };
+		4D25137420A35275005BFAC9 /* UserValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D25137120A34FD3005BFAC9 /* UserValidator.swift */; };
 		4D325C0720A2509C00A6D086 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D325C0620A2509C00A6D086 /* AppDelegate.swift */; };
 		4D325C0920A2509C00A6D086 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D325C0820A2509C00A6D086 /* ViewController.swift */; };
 		4D325C0C20A2509C00A6D086 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D325C0A20A2509C00A6D086 /* Main.storyboard */; };
 		4D325C0E20A2509F00A6D086 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D325C0D20A2509F00A6D086 /* Assets.xcassets */; };
 		4D325C1120A2509F00A6D086 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D325C0F20A2509F00A6D086 /* LaunchScreen.storyboard */; };
+		4DFE624B20A3441400A601B7 /* login_background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4DFE624A20A3441400A601B7 /* login_background.jpg */; };
+		4DFE624D20A349F900A601B7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4DFE624C20A349F900A601B7 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		025EE025BFCAF3E905ABE6BF /* Pods-Goals For Good.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Goals For Good.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Goals For Good/Pods-Goals For Good.debug.xcconfig"; sourceTree = "<group>"; };
+		4D25137120A34FD3005BFAC9 /* UserValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserValidator.swift; path = "Goals For Good/New Group/UserValidator.swift"; sourceTree = SOURCE_ROOT; };
 		4D325C0320A2509C00A6D086 /* Goals For Good.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Goals For Good.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D325C0620A2509C00A6D086 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D325C0820A2509C00A6D086 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +28,10 @@
 		4D325C0D20A2509F00A6D086 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D325C1020A2509F00A6D086 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D325C1220A2509F00A6D086 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4DFE624A20A3441400A601B7 /* login_background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = login_background.jpg; sourceTree = "<group>"; };
+		4DFE624C20A349F900A601B7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C41E259777F0B2A46E0721E5 /* Pods-Goals For Good.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Goals For Good.release.xcconfig"; path = "Pods/Target Support Files/Pods-Goals For Good/Pods-Goals For Good.release.xcconfig"; sourceTree = "<group>"; };
+		F74311942C73164F5DD5DE05 /* Pods_Goals_For_Good.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Goals_For_Good.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +39,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00B465CAD63E8100C4DF307C /* Pods_Goals_For_Good.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D25137320A350E4005BFAC9 /* Validators */ = {
+			isa = PBXGroup;
+			children = (
+				4D25137120A34FD3005BFAC9 /* UserValidator.swift */,
+			);
+			path = Validators;
+			sourceTree = "<group>";
+		};
 		4D325BFA20A2509C00A6D086 = {
 			isa = PBXGroup;
 			children = (
 				4D325C0520A2509C00A6D086 /* Goals For Good */,
 				4D325C0420A2509C00A6D086 /* Products */,
+				B877834DF90D3DF1A6D2CED7 /* Pods */,
+				FF1ED738571315DEB1AC3D9A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +75,42 @@
 		4D325C0520A2509C00A6D086 /* Goals For Good */ = {
 			isa = PBXGroup;
 			children = (
-				4D325C0620A2509C00A6D086 /* AppDelegate.swift */,
 				4D325C0820A2509C00A6D086 /* ViewController.swift */,
 				4D325C0A20A2509C00A6D086 /* Main.storyboard */,
-				4D325C0D20A2509F00A6D086 /* Assets.xcassets */,
-				4D325C0F20A2509F00A6D086 /* LaunchScreen.storyboard */,
 				4D325C1220A2509F00A6D086 /* Info.plist */,
+				4D25137320A350E4005BFAC9 /* Validators */,
+				4D325C1820A250F700A6D086 /* Supporting Files */,
 			);
 			path = "Goals For Good";
+			sourceTree = "<group>";
+		};
+		4D325C1820A250F700A6D086 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4DFE624C20A349F900A601B7 /* GoogleService-Info.plist */,
+				4DFE624A20A3441400A601B7 /* login_background.jpg */,
+				4D325C0F20A2509F00A6D086 /* LaunchScreen.storyboard */,
+				4D325C0620A2509C00A6D086 /* AppDelegate.swift */,
+				4D325C0D20A2509F00A6D086 /* Assets.xcassets */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B877834DF90D3DF1A6D2CED7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				025EE025BFCAF3E905ABE6BF /* Pods-Goals For Good.debug.xcconfig */,
+				C41E259777F0B2A46E0721E5 /* Pods-Goals For Good.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FF1ED738571315DEB1AC3D9A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F74311942C73164F5DD5DE05 /* Pods_Goals_For_Good.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +120,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4D325C1520A2509F00A6D086 /* Build configuration list for PBXNativeTarget "Goals For Good" */;
 			buildPhases = (
+				93E6066CC43B555A7964BE40 /* [CP] Check Pods Manifest.lock */,
 				4D325BFF20A2509C00A6D086 /* Sources */,
 				4D325C0020A2509C00A6D086 /* Frameworks */,
 				4D325C0120A2509C00A6D086 /* Resources */,
+				F4FE795B458A8416DEE633BB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -124,11 +175,56 @@
 			files = (
 				4D325C1120A2509F00A6D086 /* LaunchScreen.storyboard in Resources */,
 				4D325C0E20A2509F00A6D086 /* Assets.xcassets in Resources */,
+				4DFE624D20A349F900A601B7 /* GoogleService-Info.plist in Resources */,
 				4D325C0C20A2509C00A6D086 /* Main.storyboard in Resources */,
+				4DFE624B20A3441400A601B7 /* login_background.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		93E6066CC43B555A7964BE40 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Goals For Good-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F4FE795B458A8416DEE633BB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Goals For Good/Pods-Goals For Good-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Goals For Good/Pods-Goals For Good-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4D325BFF20A2509C00A6D086 /* Sources */ = {
@@ -137,6 +233,7 @@
 			files = (
 				4D325C0920A2509C00A6D086 /* ViewController.swift in Sources */,
 				4D325C0720A2509C00A6D086 /* AppDelegate.swift in Sources */,
+				4D25137420A35275005BFAC9 /* UserValidator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +375,7 @@
 		};
 		4D325C1620A2509F00A6D086 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 025EE025BFCAF3E905ABE6BF /* Pods-Goals For Good.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -296,6 +394,7 @@
 		};
 		4D325C1720A2509F00A6D086 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C41E259777F0B2A46E0721E5 /* Pods-Goals For Good.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
