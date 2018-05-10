@@ -8,28 +8,469 @@
 
 /* Begin PBXBuildFile section */
 		00B465CAD63E8100C4DF307C /* Pods_Goals_For_Good.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F74311942C73164F5DD5DE05 /* Pods_Goals_For_Good.framework */; };
-		4D25137420A35275005BFAC9 /* UserValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D25137120A34FD3005BFAC9 /* UserValidator.swift */; };
+		4D25137620A352F1005BFAC9 /* UserValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D25137520A352F1005BFAC9 /* UserValidator.swift */; };
 		4D325C0720A2509C00A6D086 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D325C0620A2509C00A6D086 /* AppDelegate.swift */; };
-		4D325C0920A2509C00A6D086 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D325C0820A2509C00A6D086 /* ViewController.swift */; };
+		4D325C0920A2509C00A6D086 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D325C0820A2509C00A6D086 /* LoginViewController.swift */; };
 		4D325C0C20A2509C00A6D086 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D325C0A20A2509C00A6D086 /* Main.storyboard */; };
 		4D325C0E20A2509F00A6D086 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D325C0D20A2509F00A6D086 /* Assets.xcassets */; };
 		4D325C1120A2509F00A6D086 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D325C0F20A2509F00A6D086 /* LaunchScreen.storyboard */; };
+		4D53475720A36EFA008EACB9 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D53475620A36EFA008EACB9 /* ProfileViewController.swift */; };
+		4D53475A20A37E8F008EACB9 /* config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D53475920A37E8F008EACB9 /* config.swift */; };
+		4D7F066F20A380E200764CA3 /* UserProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7F066E20A380E200764CA3 /* UserProfileService.swift */; };
+		4D7F067620A3ADAF00764CA3 /* love.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F067520A3ADAF00764CA3 /* love.png */; };
+		4D7F067820A3ADB600764CA3 /* soccer.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F067720A3ADB600764CA3 /* soccer.png */; };
+		4D7F067A20A3ADBC00764CA3 /* info.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F067920A3ADBC00764CA3 /* info.png */; };
+		4D7F067C20A3ADC300764CA3 /* id-card.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F067B20A3ADC300764CA3 /* id-card.png */; };
+		4D7F067E20A3AE6100764CA3 /* man.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F067D20A3AE6100764CA3 /* man.png */; };
+		4D7F068120A3B6CF00764CA3 /* playersTableBackground.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F068020A3B6CE00764CA3 /* playersTableBackground.jpeg */; };
+		4D7F068320A3C07000764CA3 /* Afghanistan-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F068220A3C07000764CA3 /* Afghanistan-flag.png */; };
+		4D7F075320A3C25F00764CA3 /* Mongolia-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F068720A3C1D500764CA3 /* Mongolia-flag.png */; };
+		4D7F075420A3C25F00764CA3 /* Albania-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F068820A3C1D600764CA3 /* Albania-flag.png */; };
+		4D7F075520A3C25F00764CA3 /* Nepal-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F068920A3C1D700764CA3 /* Nepal-flag.png */; };
+		4D7F075620A3C25F00764CA3 /* Morocco-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F068A20A3C1D800764CA3 /* Morocco-flag.png */; };
+		4D7F075720A3C25F00764CA3 /* Andorra-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F068B20A3C1D900764CA3 /* Andorra-flag.png */; };
+		4D7F075820A3C25F00764CA3 /* Sudan-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F068C20A3C1DA00764CA3 /* Sudan-flag.png */; };
+		4D7F075920A3C25F00764CA3 /* Sao-Tome-and-Principe-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F068D20A3C1DB00764CA3 /* Sao-Tome-and-Principe-flag.png */; };
+		4D7F075A20A3C25F00764CA3 /* Czechoslovakia-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F068E20A3C1DC00764CA3 /* Czechoslovakia-flag.png */; };
+		4D7F075B20A3C25F00764CA3 /* Antigua-and-Barbuda-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F068F20A3C1DD00764CA3 /* Antigua-and-Barbuda-flag.png */; };
+		4D7F075C20A3C25F00764CA3 /* Lebanon-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F069020A3C1DE00764CA3 /* Lebanon-flag.png */; };
+		4D7F075D20A3C25F00764CA3 /* Saint-Lucia-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F069120A3C1DF00764CA3 /* Saint-Lucia-flag.png */; };
+		4D7F075E20A3C25F00764CA3 /* Sri-Lanka-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F069220A3C1E000764CA3 /* Sri-Lanka-flag.png */; };
+		4D7F075F20A3C25F00764CA3 /* Tunisia-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F069320A3C1E100764CA3 /* Tunisia-flag.png */; };
+		4D7F076020A3C25F00764CA3 /* Ukraine-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F069420A3C1E300764CA3 /* Ukraine-flag.png */; };
+		4D7F076120A3C25F00764CA3 /* Niger-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F069520A3C1E400764CA3 /* Niger-flag.png */; };
+		4D7F076220A3C25F00764CA3 /* Slovakia-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F069620A3C1E500764CA3 /* Slovakia-flag.png */; };
+		4D7F076320A3C25F00764CA3 /* Dominican-Republic-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F069720A3C1E600764CA3 /* Dominican-Republic-flag.png */; };
+		4D7F076420A3C25F00764CA3 /* Armenia.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F069820A3C1E700764CA3 /* Armenia.png */; };
+		4D7F076520A3C25F00764CA3 /* Chile-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F069920A3C1E800764CA3 /* Chile-flag.png */; };
+		4D7F076620A3C25F00764CA3 /* Cameroon-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F069A20A3C1E900764CA3 /* Cameroon-flag.png */; };
+		4D7F076720A3C25F00764CA3 /* Argentina.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F069B20A3C1EA00764CA3 /* Argentina.png */; };
+		4D7F076820A3C25F00764CA3 /* Bahamas-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F069C20A3C1EA00764CA3 /* Bahamas-flag.png */; };
+		4D7F076920A3C25F00764CA3 /* Kuwait-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F069D20A3C1EB00764CA3 /* Kuwait-flag.png */; };
+		4D7F076A20A3C25F00764CA3 /* Togo-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F069E20A3C1EC00764CA3 /* Togo-flag.png */; };
+		4D7F076B20A3C25F00764CA3 /* Hong-Kong-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F069F20A3C1ED00764CA3 /* Hong-Kong-flag.png */; };
+		4D7F076C20A3C25F00764CA3 /* Grenada-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06A020A3C1ED00764CA3 /* Grenada-flag.png */; };
+		4D7F076D20A3C25F00764CA3 /* Great-Britain-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06A120A3C1EE00764CA3 /* Great-Britain-flag.png */; };
+		4D7F076E20A3C25F00764CA3 /* Croatia-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06A220A3C1EE00764CA3 /* Croatia-flag.png */; };
+		4D7F076F20A3C25F00764CA3 /* Eritrea-Flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06A320A3C1EF00764CA3 /* Eritrea-Flag.png */; };
+		4D7F077020A3C25F00764CA3 /* Qatar-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06A420A3C1F000764CA3 /* Qatar-flag.png */; };
+		4D7F077120A3C25F00764CA3 /* Moldova-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06A520A3C1F000764CA3 /* Moldova-flag.png */; };
+		4D7F077220A3C25F00764CA3 /* Sweden-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06A620A3C1F100764CA3 /* Sweden-flag.png */; };
+		4D7F077320A3C25F00764CA3 /* Malta-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06A720A3C1F200764CA3 /* Malta-flag.png */; };
+		4D7F077420A3C25F00764CA3 /* Cyprus-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06A820A3C1F200764CA3 /* Cyprus-flag.png */; };
+		4D7F077520A3C25F00764CA3 /* Greece-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06A920A3C1F300764CA3 /* Greece-flag.png */; };
+		4D7F077620A3C25F00764CA3 /* Guinea-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06AA20A3C1F300764CA3 /* Guinea-flag.png */; };
+		4D7F077720A3C25F00764CA3 /* Venezuela-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06AB20A3C1F400764CA3 /* Venezuela-flag.png */; };
+		4D7F077820A3C25F00764CA3 /* Paraguay-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06AC20A3C1F500764CA3 /* Paraguay-flag.png */; };
+		4D7F077920A3C25F00764CA3 /* Jordan-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06AD20A3C1F500764CA3 /* Jordan-flag.png */; };
+		4D7F077A20A3C25F00764CA3 /* British-Virgin-Islands-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06AE20A3C1F600764CA3 /* British-Virgin-Islands-flag.png */; };
+		4D7F077B20A3C25F00764CA3 /* Peru-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06AF20A3C1F700764CA3 /* Peru-flag.png */; };
+		4D7F077C20A3C25F00764CA3 /* Madagascar-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06B020A3C1F700764CA3 /* Madagascar-flag.png */; };
+		4D7F077D20A3C25F00764CA3 /* Brazil-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06B120A3C1F800764CA3 /* Brazil-flag.png */; };
+		4D7F077E20A3C25F00764CA3 /* Saint-Kitts-and-Nevis-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06B220A3C1F800764CA3 /* Saint-Kitts-and-Nevis-flag.png */; };
+		4D7F077F20A3C25F00764CA3 /* Ethiopia-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06B320A3C1F900764CA3 /* Ethiopia-flag.png */; };
+		4D7F078020A3C25F00764CA3 /* Ecuador-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06B420A3C1FA00764CA3 /* Ecuador-flag.png */; };
+		4D7F078120A3C25F00764CA3 /* Cambodia-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06B520A3C1FA00764CA3 /* Cambodia-flag.png */; };
+		4D7F078220A3C25F00764CA3 /* England-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06B620A3C1FB00764CA3 /* England-flag.png */; };
+		4D7F078320A3C25F00764CA3 /* Dominica-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06B720A3C1FC00764CA3 /* Dominica-flag.png */; };
+		4D7F078420A3C25F00764CA3 /* Mali-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06B820A3C1FC00764CA3 /* Mali-flag.png */; };
+		4D7F078520A3C25F00764CA3 /* Vanuatu-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06B920A3C1FD00764CA3 /* Vanuatu-flag.png */; };
+		4D7F078620A3C25F00764CA3 /* Chinese-Taipei-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06BA20A3C1FE00764CA3 /* Chinese-Taipei-flag.png */; };
+		4D7F078720A3C25F00764CA3 /* San-Marino-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06BB20A3C1FE00764CA3 /* San-Marino-flag.png */; };
+		4D7F078820A3C25F00764CA3 /* Laos-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06BC20A3C1FF00764CA3 /* Laos-flag.png */; };
+		4D7F078920A3C25F00764CA3 /* Burundi.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06BD20A3C1FF00764CA3 /* Burundi.png */; };
+		4D7F078A20A3C25F00764CA3 /* Indonesia-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06BE20A3C20000764CA3 /* Indonesia-flag.png */; };
+		4D7F078B20A3C25F00764CA3 /* Belgium-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06BF20A3C20100764CA3 /* Belgium-flag.png */; };
+		4D7F078C20A3C25F00764CA3 /* Kazakhstan-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06C020A3C20100764CA3 /* Kazakhstan-flag.png */; };
+		4D7F078D20A3C25F00764CA3 /* Uganda-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06C120A3C20200764CA3 /* Uganda-flag.png */; };
+		4D7F078E20A3C25F00764CA3 /* Azerbaijan-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06C220A3C20300764CA3 /* Azerbaijan-flag.png */; };
+		4D7F078F20A3C25F00764CA3 /* Kosovo-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06C320A3C20300764CA3 /* Kosovo-flag.png */; };
+		4D7F079020A3C25F00764CA3 /* Guatemala-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06C420A3C20400764CA3 /* Guatemala-flag.png */; };
+		4D7F079120A3C25F00764CA3 /* Somalia-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06C520A3C20400764CA3 /* Somalia-flag.png */; };
+		4D7F079220A3C25F00764CA3 /* Portugal-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06C620A3C20500764CA3 /* Portugal-flag.png */; };
+		4D7F079320A3C25F00764CA3 /* Uzbekistan-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06C720A3C20600764CA3 /* Uzbekistan-flag.png */; };
+		4D7F079420A3C25F00764CA3 /* Samoa-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06C820A3C20600764CA3 /* Samoa-flag.png */; };
+		4D7F079520A3C25F00764CA3 /* Tonga-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06C920A3C20700764CA3 /* Tonga-flag.png */; };
+		4D7F079620A3C25F00764CA3 /* Vietnam-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06CA20A3C20700764CA3 /* Vietnam-flag.png */; };
+		4D7F079720A3C25F00764CA3 /* Russia-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06CB20A3C20800764CA3 /* Russia-flag.png */; };
+		4D7F079820A3C25F00764CA3 /* Rwanda-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06CC20A3C20900764CA3 /* Rwanda-flag.png */; };
+		4D7F079920A3C25F00764CA3 /* Honduras-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06CD20A3C20900764CA3 /* Honduras-flag.png */; };
+		4D7F079A20A3C25F00764CA3 /* Nigeria-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06CE20A3C20A00764CA3 /* Nigeria-flag.png */; };
+		4D7F079B20A3C25F00764CA3 /* Palau-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06CF20A3C20B00764CA3 /* Palau-flag.png */; };
+		4D7F079C20A3C25F00764CA3 /* Romania-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06D020A3C20B00764CA3 /* Romania-flag.png */; };
+		4D7F079D20A3C25F00764CA3 /* Norway-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06D120A3C20C00764CA3 /* Norway-flag.png */; };
+		4D7F079E20A3C25F00764CA3 /* Cape-Verde-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06D220A3C20D00764CA3 /* Cape-Verde-flag.png */; };
+		4D7F079F20A3C25F00764CA3 /* Georgia-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06D320A3C20D00764CA3 /* Georgia-flag.png */; };
+		4D7F07A020A3C25F00764CA3 /* Kiribati-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06D420A3C20E00764CA3 /* Kiribati-flag.png */; };
+		4D7F07A120A3C25F00764CA3 /* Sierra-Leone-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06D520A3C20F00764CA3 /* Sierra-Leone-flag.png */; };
+		4D7F07A220A3C25F00764CA3 /* Bulgaria-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06D620A3C20F00764CA3 /* Bulgaria-flag.png */; };
+		4D7F07A320A3C25F00764CA3 /* Kyrgyzstan-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06D720A3C21000764CA3 /* Kyrgyzstan-flag.png */; };
+		4D7F07A420A3C25F00764CA3 /* Austria-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06D820A3C21100764CA3 /* Austria-flag.png */; };
+		4D7F07A520A3C25F00764CA3 /* Hungary-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06D920A3C21100764CA3 /* Hungary-flag.png */; };
+		4D7F07A620A3C25F00764CA3 /* Tuvalu-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06DA20A3C21200764CA3 /* Tuvalu-flag.png */; };
+		4D7F07A720A3C25F00764CA3 /* Guinea-Bissau-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06DB20A3C21300764CA3 /* Guinea-Bissau-flag.png */; };
+		4D7F07A820A3C25F00764CA3 /* Mauritius-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06DC20A3C21300764CA3 /* Mauritius-flag.png */; };
+		4D7F07A920A3C25F00764CA3 /* Germany-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06DD20A3C21400764CA3 /* Germany-flag.png */; };
+		4D7F07AA20A3C25F00764CA3 /* Marshall-Islands-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06DE20A3C21400764CA3 /* Marshall-Islands-flag.png */; };
+		4D7F07AB20A3C25F00764CA3 /* Iran-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06DF20A3C21500764CA3 /* Iran-flag.png */; };
+		4D7F07AC20A3C25F00764CA3 /* Bermuda-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06E020A3C21600764CA3 /* Bermuda-flag.png */; };
+		4D7F07AD20A3C25F00764CA3 /* Mozambique-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06E120A3C21600764CA3 /* Mozambique-flag.png */; };
+		4D7F07AE20A3C25F00764CA3 /* Virgin-Island-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06E220A3C21700764CA3 /* Virgin-Island-flag.png */; };
+		4D7F07AF20A3C25F00764CA3 /* Gabon-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06E320A3C21800764CA3 /* Gabon-flag.png */; };
+		4D7F07B020A3C25F00764CA3 /* Central-African-Republic-Flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06E420A3C21800764CA3 /* Central-African-Republic-Flag.png */; };
+		4D7F07B120A3C25F00764CA3 /* Denmark-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06E520A3C21900764CA3 /* Denmark-flag.png */; };
+		4D7F07B220A3C25F00764CA3 /* El-Salvador-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06E620A3C21A00764CA3 /* El-Salvador-flag.png */; };
+		4D7F07B320A3C25F00764CA3 /* Nicaragua-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06E720A3C21A00764CA3 /* Nicaragua-flag.png */; };
+		4D7F07B420A3C25F00764CA3 /* North-Korea-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06E820A3C21B00764CA3 /* North-Korea-flag.png */; };
+		4D7F07B520A3C25F00764CA3 /* Botswana-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06E920A3C21B00764CA3 /* Botswana-flag.png */; };
+		4D7F07B620A3C25F00764CA3 /* Chad-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06EA20A3C21C00764CA3 /* Chad-flag.png */; };
+		4D7F07B720A3C25F00764CA3 /* Pakistan-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06EB20A3C21D00764CA3 /* Pakistan-flag.png */; };
+		4D7F07B820A3C25F00764CA3 /* Panama-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06EC20A3C21D00764CA3 /* Panama-flag.png */; };
+		4D7F07B920A3C25F00764CA3 /* Nauru-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06ED20A3C21E00764CA3 /* Nauru-flag.png */; };
+		4D7F07BA20A3C25F00764CA3 /* Thailand-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06EE20A3C21F00764CA3 /* Thailand-flag.png */; };
+		4D7F07BB20A3C25F00764CA3 /* Brunei-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06EF20A3C21F00764CA3 /* Brunei-flag.png */; };
+		4D7F07BC20A3C25F00764CA3 /* Myanmar-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06F020A3C22000764CA3 /* Myanmar-flag.png */; };
+		4D7F07BD20A3C25F00764CA3 /* Tanzania-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06F120A3C22000764CA3 /* Tanzania-flag.png */; };
+		4D7F07BE20A3C25F00764CA3 /* Barbados-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06F220A3C22100764CA3 /* Barbados-flag.png */; };
+		4D7F07BF20A3C25F00764CA3 /* Congo-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06F320A3C22200764CA3 /* Congo-flag.png */; };
+		4D7F07C020A3C25F00764CA3 /* Singapore-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06F420A3C22200764CA3 /* Singapore-flag.png */; };
+		4D7F07C120A3C25F00764CA3 /* Spain-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06F520A3C22300764CA3 /* Spain-flag.png */; };
+		4D7F07C220A3C25F00764CA3 /* Liechtenstein-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06F620A3C22400764CA3 /* Liechtenstein-flag.png */; };
+		4D7F07C320A3C25F00764CA3 /* Latvia-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06F720A3C22400764CA3 /* Latvia-flag.png */; };
+		4D7F07C420A3C25F00764CA3 /* Tajikistan-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06F820A3C22500764CA3 /* Tajikistan-flag.png */; };
+		4D7F07C520A3C25F00764CA3 /* Macedonia-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06F920A3C22500764CA3 /* Macedonia-flag.png */; };
+		4D7F07C620A3C25F00764CA3 /* Montenegro-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06FA20A3C22600764CA3 /* Montenegro-flag.png */; };
+		4D7F07C720A3C25F00764CA3 /* Namibia-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06FB20A3C22700764CA3 /* Namibia-flag.png */; };
+		4D7F07C820A3C25F00764CA3 /* Papua-New-Guinea-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06FC20A3C22700764CA3 /* Papua-New-Guinea-flag.png */; };
+		4D7F07C920A3C25F00764CA3 /* Philippines-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06FD20A3C22800764CA3 /* Philippines-flag.png */; };
+		4D7F07CA20A3C25F00764CA3 /* Turkmenistan-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06FE20A3C22900764CA3 /* Turkmenistan-flag.png */; };
+		4D7F07CB20A3C25F00764CA3 /* Luxembourg-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F06FF20A3C22900764CA3 /* Luxembourg-flag.png */; };
+		4D7F07CC20A3C25F00764CA3 /* Comoros-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F070020A3C22A00764CA3 /* Comoros-flag.png */; };
+		4D7F07CD20A3C25F00764CA3 /* The-Gambia-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F070120A3C22B00764CA3 /* The-Gambia-flag.png */; };
+		4D7F07CE20A3C25F00764CA3 /* Lithuania-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F070220A3C22B00764CA3 /* Lithuania-flag.png */; };
+		4D7F07CF20A3C25F00764CA3 /* Aruba.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F070320A3C22C00764CA3 /* Aruba.png */; };
+		4D7F07D020A3C25F00764CA3 /* Guam-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F070420A3C22C00764CA3 /* Guam-flag.png */; };
+		4D7F07D120A3C25F00764CA3 /* Serbia-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F070520A3C22D00764CA3 /* Serbia-flag.png */; };
+		4D7F07D220A3C25F00764CA3 /* Colombia-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F070620A3C22E00764CA3 /* Colombia-flag.png */; };
+		4D7F07D320A3C25F00764CA3 /* Liberia-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F070720A3C22E00764CA3 /* Liberia-flag.png */; };
+		4D7F07D420A3C25F00764CA3 /* Jamaica-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F070820A3C22F00764CA3 /* Jamaica-flag.png */; };
+		4D7F07D520A3C25F00764CA3 /* Equatorial-Guinea-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F070920A3C23000764CA3 /* Equatorial-Guinea-flag.png */; };
+		4D7F07D620A3C25F00764CA3 /* Oman-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F070A20A3C23000764CA3 /* Oman-flag.png */; };
+		4D7F07D720A3C25F00764CA3 /* Finland-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F070B20A3C23100764CA3 /* Finland-flag.png */; };
+		4D7F07D820A3C25F00764CA3 /* Yemen-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F070C20A3C23100764CA3 /* Yemen-flag.png */; };
+		4D7F07D920A3C25F00764CA3 /* Bhutan-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F070D20A3C23200764CA3 /* Bhutan-flag.png */; };
+		4D7F07DA20A3C25F00764CA3 /* Mexico-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F070E20A3C23300764CA3 /* Mexico-flag.png */; };
+		4D7F07DB20A3C25F00764CA3 /* Italy-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F070F20A3C23300764CA3 /* Italy-flag.png */; };
+		4D7F07DC20A3C25F00764CA3 /* Seychelles-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F071020A3C23400764CA3 /* Seychelles-flag.png */; };
+		4D7F07DD20A3C25F00764CA3 /* Bolivia-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F071120A3C23500764CA3 /* Bolivia-flag.png */; };
+		4D7F07DE20A3C25F00764CA3 /* Djibouti-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F071220A3C23500764CA3 /* Djibouti-flag.png */; };
+		4D7F07DF20A3C25F00764CA3 /* Saudi-Arabia-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F071320A3C23600764CA3 /* Saudi-Arabia-flag.png */; };
+		4D7F07E020A3C25F00764CA3 /* Zambia-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F071420A3C23700764CA3 /* Zambia-flag.png */; };
+		4D7F07E120A3C25F00764CA3 /* Canada-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F071520A3C23700764CA3 /* Canada-flag.png */; };
+		4D7F07E220A3C25F00764CA3 /* Palestine-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F071620A3C23800764CA3 /* Palestine-flag.png */; };
+		4D7F07E320A3C25F00764CA3 /* Australia-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F071720A3C23900764CA3 /* Australia-flag.png */; };
+		4D7F07E420A3C25F00764CA3 /* Haiti-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F071820A3C23900764CA3 /* Haiti-flag.png */; };
+		4D7F07E520A3C25F00764CA3 /* Switzerland-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F071920A3C23A00764CA3 /* Switzerland-flag.png */; };
+		4D7F07E620A3C25F00764CA3 /* Burkina-Faso-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F071A20A3C23B00764CA3 /* Burkina-Faso-flag.png */; };
+		4D7F07E720A3C25F00764CA3 /* Uruguay-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F071B20A3C23B00764CA3 /* Uruguay-flag.png */; };
+		4D7F07E820A3C25F00764CA3 /* Kenya-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F071C20A3C23C00764CA3 /* Kenya-flag.png */; };
+		4D7F07E920A3C25F00764CA3 /* Benin-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F071D20A3C23C00764CA3 /* Benin-flag.png */; };
+		4D7F07EA20A3C25F00764CA3 /* Malawi-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F071E20A3C23D00764CA3 /* Malawi-flag.png */; };
+		4D7F07EB20A3C25F00764CA3 /* Angola-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F071F20A3C23E00764CA3 /* Angola-flag.png */; };
+		4D7F07EC20A3C25F00764CA3 /* Syria-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F072020A3C23E00764CA3 /* Syria-flag.png */; };
+		4D7F07ED20A3C25F00764CA3 /* Maldives-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F072120A3C23F00764CA3 /* Maldives-flag.png */; };
+		4D7F07EE20A3C25F00764CA3 /* United-Arab-Emirates-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F072220A3C24000764CA3 /* United-Arab-Emirates-flag.png */; };
+		4D7F07EF20A3C25F00764CA3 /* Iraq-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F072320A3C24000764CA3 /* Iraq-flag.png */; };
+		4D7F07F020A3C25F00764CA3 /* Malaysia-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F072420A3C24100764CA3 /* Malaysia-flag.png */; };
+		4D7F07F120A3C25F00764CA3 /* Japan-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F072520A3C24100764CA3 /* Japan-flag.png */; };
+		4D7F07F220A3C25F00764CA3 /* Netherlands-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F072620A3C24200764CA3 /* Netherlands-flag.png */; };
+		4D7F07F320A3C25F00764CA3 /* Belize-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F072720A3C24300764CA3 /* Belize-flag.png */; };
+		4D7F07F420A3C25F00764CA3 /* South-Korea-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F072820A3C24300764CA3 /* South-Korea-flag.png */; };
+		4D7F07F520A3C25F00764CA3 /* Turkey-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F072920A3C24400764CA3 /* Turkey-flag.png */; };
+		4D7F07F620A3C25F00764CA3 /* Suriname-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F072A20A3C24500764CA3 /* Suriname-flag.png */; };
+		4D7F07F720A3C25F00764CA3 /* Costa-Rica-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F072B20A3C24500764CA3 /* Costa-Rica-flag.png */; };
+		4D7F07F820A3C25F00764CA3 /* Cuba-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F072C20A3C24600764CA3 /* Cuba-flag.png */; };
+		4D7F07F920A3C25F00764CA3 /* Puerto-Rico-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F072D20A3C24700764CA3 /* Puerto-Rico-flag.png */; };
+		4D7F07FA20A3C25F00764CA3 /* Iceland-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F072E20A3C24700764CA3 /* Iceland-flag.png */; };
+		4D7F07FB20A3C25F00764CA3 /* Ghana-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F072F20A3C24800764CA3 /* Ghana-flag.png */; };
+		4D7F07FC20A3C25F00764CA3 /* New-Zealand-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F073020A3C24800764CA3 /* New-Zealand-flag.png */; };
+		4D7F07FD20A3C25F00764CA3 /* Saint-Vincent-and-the-Grenadines-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F073120A3C24900764CA3 /* Saint-Vincent-and-the-Grenadines-flag.png */; };
+		4D7F07FE20A3C25F00764CA3 /* Guyana-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F073220A3C24A00764CA3 /* Guyana-flag.png */; };
+		4D7F07FF20A3C25F00764CA3 /* Bangladesh-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F073320A3C24A00764CA3 /* Bangladesh-flag.png */; };
+		4D7F080020A3C25F00764CA3 /* Estonia-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F073420A3C24B00764CA3 /* Estonia-flag.png */; };
+		4D7F080120A3C25F00764CA3 /* Ivory-Coast-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F073520A3C24C00764CA3 /* Ivory-Coast-flag.png */; };
+		4D7F080220A3C25F00764CA3 /* Lesotho-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F073620A3C24C00764CA3 /* Lesotho-flag.png */; };
+		4D7F080320A3C25F00764CA3 /* Egypt-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F073720A3C24D00764CA3 /* Egypt-flag.png */; };
+		4D7F080420A3C25F00764CA3 /* Swaziland-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F073820A3C24D00764CA3 /* Swaziland-flag.png */; };
+		4D7F080520A3C25F00764CA3 /* DR-Congo-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F073920A3C24E00764CA3 /* DR-Congo-flag.png */; };
+		4D7F080620A3C25F00764CA3 /* France-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F073A20A3C24F00764CA3 /* France-flag.png */; };
+		4D7F080720A3C25F00764CA3 /* Zimbabwe-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F073B20A3C24F00764CA3 /* Zimbabwe-flag.png */; };
+		4D7F080820A3C25F00764CA3 /* Slovenia-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F073C20A3C25000764CA3 /* Slovenia-flag.png */; };
+		4D7F080920A3C25F00764CA3 /* South-Sudan-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F073D20A3C25100764CA3 /* South-Sudan-flag.png */; };
+		4D7F080A20A3C25F00764CA3 /* Israel-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F073E20A3C25100764CA3 /* Israel-flag.png */; };
+		4D7F080B20A3C25F00764CA3 /* Solomon-Islands-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F073F20A3C25200764CA3 /* Solomon-Islands-flag.png */; };
+		4D7F080C20A3C25F00764CA3 /* Senegal-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F074020A3C25300764CA3 /* Senegal-flag.png */; };
+		4D7F080D20A3C25F00764CA3 /* Timor-Leste-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F074120A3C25300764CA3 /* Timor-Leste-flag.png */; };
+		4D7F080E20A3C25F00764CA3 /* Ireland-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F074220A3C25400764CA3 /* Ireland-flag.png */; };
+		4D7F080F20A3C25F00764CA3 /* Trinidad-and-Tobago-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F074320A3C25500764CA3 /* Trinidad-and-Tobago-flag.png */; };
+		4D7F081020A3C25F00764CA3 /* Belarus-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F074420A3C25500764CA3 /* Belarus-flag.png */; };
+		4D7F081120A3C25F00764CA3 /* Mauritania-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F074520A3C25600764CA3 /* Mauritania-flag.png */; };
+		4D7F081220A3C25F00764CA3 /* Scotland-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F074620A3C25600764CA3 /* Scotland-flag.png */; };
+		4D7F081320A3C25F00764CA3 /* Bosnia-and-Herzegovina-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F074720A3C25700764CA3 /* Bosnia-and-Herzegovina-flag.png */; };
+		4D7F081420A3C25F00764CA3 /* Fiji-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F074820A3C25800764CA3 /* Fiji-flag.png */; };
+		4D7F081520A3C25F00764CA3 /* Libya-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F074920A3C25800764CA3 /* Libya-flag.png */; };
+		4D7F081620A3C25F00764CA3 /* Bahrain-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F074A20A3C25900764CA3 /* Bahrain-flag.png */; };
+		4D7F081720A3C25F00764CA3 /* USA-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F074B20A3C25A00764CA3 /* USA-flag.png */; };
+		4D7F081820A3C25F00764CA3 /* Cayman-Islands-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F074C20A3C25A00764CA3 /* Cayman-Islands-flag.png */; };
+		4D7F081920A3C25F00764CA3 /* South-Africa-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F074D20A3C25B00764CA3 /* South-Africa-flag.png */; };
+		4D7F081A20A3C25F00764CA3 /* Poland-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F074E20A3C25C00764CA3 /* Poland-flag.png */; };
+		4D7F081B20A3C25F00764CA3 /* India-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F074F20A3C25C00764CA3 /* India-flag.png */; };
+		4D7F081C20A3C25F00764CA3 /* Algeria-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F075020A3C25D00764CA3 /* Algeria-flag.png */; };
+		4D7F081D20A3C25F00764CA3 /* China-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F075120A3C25E00764CA3 /* China-flag.png */; };
+		4D7F081E20A3C25F00764CA3 /* Monaco-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F075220A3C25F00764CA3 /* Monaco-flag.png */; };
+		4D7F082020A3C6B800764CA3 /* PlayerCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7F081F20A3C6B800764CA3 /* PlayerCellViewController.swift */; };
+		4D7F082220A3C9CA00764CA3 /* NetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7F082120A3C9CA00764CA3 /* NetworkingService.swift */; };
 		4DFE624B20A3441400A601B7 /* login_background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4DFE624A20A3441400A601B7 /* login_background.jpg */; };
 		4DFE624D20A349F900A601B7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4DFE624C20A349F900A601B7 /* GoogleService-Info.plist */; };
+		4DFF6A8F20A3DA6700FDC35B /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFF6A8E20A3DA6700FDC35B /* Team.swift */; };
+		4DFF6A9220A3E44D00FDC35B /* CharitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFF6A9120A3E44D00FDC35B /* CharitiesViewController.swift */; };
+		4DFF6A9820A4259200FDC35B /* PagedTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFF6A9720A4259200FDC35B /* PagedTeam.swift */; };
+		4DFF6A9A20A42DA500FDC35B /* DetailedPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFF6A9920A42DA500FDC35B /* DetailedPlayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		025EE025BFCAF3E905ABE6BF /* Pods-Goals For Good.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Goals For Good.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Goals For Good/Pods-Goals For Good.debug.xcconfig"; sourceTree = "<group>"; };
-		4D25137120A34FD3005BFAC9 /* UserValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserValidator.swift; path = "Goals For Good/New Group/UserValidator.swift"; sourceTree = SOURCE_ROOT; };
+		4D25137520A352F1005BFAC9 /* UserValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserValidator.swift; sourceTree = "<group>"; };
 		4D325C0320A2509C00A6D086 /* Goals For Good.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Goals For Good.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D325C0620A2509C00A6D086 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4D325C0820A2509C00A6D086 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4D325C0820A2509C00A6D086 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		4D325C0B20A2509C00A6D086 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4D325C0D20A2509F00A6D086 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D325C1020A2509F00A6D086 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D325C1220A2509F00A6D086 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D53475620A36EFA008EACB9 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		4D53475820A3783C008EACB9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		4D53475920A37E8F008EACB9 /* config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = config.swift; sourceTree = "<group>"; };
+		4D7F066E20A380E200764CA3 /* UserProfileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileService.swift; sourceTree = "<group>"; };
+		4D7F067520A3ADAF00764CA3 /* love.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = love.png; sourceTree = "<group>"; };
+		4D7F067720A3ADB600764CA3 /* soccer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = soccer.png; sourceTree = "<group>"; };
+		4D7F067920A3ADBC00764CA3 /* info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info.png; sourceTree = "<group>"; };
+		4D7F067B20A3ADC300764CA3 /* id-card.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "id-card.png"; sourceTree = "<group>"; };
+		4D7F067D20A3AE6100764CA3 /* man.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = man.png; sourceTree = "<group>"; };
+		4D7F068020A3B6CE00764CA3 /* playersTableBackground.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = playersTableBackground.jpeg; sourceTree = "<group>"; };
+		4D7F068220A3C07000764CA3 /* Afghanistan-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Afghanistan-flag.png"; sourceTree = "<group>"; };
+		4D7F068720A3C1D500764CA3 /* Mongolia-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Mongolia-flag.png"; sourceTree = "<group>"; };
+		4D7F068820A3C1D600764CA3 /* Albania-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Albania-flag.png"; sourceTree = "<group>"; };
+		4D7F068920A3C1D700764CA3 /* Nepal-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Nepal-flag.png"; sourceTree = "<group>"; };
+		4D7F068A20A3C1D800764CA3 /* Morocco-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Morocco-flag.png"; sourceTree = "<group>"; };
+		4D7F068B20A3C1D900764CA3 /* Andorra-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Andorra-flag.png"; sourceTree = "<group>"; };
+		4D7F068C20A3C1DA00764CA3 /* Sudan-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Sudan-flag.png"; sourceTree = "<group>"; };
+		4D7F068D20A3C1DB00764CA3 /* Sao-Tome-and-Principe-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Sao-Tome-and-Principe-flag.png"; sourceTree = "<group>"; };
+		4D7F068E20A3C1DC00764CA3 /* Czechoslovakia-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Czechoslovakia-flag.png"; sourceTree = "<group>"; };
+		4D7F068F20A3C1DD00764CA3 /* Antigua-and-Barbuda-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Antigua-and-Barbuda-flag.png"; sourceTree = "<group>"; };
+		4D7F069020A3C1DE00764CA3 /* Lebanon-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Lebanon-flag.png"; sourceTree = "<group>"; };
+		4D7F069120A3C1DF00764CA3 /* Saint-Lucia-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Saint-Lucia-flag.png"; sourceTree = "<group>"; };
+		4D7F069220A3C1E000764CA3 /* Sri-Lanka-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Sri-Lanka-flag.png"; sourceTree = "<group>"; };
+		4D7F069320A3C1E100764CA3 /* Tunisia-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Tunisia-flag.png"; sourceTree = "<group>"; };
+		4D7F069420A3C1E300764CA3 /* Ukraine-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ukraine-flag.png"; sourceTree = "<group>"; };
+		4D7F069520A3C1E400764CA3 /* Niger-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Niger-flag.png"; sourceTree = "<group>"; };
+		4D7F069620A3C1E500764CA3 /* Slovakia-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Slovakia-flag.png"; sourceTree = "<group>"; };
+		4D7F069720A3C1E600764CA3 /* Dominican-Republic-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Dominican-Republic-flag.png"; sourceTree = "<group>"; };
+		4D7F069820A3C1E700764CA3 /* Armenia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Armenia.png; sourceTree = "<group>"; };
+		4D7F069920A3C1E800764CA3 /* Chile-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Chile-flag.png"; sourceTree = "<group>"; };
+		4D7F069A20A3C1E900764CA3 /* Cameroon-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Cameroon-flag.png"; sourceTree = "<group>"; };
+		4D7F069B20A3C1EA00764CA3 /* Argentina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Argentina.png; sourceTree = "<group>"; };
+		4D7F069C20A3C1EA00764CA3 /* Bahamas-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Bahamas-flag.png"; sourceTree = "<group>"; };
+		4D7F069D20A3C1EB00764CA3 /* Kuwait-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Kuwait-flag.png"; sourceTree = "<group>"; };
+		4D7F069E20A3C1EC00764CA3 /* Togo-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Togo-flag.png"; sourceTree = "<group>"; };
+		4D7F069F20A3C1ED00764CA3 /* Hong-Kong-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Hong-Kong-flag.png"; sourceTree = "<group>"; };
+		4D7F06A020A3C1ED00764CA3 /* Grenada-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Grenada-flag.png"; sourceTree = "<group>"; };
+		4D7F06A120A3C1EE00764CA3 /* Great-Britain-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Great-Britain-flag.png"; sourceTree = "<group>"; };
+		4D7F06A220A3C1EE00764CA3 /* Croatia-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Croatia-flag.png"; sourceTree = "<group>"; };
+		4D7F06A320A3C1EF00764CA3 /* Eritrea-Flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Eritrea-Flag.png"; sourceTree = "<group>"; };
+		4D7F06A420A3C1F000764CA3 /* Qatar-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Qatar-flag.png"; sourceTree = "<group>"; };
+		4D7F06A520A3C1F000764CA3 /* Moldova-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Moldova-flag.png"; sourceTree = "<group>"; };
+		4D7F06A620A3C1F100764CA3 /* Sweden-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Sweden-flag.png"; sourceTree = "<group>"; };
+		4D7F06A720A3C1F200764CA3 /* Malta-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Malta-flag.png"; sourceTree = "<group>"; };
+		4D7F06A820A3C1F200764CA3 /* Cyprus-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Cyprus-flag.png"; sourceTree = "<group>"; };
+		4D7F06A920A3C1F300764CA3 /* Greece-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Greece-flag.png"; sourceTree = "<group>"; };
+		4D7F06AA20A3C1F300764CA3 /* Guinea-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Guinea-flag.png"; sourceTree = "<group>"; };
+		4D7F06AB20A3C1F400764CA3 /* Venezuela-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Venezuela-flag.png"; sourceTree = "<group>"; };
+		4D7F06AC20A3C1F500764CA3 /* Paraguay-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Paraguay-flag.png"; sourceTree = "<group>"; };
+		4D7F06AD20A3C1F500764CA3 /* Jordan-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Jordan-flag.png"; sourceTree = "<group>"; };
+		4D7F06AE20A3C1F600764CA3 /* British-Virgin-Islands-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "British-Virgin-Islands-flag.png"; sourceTree = "<group>"; };
+		4D7F06AF20A3C1F700764CA3 /* Peru-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Peru-flag.png"; sourceTree = "<group>"; };
+		4D7F06B020A3C1F700764CA3 /* Madagascar-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Madagascar-flag.png"; sourceTree = "<group>"; };
+		4D7F06B120A3C1F800764CA3 /* Brazil-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Brazil-flag.png"; sourceTree = "<group>"; };
+		4D7F06B220A3C1F800764CA3 /* Saint-Kitts-and-Nevis-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Saint-Kitts-and-Nevis-flag.png"; sourceTree = "<group>"; };
+		4D7F06B320A3C1F900764CA3 /* Ethiopia-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ethiopia-flag.png"; sourceTree = "<group>"; };
+		4D7F06B420A3C1FA00764CA3 /* Ecuador-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ecuador-flag.png"; sourceTree = "<group>"; };
+		4D7F06B520A3C1FA00764CA3 /* Cambodia-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Cambodia-flag.png"; sourceTree = "<group>"; };
+		4D7F06B620A3C1FB00764CA3 /* England-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "England-flag.png"; sourceTree = "<group>"; };
+		4D7F06B720A3C1FC00764CA3 /* Dominica-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Dominica-flag.png"; sourceTree = "<group>"; };
+		4D7F06B820A3C1FC00764CA3 /* Mali-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Mali-flag.png"; sourceTree = "<group>"; };
+		4D7F06B920A3C1FD00764CA3 /* Vanuatu-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Vanuatu-flag.png"; sourceTree = "<group>"; };
+		4D7F06BA20A3C1FE00764CA3 /* Chinese-Taipei-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Chinese-Taipei-flag.png"; sourceTree = "<group>"; };
+		4D7F06BB20A3C1FE00764CA3 /* San-Marino-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "San-Marino-flag.png"; sourceTree = "<group>"; };
+		4D7F06BC20A3C1FF00764CA3 /* Laos-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Laos-flag.png"; sourceTree = "<group>"; };
+		4D7F06BD20A3C1FF00764CA3 /* Burundi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Burundi.png; sourceTree = "<group>"; };
+		4D7F06BE20A3C20000764CA3 /* Indonesia-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Indonesia-flag.png"; sourceTree = "<group>"; };
+		4D7F06BF20A3C20100764CA3 /* Belgium-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Belgium-flag.png"; sourceTree = "<group>"; };
+		4D7F06C020A3C20100764CA3 /* Kazakhstan-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Kazakhstan-flag.png"; sourceTree = "<group>"; };
+		4D7F06C120A3C20200764CA3 /* Uganda-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Uganda-flag.png"; sourceTree = "<group>"; };
+		4D7F06C220A3C20300764CA3 /* Azerbaijan-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Azerbaijan-flag.png"; sourceTree = "<group>"; };
+		4D7F06C320A3C20300764CA3 /* Kosovo-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Kosovo-flag.png"; sourceTree = "<group>"; };
+		4D7F06C420A3C20400764CA3 /* Guatemala-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Guatemala-flag.png"; sourceTree = "<group>"; };
+		4D7F06C520A3C20400764CA3 /* Somalia-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Somalia-flag.png"; sourceTree = "<group>"; };
+		4D7F06C620A3C20500764CA3 /* Portugal-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Portugal-flag.png"; sourceTree = "<group>"; };
+		4D7F06C720A3C20600764CA3 /* Uzbekistan-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Uzbekistan-flag.png"; sourceTree = "<group>"; };
+		4D7F06C820A3C20600764CA3 /* Samoa-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Samoa-flag.png"; sourceTree = "<group>"; };
+		4D7F06C920A3C20700764CA3 /* Tonga-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Tonga-flag.png"; sourceTree = "<group>"; };
+		4D7F06CA20A3C20700764CA3 /* Vietnam-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Vietnam-flag.png"; sourceTree = "<group>"; };
+		4D7F06CB20A3C20800764CA3 /* Russia-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Russia-flag.png"; sourceTree = "<group>"; };
+		4D7F06CC20A3C20900764CA3 /* Rwanda-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Rwanda-flag.png"; sourceTree = "<group>"; };
+		4D7F06CD20A3C20900764CA3 /* Honduras-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Honduras-flag.png"; sourceTree = "<group>"; };
+		4D7F06CE20A3C20A00764CA3 /* Nigeria-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Nigeria-flag.png"; sourceTree = "<group>"; };
+		4D7F06CF20A3C20B00764CA3 /* Palau-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Palau-flag.png"; sourceTree = "<group>"; };
+		4D7F06D020A3C20B00764CA3 /* Romania-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Romania-flag.png"; sourceTree = "<group>"; };
+		4D7F06D120A3C20C00764CA3 /* Norway-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Norway-flag.png"; sourceTree = "<group>"; };
+		4D7F06D220A3C20D00764CA3 /* Cape-Verde-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Cape-Verde-flag.png"; sourceTree = "<group>"; };
+		4D7F06D320A3C20D00764CA3 /* Georgia-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Georgia-flag.png"; sourceTree = "<group>"; };
+		4D7F06D420A3C20E00764CA3 /* Kiribati-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Kiribati-flag.png"; sourceTree = "<group>"; };
+		4D7F06D520A3C20F00764CA3 /* Sierra-Leone-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Sierra-Leone-flag.png"; sourceTree = "<group>"; };
+		4D7F06D620A3C20F00764CA3 /* Bulgaria-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Bulgaria-flag.png"; sourceTree = "<group>"; };
+		4D7F06D720A3C21000764CA3 /* Kyrgyzstan-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Kyrgyzstan-flag.png"; sourceTree = "<group>"; };
+		4D7F06D820A3C21100764CA3 /* Austria-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Austria-flag.png"; sourceTree = "<group>"; };
+		4D7F06D920A3C21100764CA3 /* Hungary-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Hungary-flag.png"; sourceTree = "<group>"; };
+		4D7F06DA20A3C21200764CA3 /* Tuvalu-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Tuvalu-flag.png"; sourceTree = "<group>"; };
+		4D7F06DB20A3C21300764CA3 /* Guinea-Bissau-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Guinea-Bissau-flag.png"; sourceTree = "<group>"; };
+		4D7F06DC20A3C21300764CA3 /* Mauritius-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Mauritius-flag.png"; sourceTree = "<group>"; };
+		4D7F06DD20A3C21400764CA3 /* Germany-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Germany-flag.png"; sourceTree = "<group>"; };
+		4D7F06DE20A3C21400764CA3 /* Marshall-Islands-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Marshall-Islands-flag.png"; sourceTree = "<group>"; };
+		4D7F06DF20A3C21500764CA3 /* Iran-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Iran-flag.png"; sourceTree = "<group>"; };
+		4D7F06E020A3C21600764CA3 /* Bermuda-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Bermuda-flag.png"; sourceTree = "<group>"; };
+		4D7F06E120A3C21600764CA3 /* Mozambique-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Mozambique-flag.png"; sourceTree = "<group>"; };
+		4D7F06E220A3C21700764CA3 /* Virgin-Island-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Virgin-Island-flag.png"; sourceTree = "<group>"; };
+		4D7F06E320A3C21800764CA3 /* Gabon-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Gabon-flag.png"; sourceTree = "<group>"; };
+		4D7F06E420A3C21800764CA3 /* Central-African-Republic-Flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Central-African-Republic-Flag.png"; sourceTree = "<group>"; };
+		4D7F06E520A3C21900764CA3 /* Denmark-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Denmark-flag.png"; sourceTree = "<group>"; };
+		4D7F06E620A3C21A00764CA3 /* El-Salvador-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "El-Salvador-flag.png"; sourceTree = "<group>"; };
+		4D7F06E720A3C21A00764CA3 /* Nicaragua-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Nicaragua-flag.png"; sourceTree = "<group>"; };
+		4D7F06E820A3C21B00764CA3 /* North-Korea-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "North-Korea-flag.png"; sourceTree = "<group>"; };
+		4D7F06E920A3C21B00764CA3 /* Botswana-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Botswana-flag.png"; sourceTree = "<group>"; };
+		4D7F06EA20A3C21C00764CA3 /* Chad-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Chad-flag.png"; sourceTree = "<group>"; };
+		4D7F06EB20A3C21D00764CA3 /* Pakistan-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pakistan-flag.png"; sourceTree = "<group>"; };
+		4D7F06EC20A3C21D00764CA3 /* Panama-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Panama-flag.png"; sourceTree = "<group>"; };
+		4D7F06ED20A3C21E00764CA3 /* Nauru-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Nauru-flag.png"; sourceTree = "<group>"; };
+		4D7F06EE20A3C21F00764CA3 /* Thailand-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Thailand-flag.png"; sourceTree = "<group>"; };
+		4D7F06EF20A3C21F00764CA3 /* Brunei-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Brunei-flag.png"; sourceTree = "<group>"; };
+		4D7F06F020A3C22000764CA3 /* Myanmar-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Myanmar-flag.png"; sourceTree = "<group>"; };
+		4D7F06F120A3C22000764CA3 /* Tanzania-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Tanzania-flag.png"; sourceTree = "<group>"; };
+		4D7F06F220A3C22100764CA3 /* Barbados-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Barbados-flag.png"; sourceTree = "<group>"; };
+		4D7F06F320A3C22200764CA3 /* Congo-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Congo-flag.png"; sourceTree = "<group>"; };
+		4D7F06F420A3C22200764CA3 /* Singapore-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Singapore-flag.png"; sourceTree = "<group>"; };
+		4D7F06F520A3C22300764CA3 /* Spain-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Spain-flag.png"; sourceTree = "<group>"; };
+		4D7F06F620A3C22400764CA3 /* Liechtenstein-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Liechtenstein-flag.png"; sourceTree = "<group>"; };
+		4D7F06F720A3C22400764CA3 /* Latvia-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Latvia-flag.png"; sourceTree = "<group>"; };
+		4D7F06F820A3C22500764CA3 /* Tajikistan-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Tajikistan-flag.png"; sourceTree = "<group>"; };
+		4D7F06F920A3C22500764CA3 /* Macedonia-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Macedonia-flag.png"; sourceTree = "<group>"; };
+		4D7F06FA20A3C22600764CA3 /* Montenegro-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Montenegro-flag.png"; sourceTree = "<group>"; };
+		4D7F06FB20A3C22700764CA3 /* Namibia-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Namibia-flag.png"; sourceTree = "<group>"; };
+		4D7F06FC20A3C22700764CA3 /* Papua-New-Guinea-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Papua-New-Guinea-flag.png"; sourceTree = "<group>"; };
+		4D7F06FD20A3C22800764CA3 /* Philippines-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Philippines-flag.png"; sourceTree = "<group>"; };
+		4D7F06FE20A3C22900764CA3 /* Turkmenistan-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Turkmenistan-flag.png"; sourceTree = "<group>"; };
+		4D7F06FF20A3C22900764CA3 /* Luxembourg-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Luxembourg-flag.png"; sourceTree = "<group>"; };
+		4D7F070020A3C22A00764CA3 /* Comoros-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Comoros-flag.png"; sourceTree = "<group>"; };
+		4D7F070120A3C22B00764CA3 /* The-Gambia-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "The-Gambia-flag.png"; sourceTree = "<group>"; };
+		4D7F070220A3C22B00764CA3 /* Lithuania-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Lithuania-flag.png"; sourceTree = "<group>"; };
+		4D7F070320A3C22C00764CA3 /* Aruba.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Aruba.png; sourceTree = "<group>"; };
+		4D7F070420A3C22C00764CA3 /* Guam-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Guam-flag.png"; sourceTree = "<group>"; };
+		4D7F070520A3C22D00764CA3 /* Serbia-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Serbia-flag.png"; sourceTree = "<group>"; };
+		4D7F070620A3C22E00764CA3 /* Colombia-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Colombia-flag.png"; sourceTree = "<group>"; };
+		4D7F070720A3C22E00764CA3 /* Liberia-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Liberia-flag.png"; sourceTree = "<group>"; };
+		4D7F070820A3C22F00764CA3 /* Jamaica-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Jamaica-flag.png"; sourceTree = "<group>"; };
+		4D7F070920A3C23000764CA3 /* Equatorial-Guinea-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Equatorial-Guinea-flag.png"; sourceTree = "<group>"; };
+		4D7F070A20A3C23000764CA3 /* Oman-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Oman-flag.png"; sourceTree = "<group>"; };
+		4D7F070B20A3C23100764CA3 /* Finland-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Finland-flag.png"; sourceTree = "<group>"; };
+		4D7F070C20A3C23100764CA3 /* Yemen-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Yemen-flag.png"; sourceTree = "<group>"; };
+		4D7F070D20A3C23200764CA3 /* Bhutan-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Bhutan-flag.png"; sourceTree = "<group>"; };
+		4D7F070E20A3C23300764CA3 /* Mexico-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Mexico-flag.png"; sourceTree = "<group>"; };
+		4D7F070F20A3C23300764CA3 /* Italy-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Italy-flag.png"; sourceTree = "<group>"; };
+		4D7F071020A3C23400764CA3 /* Seychelles-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Seychelles-flag.png"; sourceTree = "<group>"; };
+		4D7F071120A3C23500764CA3 /* Bolivia-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Bolivia-flag.png"; sourceTree = "<group>"; };
+		4D7F071220A3C23500764CA3 /* Djibouti-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Djibouti-flag.png"; sourceTree = "<group>"; };
+		4D7F071320A3C23600764CA3 /* Saudi-Arabia-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Saudi-Arabia-flag.png"; sourceTree = "<group>"; };
+		4D7F071420A3C23700764CA3 /* Zambia-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Zambia-flag.png"; sourceTree = "<group>"; };
+		4D7F071520A3C23700764CA3 /* Canada-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Canada-flag.png"; sourceTree = "<group>"; };
+		4D7F071620A3C23800764CA3 /* Palestine-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Palestine-flag.png"; sourceTree = "<group>"; };
+		4D7F071720A3C23900764CA3 /* Australia-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Australia-flag.png"; sourceTree = "<group>"; };
+		4D7F071820A3C23900764CA3 /* Haiti-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Haiti-flag.png"; sourceTree = "<group>"; };
+		4D7F071920A3C23A00764CA3 /* Switzerland-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Switzerland-flag.png"; sourceTree = "<group>"; };
+		4D7F071A20A3C23B00764CA3 /* Burkina-Faso-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Burkina-Faso-flag.png"; sourceTree = "<group>"; };
+		4D7F071B20A3C23B00764CA3 /* Uruguay-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Uruguay-flag.png"; sourceTree = "<group>"; };
+		4D7F071C20A3C23C00764CA3 /* Kenya-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Kenya-flag.png"; sourceTree = "<group>"; };
+		4D7F071D20A3C23C00764CA3 /* Benin-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Benin-flag.png"; sourceTree = "<group>"; };
+		4D7F071E20A3C23D00764CA3 /* Malawi-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Malawi-flag.png"; sourceTree = "<group>"; };
+		4D7F071F20A3C23E00764CA3 /* Angola-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Angola-flag.png"; sourceTree = "<group>"; };
+		4D7F072020A3C23E00764CA3 /* Syria-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Syria-flag.png"; sourceTree = "<group>"; };
+		4D7F072120A3C23F00764CA3 /* Maldives-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Maldives-flag.png"; sourceTree = "<group>"; };
+		4D7F072220A3C24000764CA3 /* United-Arab-Emirates-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "United-Arab-Emirates-flag.png"; sourceTree = "<group>"; };
+		4D7F072320A3C24000764CA3 /* Iraq-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Iraq-flag.png"; sourceTree = "<group>"; };
+		4D7F072420A3C24100764CA3 /* Malaysia-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Malaysia-flag.png"; sourceTree = "<group>"; };
+		4D7F072520A3C24100764CA3 /* Japan-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Japan-flag.png"; sourceTree = "<group>"; };
+		4D7F072620A3C24200764CA3 /* Netherlands-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Netherlands-flag.png"; sourceTree = "<group>"; };
+		4D7F072720A3C24300764CA3 /* Belize-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Belize-flag.png"; sourceTree = "<group>"; };
+		4D7F072820A3C24300764CA3 /* South-Korea-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "South-Korea-flag.png"; sourceTree = "<group>"; };
+		4D7F072920A3C24400764CA3 /* Turkey-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Turkey-flag.png"; sourceTree = "<group>"; };
+		4D7F072A20A3C24500764CA3 /* Suriname-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Suriname-flag.png"; sourceTree = "<group>"; };
+		4D7F072B20A3C24500764CA3 /* Costa-Rica-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Costa-Rica-flag.png"; sourceTree = "<group>"; };
+		4D7F072C20A3C24600764CA3 /* Cuba-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Cuba-flag.png"; sourceTree = "<group>"; };
+		4D7F072D20A3C24700764CA3 /* Puerto-Rico-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Puerto-Rico-flag.png"; sourceTree = "<group>"; };
+		4D7F072E20A3C24700764CA3 /* Iceland-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Iceland-flag.png"; sourceTree = "<group>"; };
+		4D7F072F20A3C24800764CA3 /* Ghana-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ghana-flag.png"; sourceTree = "<group>"; };
+		4D7F073020A3C24800764CA3 /* New-Zealand-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "New-Zealand-flag.png"; sourceTree = "<group>"; };
+		4D7F073120A3C24900764CA3 /* Saint-Vincent-and-the-Grenadines-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Saint-Vincent-and-the-Grenadines-flag.png"; sourceTree = "<group>"; };
+		4D7F073220A3C24A00764CA3 /* Guyana-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Guyana-flag.png"; sourceTree = "<group>"; };
+		4D7F073320A3C24A00764CA3 /* Bangladesh-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Bangladesh-flag.png"; sourceTree = "<group>"; };
+		4D7F073420A3C24B00764CA3 /* Estonia-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Estonia-flag.png"; sourceTree = "<group>"; };
+		4D7F073520A3C24C00764CA3 /* Ivory-Coast-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ivory-Coast-flag.png"; sourceTree = "<group>"; };
+		4D7F073620A3C24C00764CA3 /* Lesotho-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Lesotho-flag.png"; sourceTree = "<group>"; };
+		4D7F073720A3C24D00764CA3 /* Egypt-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Egypt-flag.png"; sourceTree = "<group>"; };
+		4D7F073820A3C24D00764CA3 /* Swaziland-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Swaziland-flag.png"; sourceTree = "<group>"; };
+		4D7F073920A3C24E00764CA3 /* DR-Congo-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DR-Congo-flag.png"; sourceTree = "<group>"; };
+		4D7F073A20A3C24F00764CA3 /* France-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "France-flag.png"; sourceTree = "<group>"; };
+		4D7F073B20A3C24F00764CA3 /* Zimbabwe-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Zimbabwe-flag.png"; sourceTree = "<group>"; };
+		4D7F073C20A3C25000764CA3 /* Slovenia-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Slovenia-flag.png"; sourceTree = "<group>"; };
+		4D7F073D20A3C25100764CA3 /* South-Sudan-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "South-Sudan-flag.png"; sourceTree = "<group>"; };
+		4D7F073E20A3C25100764CA3 /* Israel-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Israel-flag.png"; sourceTree = "<group>"; };
+		4D7F073F20A3C25200764CA3 /* Solomon-Islands-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Solomon-Islands-flag.png"; sourceTree = "<group>"; };
+		4D7F074020A3C25300764CA3 /* Senegal-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Senegal-flag.png"; sourceTree = "<group>"; };
+		4D7F074120A3C25300764CA3 /* Timor-Leste-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Timor-Leste-flag.png"; sourceTree = "<group>"; };
+		4D7F074220A3C25400764CA3 /* Ireland-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ireland-flag.png"; sourceTree = "<group>"; };
+		4D7F074320A3C25500764CA3 /* Trinidad-and-Tobago-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Trinidad-and-Tobago-flag.png"; sourceTree = "<group>"; };
+		4D7F074420A3C25500764CA3 /* Belarus-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Belarus-flag.png"; sourceTree = "<group>"; };
+		4D7F074520A3C25600764CA3 /* Mauritania-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Mauritania-flag.png"; sourceTree = "<group>"; };
+		4D7F074620A3C25600764CA3 /* Scotland-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Scotland-flag.png"; sourceTree = "<group>"; };
+		4D7F074720A3C25700764CA3 /* Bosnia-and-Herzegovina-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Bosnia-and-Herzegovina-flag.png"; sourceTree = "<group>"; };
+		4D7F074820A3C25800764CA3 /* Fiji-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fiji-flag.png"; sourceTree = "<group>"; };
+		4D7F074920A3C25800764CA3 /* Libya-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Libya-flag.png"; sourceTree = "<group>"; };
+		4D7F074A20A3C25900764CA3 /* Bahrain-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Bahrain-flag.png"; sourceTree = "<group>"; };
+		4D7F074B20A3C25A00764CA3 /* USA-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "USA-flag.png"; sourceTree = "<group>"; };
+		4D7F074C20A3C25A00764CA3 /* Cayman-Islands-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Cayman-Islands-flag.png"; sourceTree = "<group>"; };
+		4D7F074D20A3C25B00764CA3 /* South-Africa-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "South-Africa-flag.png"; sourceTree = "<group>"; };
+		4D7F074E20A3C25C00764CA3 /* Poland-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Poland-flag.png"; sourceTree = "<group>"; };
+		4D7F074F20A3C25C00764CA3 /* India-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "India-flag.png"; sourceTree = "<group>"; };
+		4D7F075020A3C25D00764CA3 /* Algeria-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Algeria-flag.png"; sourceTree = "<group>"; };
+		4D7F075120A3C25E00764CA3 /* China-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "China-flag.png"; sourceTree = "<group>"; };
+		4D7F075220A3C25F00764CA3 /* Monaco-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Monaco-flag.png"; sourceTree = "<group>"; };
+		4D7F081F20A3C6B800764CA3 /* PlayerCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCellViewController.swift; sourceTree = "<group>"; };
+		4D7F082120A3C9CA00764CA3 /* NetworkingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingService.swift; sourceTree = "<group>"; };
 		4DFE624A20A3441400A601B7 /* login_background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = login_background.jpg; sourceTree = "<group>"; };
 		4DFE624C20A349F900A601B7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4DFF6A8E20A3DA6700FDC35B /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		4DFF6A9120A3E44D00FDC35B /* CharitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharitiesViewController.swift; sourceTree = "<group>"; };
+		4DFF6A9720A4259200FDC35B /* PagedTeam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagedTeam.swift; sourceTree = "<group>"; };
+		4DFF6A9920A42DA500FDC35B /* DetailedPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedPlayer.swift; sourceTree = "<group>"; };
 		C41E259777F0B2A46E0721E5 /* Pods-Goals For Good.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Goals For Good.release.xcconfig"; path = "Pods/Target Support Files/Pods-Goals For Good/Pods-Goals For Good.release.xcconfig"; sourceTree = "<group>"; };
 		F74311942C73164F5DD5DE05 /* Pods_Goals_For_Good.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Goals_For_Good.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -49,7 +490,7 @@
 		4D25137320A350E4005BFAC9 /* Validators */ = {
 			isa = PBXGroup;
 			children = (
-				4D25137120A34FD3005BFAC9 /* UserValidator.swift */,
+				4D25137520A352F1005BFAC9 /* UserValidator.swift */,
 			);
 			path = Validators;
 			sourceTree = "<group>";
@@ -75,9 +516,13 @@
 		4D325C0520A2509C00A6D086 /* Goals For Good */ = {
 			isa = PBXGroup;
 			children = (
-				4D325C0820A2509C00A6D086 /* ViewController.swift */,
+				4D53475820A3783C008EACB9 /* README.md */,
+				4D53475920A37E8F008EACB9 /* config.swift */,
 				4D325C0A20A2509C00A6D086 /* Main.storyboard */,
 				4D325C1220A2509F00A6D086 /* Info.plist */,
+				4D7F067020A38BB900764CA3 /* Controllers */,
+				4D53474C20A359AD008EACB9 /* Services */,
+				4DFF6A9020A3DB2A00FDC35B /* Models */,
 				4D25137320A350E4005BFAC9 /* Validators */,
 				4D325C1820A250F700A6D086 /* Supporting Files */,
 			);
@@ -88,12 +533,295 @@
 			isa = PBXGroup;
 			children = (
 				4DFE624C20A349F900A601B7 /* GoogleService-Info.plist */,
-				4DFE624A20A3441400A601B7 /* login_background.jpg */,
 				4D325C0F20A2509F00A6D086 /* LaunchScreen.storyboard */,
 				4D325C0620A2509C00A6D086 /* AppDelegate.swift */,
 				4D325C0D20A2509F00A6D086 /* Assets.xcassets */,
+				4D7F067F20A3AE6B00764CA3 /* Images */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4D53474C20A359AD008EACB9 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				4D7F066E20A380E200764CA3 /* UserProfileService.swift */,
+				4D7F082120A3C9CA00764CA3 /* NetworkingService.swift */,
+			);
+			name = Services;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		4D53474F20A36561008EACB9 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4D7F081F20A3C6B800764CA3 /* PlayerCellViewController.swift */,
+				4D325C0820A2509C00A6D086 /* LoginViewController.swift */,
+				4D53475620A36EFA008EACB9 /* ProfileViewController.swift */,
+				4DFF6A9120A3E44D00FDC35B /* CharitiesViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		4D7F067020A38BB900764CA3 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4D53474F20A36561008EACB9 /* View Controllers */,
+			);
+			name = Controllers;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		4D7F067F20A3AE6B00764CA3 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				4D7F068520A3C09600764CA3 /* Tab Icons */,
+				4D7F068620A3C0BC00764CA3 /* Backgrounds */,
+				4D7F068420A3C08500764CA3 /* Flags */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		4D7F068420A3C08500764CA3 /* Flags */ = {
+			isa = PBXGroup;
+			children = (
+				4D7F068220A3C07000764CA3 /* Afghanistan-flag.png */,
+				4D7F068820A3C1D600764CA3 /* Albania-flag.png */,
+				4D7F075020A3C25D00764CA3 /* Algeria-flag.png */,
+				4D7F068B20A3C1D900764CA3 /* Andorra-flag.png */,
+				4D7F071F20A3C23E00764CA3 /* Angola-flag.png */,
+				4D7F068F20A3C1DD00764CA3 /* Antigua-and-Barbuda-flag.png */,
+				4D7F069B20A3C1EA00764CA3 /* Argentina.png */,
+				4D7F069820A3C1E700764CA3 /* Armenia.png */,
+				4D7F070320A3C22C00764CA3 /* Aruba.png */,
+				4D7F071720A3C23900764CA3 /* Australia-flag.png */,
+				4D7F06D820A3C21100764CA3 /* Austria-flag.png */,
+				4D7F06C220A3C20300764CA3 /* Azerbaijan-flag.png */,
+				4D7F069C20A3C1EA00764CA3 /* Bahamas-flag.png */,
+				4D7F074A20A3C25900764CA3 /* Bahrain-flag.png */,
+				4D7F073320A3C24A00764CA3 /* Bangladesh-flag.png */,
+				4D7F06F220A3C22100764CA3 /* Barbados-flag.png */,
+				4D7F074420A3C25500764CA3 /* Belarus-flag.png */,
+				4D7F06BF20A3C20100764CA3 /* Belgium-flag.png */,
+				4D7F072720A3C24300764CA3 /* Belize-flag.png */,
+				4D7F071D20A3C23C00764CA3 /* Benin-flag.png */,
+				4D7F06E020A3C21600764CA3 /* Bermuda-flag.png */,
+				4D7F070D20A3C23200764CA3 /* Bhutan-flag.png */,
+				4D7F071120A3C23500764CA3 /* Bolivia-flag.png */,
+				4D7F074720A3C25700764CA3 /* Bosnia-and-Herzegovina-flag.png */,
+				4D7F06E920A3C21B00764CA3 /* Botswana-flag.png */,
+				4D7F06B120A3C1F800764CA3 /* Brazil-flag.png */,
+				4D7F06AE20A3C1F600764CA3 /* British-Virgin-Islands-flag.png */,
+				4D7F06EF20A3C21F00764CA3 /* Brunei-flag.png */,
+				4D7F06D620A3C20F00764CA3 /* Bulgaria-flag.png */,
+				4D7F071A20A3C23B00764CA3 /* Burkina-Faso-flag.png */,
+				4D7F06BD20A3C1FF00764CA3 /* Burundi.png */,
+				4D7F06B520A3C1FA00764CA3 /* Cambodia-flag.png */,
+				4D7F069A20A3C1E900764CA3 /* Cameroon-flag.png */,
+				4D7F071520A3C23700764CA3 /* Canada-flag.png */,
+				4D7F06D220A3C20D00764CA3 /* Cape-Verde-flag.png */,
+				4D7F074C20A3C25A00764CA3 /* Cayman-Islands-flag.png */,
+				4D7F06E420A3C21800764CA3 /* Central-African-Republic-Flag.png */,
+				4D7F06EA20A3C21C00764CA3 /* Chad-flag.png */,
+				4D7F069920A3C1E800764CA3 /* Chile-flag.png */,
+				4D7F075120A3C25E00764CA3 /* China-flag.png */,
+				4D7F06BA20A3C1FE00764CA3 /* Chinese-Taipei-flag.png */,
+				4D7F070620A3C22E00764CA3 /* Colombia-flag.png */,
+				4D7F070020A3C22A00764CA3 /* Comoros-flag.png */,
+				4D7F06F320A3C22200764CA3 /* Congo-flag.png */,
+				4D7F072B20A3C24500764CA3 /* Costa-Rica-flag.png */,
+				4D7F06A220A3C1EE00764CA3 /* Croatia-flag.png */,
+				4D7F072C20A3C24600764CA3 /* Cuba-flag.png */,
+				4D7F06A820A3C1F200764CA3 /* Cyprus-flag.png */,
+				4D7F068E20A3C1DC00764CA3 /* Czechoslovakia-flag.png */,
+				4D7F06E520A3C21900764CA3 /* Denmark-flag.png */,
+				4D7F071220A3C23500764CA3 /* Djibouti-flag.png */,
+				4D7F06B720A3C1FC00764CA3 /* Dominica-flag.png */,
+				4D7F069720A3C1E600764CA3 /* Dominican-Republic-flag.png */,
+				4D7F073920A3C24E00764CA3 /* DR-Congo-flag.png */,
+				4D7F06B420A3C1FA00764CA3 /* Ecuador-flag.png */,
+				4D7F073720A3C24D00764CA3 /* Egypt-flag.png */,
+				4D7F06E620A3C21A00764CA3 /* El-Salvador-flag.png */,
+				4D7F06B620A3C1FB00764CA3 /* England-flag.png */,
+				4D7F070920A3C23000764CA3 /* Equatorial-Guinea-flag.png */,
+				4D7F06A320A3C1EF00764CA3 /* Eritrea-Flag.png */,
+				4D7F073420A3C24B00764CA3 /* Estonia-flag.png */,
+				4D7F06B320A3C1F900764CA3 /* Ethiopia-flag.png */,
+				4D7F074820A3C25800764CA3 /* Fiji-flag.png */,
+				4D7F070B20A3C23100764CA3 /* Finland-flag.png */,
+				4D7F073A20A3C24F00764CA3 /* France-flag.png */,
+				4D7F06E320A3C21800764CA3 /* Gabon-flag.png */,
+				4D7F06D320A3C20D00764CA3 /* Georgia-flag.png */,
+				4D7F06DD20A3C21400764CA3 /* Germany-flag.png */,
+				4D7F072F20A3C24800764CA3 /* Ghana-flag.png */,
+				4D7F06A120A3C1EE00764CA3 /* Great-Britain-flag.png */,
+				4D7F06A920A3C1F300764CA3 /* Greece-flag.png */,
+				4D7F06A020A3C1ED00764CA3 /* Grenada-flag.png */,
+				4D7F070420A3C22C00764CA3 /* Guam-flag.png */,
+				4D7F06C420A3C20400764CA3 /* Guatemala-flag.png */,
+				4D7F06DB20A3C21300764CA3 /* Guinea-Bissau-flag.png */,
+				4D7F06AA20A3C1F300764CA3 /* Guinea-flag.png */,
+				4D7F073220A3C24A00764CA3 /* Guyana-flag.png */,
+				4D7F071820A3C23900764CA3 /* Haiti-flag.png */,
+				4D7F06CD20A3C20900764CA3 /* Honduras-flag.png */,
+				4D7F069F20A3C1ED00764CA3 /* Hong-Kong-flag.png */,
+				4D7F06D920A3C21100764CA3 /* Hungary-flag.png */,
+				4D7F072E20A3C24700764CA3 /* Iceland-flag.png */,
+				4D7F074F20A3C25C00764CA3 /* India-flag.png */,
+				4D7F06BE20A3C20000764CA3 /* Indonesia-flag.png */,
+				4D7F06DF20A3C21500764CA3 /* Iran-flag.png */,
+				4D7F072320A3C24000764CA3 /* Iraq-flag.png */,
+				4D7F074220A3C25400764CA3 /* Ireland-flag.png */,
+				4D7F073E20A3C25100764CA3 /* Israel-flag.png */,
+				4D7F070F20A3C23300764CA3 /* Italy-flag.png */,
+				4D7F073520A3C24C00764CA3 /* Ivory-Coast-flag.png */,
+				4D7F070820A3C22F00764CA3 /* Jamaica-flag.png */,
+				4D7F072520A3C24100764CA3 /* Japan-flag.png */,
+				4D7F06AD20A3C1F500764CA3 /* Jordan-flag.png */,
+				4D7F06C020A3C20100764CA3 /* Kazakhstan-flag.png */,
+				4D7F071C20A3C23C00764CA3 /* Kenya-flag.png */,
+				4D7F06D420A3C20E00764CA3 /* Kiribati-flag.png */,
+				4D7F06C320A3C20300764CA3 /* Kosovo-flag.png */,
+				4D7F069D20A3C1EB00764CA3 /* Kuwait-flag.png */,
+				4D7F06D720A3C21000764CA3 /* Kyrgyzstan-flag.png */,
+				4D7F06BC20A3C1FF00764CA3 /* Laos-flag.png */,
+				4D7F06F720A3C22400764CA3 /* Latvia-flag.png */,
+				4D7F069020A3C1DE00764CA3 /* Lebanon-flag.png */,
+				4D7F073620A3C24C00764CA3 /* Lesotho-flag.png */,
+				4D7F070720A3C22E00764CA3 /* Liberia-flag.png */,
+				4D7F074920A3C25800764CA3 /* Libya-flag.png */,
+				4D7F06F620A3C22400764CA3 /* Liechtenstein-flag.png */,
+				4D7F070220A3C22B00764CA3 /* Lithuania-flag.png */,
+				4D7F06FF20A3C22900764CA3 /* Luxembourg-flag.png */,
+				4D7F06F920A3C22500764CA3 /* Macedonia-flag.png */,
+				4D7F06B020A3C1F700764CA3 /* Madagascar-flag.png */,
+				4D7F071E20A3C23D00764CA3 /* Malawi-flag.png */,
+				4D7F072420A3C24100764CA3 /* Malaysia-flag.png */,
+				4D7F072120A3C23F00764CA3 /* Maldives-flag.png */,
+				4D7F06B820A3C1FC00764CA3 /* Mali-flag.png */,
+				4D7F06A720A3C1F200764CA3 /* Malta-flag.png */,
+				4D7F06DE20A3C21400764CA3 /* Marshall-Islands-flag.png */,
+				4D7F074520A3C25600764CA3 /* Mauritania-flag.png */,
+				4D7F06DC20A3C21300764CA3 /* Mauritius-flag.png */,
+				4D7F070E20A3C23300764CA3 /* Mexico-flag.png */,
+				4D7F06A520A3C1F000764CA3 /* Moldova-flag.png */,
+				4D7F075220A3C25F00764CA3 /* Monaco-flag.png */,
+				4D7F068720A3C1D500764CA3 /* Mongolia-flag.png */,
+				4D7F06FA20A3C22600764CA3 /* Montenegro-flag.png */,
+				4D7F068A20A3C1D800764CA3 /* Morocco-flag.png */,
+				4D7F06E120A3C21600764CA3 /* Mozambique-flag.png */,
+				4D7F06F020A3C22000764CA3 /* Myanmar-flag.png */,
+				4D7F06FB20A3C22700764CA3 /* Namibia-flag.png */,
+				4D7F06ED20A3C21E00764CA3 /* Nauru-flag.png */,
+				4D7F068920A3C1D700764CA3 /* Nepal-flag.png */,
+				4D7F072620A3C24200764CA3 /* Netherlands-flag.png */,
+				4D7F073020A3C24800764CA3 /* New-Zealand-flag.png */,
+				4D7F06E720A3C21A00764CA3 /* Nicaragua-flag.png */,
+				4D7F069520A3C1E400764CA3 /* Niger-flag.png */,
+				4D7F06CE20A3C20A00764CA3 /* Nigeria-flag.png */,
+				4D7F06E820A3C21B00764CA3 /* North-Korea-flag.png */,
+				4D7F06D120A3C20C00764CA3 /* Norway-flag.png */,
+				4D7F070A20A3C23000764CA3 /* Oman-flag.png */,
+				4D7F06EB20A3C21D00764CA3 /* Pakistan-flag.png */,
+				4D7F06CF20A3C20B00764CA3 /* Palau-flag.png */,
+				4D7F071620A3C23800764CA3 /* Palestine-flag.png */,
+				4D7F06EC20A3C21D00764CA3 /* Panama-flag.png */,
+				4D7F06FC20A3C22700764CA3 /* Papua-New-Guinea-flag.png */,
+				4D7F06AC20A3C1F500764CA3 /* Paraguay-flag.png */,
+				4D7F06AF20A3C1F700764CA3 /* Peru-flag.png */,
+				4D7F06FD20A3C22800764CA3 /* Philippines-flag.png */,
+				4D7F074E20A3C25C00764CA3 /* Poland-flag.png */,
+				4D7F06C620A3C20500764CA3 /* Portugal-flag.png */,
+				4D7F072D20A3C24700764CA3 /* Puerto-Rico-flag.png */,
+				4D7F06A420A3C1F000764CA3 /* Qatar-flag.png */,
+				4D7F06D020A3C20B00764CA3 /* Romania-flag.png */,
+				4D7F06CB20A3C20800764CA3 /* Russia-flag.png */,
+				4D7F06CC20A3C20900764CA3 /* Rwanda-flag.png */,
+				4D7F06B220A3C1F800764CA3 /* Saint-Kitts-and-Nevis-flag.png */,
+				4D7F069120A3C1DF00764CA3 /* Saint-Lucia-flag.png */,
+				4D7F073120A3C24900764CA3 /* Saint-Vincent-and-the-Grenadines-flag.png */,
+				4D7F06C820A3C20600764CA3 /* Samoa-flag.png */,
+				4D7F06BB20A3C1FE00764CA3 /* San-Marino-flag.png */,
+				4D7F068D20A3C1DB00764CA3 /* Sao-Tome-and-Principe-flag.png */,
+				4D7F071320A3C23600764CA3 /* Saudi-Arabia-flag.png */,
+				4D7F074620A3C25600764CA3 /* Scotland-flag.png */,
+				4D7F074020A3C25300764CA3 /* Senegal-flag.png */,
+				4D7F070520A3C22D00764CA3 /* Serbia-flag.png */,
+				4D7F071020A3C23400764CA3 /* Seychelles-flag.png */,
+				4D7F06D520A3C20F00764CA3 /* Sierra-Leone-flag.png */,
+				4D7F06F420A3C22200764CA3 /* Singapore-flag.png */,
+				4D7F069620A3C1E500764CA3 /* Slovakia-flag.png */,
+				4D7F073C20A3C25000764CA3 /* Slovenia-flag.png */,
+				4D7F073F20A3C25200764CA3 /* Solomon-Islands-flag.png */,
+				4D7F06C520A3C20400764CA3 /* Somalia-flag.png */,
+				4D7F074D20A3C25B00764CA3 /* South-Africa-flag.png */,
+				4D7F072820A3C24300764CA3 /* South-Korea-flag.png */,
+				4D7F073D20A3C25100764CA3 /* South-Sudan-flag.png */,
+				4D7F06F520A3C22300764CA3 /* Spain-flag.png */,
+				4D7F069220A3C1E000764CA3 /* Sri-Lanka-flag.png */,
+				4D7F068C20A3C1DA00764CA3 /* Sudan-flag.png */,
+				4D7F072A20A3C24500764CA3 /* Suriname-flag.png */,
+				4D7F073820A3C24D00764CA3 /* Swaziland-flag.png */,
+				4D7F06A620A3C1F100764CA3 /* Sweden-flag.png */,
+				4D7F071920A3C23A00764CA3 /* Switzerland-flag.png */,
+				4D7F072020A3C23E00764CA3 /* Syria-flag.png */,
+				4D7F06F820A3C22500764CA3 /* Tajikistan-flag.png */,
+				4D7F06F120A3C22000764CA3 /* Tanzania-flag.png */,
+				4D7F06EE20A3C21F00764CA3 /* Thailand-flag.png */,
+				4D7F070120A3C22B00764CA3 /* The-Gambia-flag.png */,
+				4D7F074120A3C25300764CA3 /* Timor-Leste-flag.png */,
+				4D7F069E20A3C1EC00764CA3 /* Togo-flag.png */,
+				4D7F06C920A3C20700764CA3 /* Tonga-flag.png */,
+				4D7F074320A3C25500764CA3 /* Trinidad-and-Tobago-flag.png */,
+				4D7F069320A3C1E100764CA3 /* Tunisia-flag.png */,
+				4D7F072920A3C24400764CA3 /* Turkey-flag.png */,
+				4D7F06FE20A3C22900764CA3 /* Turkmenistan-flag.png */,
+				4D7F06DA20A3C21200764CA3 /* Tuvalu-flag.png */,
+				4D7F06C120A3C20200764CA3 /* Uganda-flag.png */,
+				4D7F069420A3C1E300764CA3 /* Ukraine-flag.png */,
+				4D7F072220A3C24000764CA3 /* United-Arab-Emirates-flag.png */,
+				4D7F071B20A3C23B00764CA3 /* Uruguay-flag.png */,
+				4D7F074B20A3C25A00764CA3 /* USA-flag.png */,
+				4D7F06C720A3C20600764CA3 /* Uzbekistan-flag.png */,
+				4D7F06B920A3C1FD00764CA3 /* Vanuatu-flag.png */,
+				4D7F06AB20A3C1F400764CA3 /* Venezuela-flag.png */,
+				4D7F06CA20A3C20700764CA3 /* Vietnam-flag.png */,
+				4D7F06E220A3C21700764CA3 /* Virgin-Island-flag.png */,
+				4D7F070C20A3C23100764CA3 /* Yemen-flag.png */,
+				4D7F071420A3C23700764CA3 /* Zambia-flag.png */,
+				4D7F073B20A3C24F00764CA3 /* Zimbabwe-flag.png */,
+			);
+			path = Flags;
+			sourceTree = "<group>";
+		};
+		4D7F068520A3C09600764CA3 /* Tab Icons */ = {
+			isa = PBXGroup;
+			children = (
+				4D7F067B20A3ADC300764CA3 /* id-card.png */,
+				4D7F067520A3ADAF00764CA3 /* love.png */,
+				4D7F067720A3ADB600764CA3 /* soccer.png */,
+				4D7F067920A3ADBC00764CA3 /* info.png */,
+				4D7F067D20A3AE6100764CA3 /* man.png */,
+			);
+			path = "Tab Icons";
+			sourceTree = "<group>";
+		};
+		4D7F068620A3C0BC00764CA3 /* Backgrounds */ = {
+			isa = PBXGroup;
+			children = (
+				4DFE624A20A3441400A601B7 /* login_background.jpg */,
+				4D7F068020A3B6CE00764CA3 /* playersTableBackground.jpeg */,
+			);
+			path = Backgrounds;
+			sourceTree = "<group>";
+		};
+		4DFF6A9020A3DB2A00FDC35B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4DFF6A8E20A3DA6700FDC35B /* Team.swift */,
+				4DFF6A9720A4259200FDC35B /* PagedTeam.swift */,
+				4DFF6A9920A42DA500FDC35B /* DetailedPlayer.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		B877834DF90D3DF1A6D2CED7 /* Pods */ = {
@@ -173,11 +901,222 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D7F07F020A3C25F00764CA3 /* Malaysia-flag.png in Resources */,
+				4D7F075920A3C25F00764CA3 /* Sao-Tome-and-Principe-flag.png in Resources */,
+				4D7F079220A3C25F00764CA3 /* Portugal-flag.png in Resources */,
+				4D7F07BD20A3C25F00764CA3 /* Tanzania-flag.png in Resources */,
+				4D7F07FF20A3C25F00764CA3 /* Bangladesh-flag.png in Resources */,
+				4D7F081720A3C25F00764CA3 /* USA-flag.png in Resources */,
+				4D7F07A020A3C25F00764CA3 /* Kiribati-flag.png in Resources */,
+				4D7F076120A3C25F00764CA3 /* Niger-flag.png in Resources */,
+				4D7F079720A3C25F00764CA3 /* Russia-flag.png in Resources */,
+				4D7F076520A3C25F00764CA3 /* Chile-flag.png in Resources */,
+				4D7F07AA20A3C25F00764CA3 /* Marshall-Islands-flag.png in Resources */,
+				4D7F075420A3C25F00764CA3 /* Albania-flag.png in Resources */,
+				4D7F07E020A3C25F00764CA3 /* Zambia-flag.png in Resources */,
+				4D7F07F720A3C25F00764CA3 /* Costa-Rica-flag.png in Resources */,
+				4D7F076A20A3C25F00764CA3 /* Togo-flag.png in Resources */,
+				4D7F07D520A3C25F00764CA3 /* Equatorial-Guinea-flag.png in Resources */,
+				4D7F07B520A3C25F00764CA3 /* Botswana-flag.png in Resources */,
+				4D7F078320A3C25F00764CA3 /* Dominica-flag.png in Resources */,
+				4D7F076E20A3C25F00764CA3 /* Croatia-flag.png in Resources */,
+				4D7F07A620A3C25F00764CA3 /* Tuvalu-flag.png in Resources */,
 				4D325C1120A2509F00A6D086 /* LaunchScreen.storyboard in Resources */,
+				4D7F080B20A3C25F00764CA3 /* Solomon-Islands-flag.png in Resources */,
+				4D7F079820A3C25F00764CA3 /* Rwanda-flag.png in Resources */,
+				4D7F07EE20A3C25F00764CA3 /* United-Arab-Emirates-flag.png in Resources */,
+				4D7F07E720A3C25F00764CA3 /* Uruguay-flag.png in Resources */,
+				4D7F07AC20A3C25F00764CA3 /* Bermuda-flag.png in Resources */,
+				4D7F07EA20A3C25F00764CA3 /* Malawi-flag.png in Resources */,
+				4D7F07C820A3C25F00764CA3 /* Papua-New-Guinea-flag.png in Resources */,
+				4D7F07E120A3C25F00764CA3 /* Canada-flag.png in Resources */,
+				4D7F075C20A3C25F00764CA3 /* Lebanon-flag.png in Resources */,
+				4D7F080F20A3C25F00764CA3 /* Trinidad-and-Tobago-flag.png in Resources */,
+				4D7F080220A3C25F00764CA3 /* Lesotho-flag.png in Resources */,
+				4D7F075A20A3C25F00764CA3 /* Czechoslovakia-flag.png in Resources */,
+				4D7F076820A3C25F00764CA3 /* Bahamas-flag.png in Resources */,
+				4D7F07F420A3C25F00764CA3 /* South-Korea-flag.png in Resources */,
+				4D7F07F320A3C25F00764CA3 /* Belize-flag.png in Resources */,
+				4D7F080120A3C25F00764CA3 /* Ivory-Coast-flag.png in Resources */,
+				4D7F07EB20A3C25F00764CA3 /* Angola-flag.png in Resources */,
+				4D7F080420A3C25F00764CA3 /* Swaziland-flag.png in Resources */,
+				4D7F07DC20A3C25F00764CA3 /* Seychelles-flag.png in Resources */,
+				4D7F07B420A3C25F00764CA3 /* North-Korea-flag.png in Resources */,
+				4D7F081320A3C25F00764CA3 /* Bosnia-and-Herzegovina-flag.png in Resources */,
 				4D325C0E20A2509F00A6D086 /* Assets.xcassets in Resources */,
+				4D7F068320A3C07000764CA3 /* Afghanistan-flag.png in Resources */,
+				4D7F07C220A3C25F00764CA3 /* Liechtenstein-flag.png in Resources */,
+				4D7F075720A3C25F00764CA3 /* Andorra-flag.png in Resources */,
+				4D7F079F20A3C25F00764CA3 /* Georgia-flag.png in Resources */,
+				4D7F07DD20A3C25F00764CA3 /* Bolivia-flag.png in Resources */,
+				4D7F081620A3C25F00764CA3 /* Bahrain-flag.png in Resources */,
+				4D7F078F20A3C25F00764CA3 /* Kosovo-flag.png in Resources */,
+				4D7F07AE20A3C25F00764CA3 /* Virgin-Island-flag.png in Resources */,
+				4D7F07D120A3C25F00764CA3 /* Serbia-flag.png in Resources */,
+				4D7F078420A3C25F00764CA3 /* Mali-flag.png in Resources */,
+				4D7F07C720A3C25F00764CA3 /* Namibia-flag.png in Resources */,
 				4DFE624D20A349F900A601B7 /* GoogleService-Info.plist in Resources */,
+				4D7F081420A3C25F00764CA3 /* Fiji-flag.png in Resources */,
+				4D7F078D20A3C25F00764CA3 /* Uganda-flag.png in Resources */,
+				4D7F07BF20A3C25F00764CA3 /* Congo-flag.png in Resources */,
+				4D7F067C20A3ADC300764CA3 /* id-card.png in Resources */,
+				4D7F07B120A3C25F00764CA3 /* Denmark-flag.png in Resources */,
+				4D7F07CA20A3C25F00764CA3 /* Turkmenistan-flag.png in Resources */,
+				4D7F07E320A3C25F00764CA3 /* Australia-flag.png in Resources */,
+				4D7F077F20A3C25F00764CA3 /* Ethiopia-flag.png in Resources */,
+				4D7F07F920A3C25F00764CA3 /* Puerto-Rico-flag.png in Resources */,
+				4D7F080C20A3C25F00764CA3 /* Senegal-flag.png in Resources */,
+				4D7F076720A3C25F00764CA3 /* Argentina.png in Resources */,
+				4D7F081D20A3C25F00764CA3 /* China-flag.png in Resources */,
+				4D7F078020A3C25F00764CA3 /* Ecuador-flag.png in Resources */,
+				4D7F07E420A3C25F00764CA3 /* Haiti-flag.png in Resources */,
+				4D7F079E20A3C25F00764CA3 /* Cape-Verde-flag.png in Resources */,
+				4D7F07E620A3C25F00764CA3 /* Burkina-Faso-flag.png in Resources */,
+				4D7F07DE20A3C25F00764CA3 /* Djibouti-flag.png in Resources */,
+				4D7F07AF20A3C25F00764CA3 /* Gabon-flag.png in Resources */,
+				4D7F07E520A3C25F00764CA3 /* Switzerland-flag.png in Resources */,
+				4D7F079D20A3C25F00764CA3 /* Norway-flag.png in Resources */,
+				4D7F07B920A3C25F00764CA3 /* Nauru-flag.png in Resources */,
+				4D7F07D820A3C25F00764CA3 /* Yemen-flag.png in Resources */,
+				4D7F07D220A3C25F00764CA3 /* Colombia-flag.png in Resources */,
+				4D7F081E20A3C25F00764CA3 /* Monaco-flag.png in Resources */,
 				4D325C0C20A2509C00A6D086 /* Main.storyboard in Resources */,
+				4D7F076020A3C25F00764CA3 /* Ukraine-flag.png in Resources */,
+				4D7F07BA20A3C25F00764CA3 /* Thailand-flag.png in Resources */,
+				4D7F078A20A3C25F00764CA3 /* Indonesia-flag.png in Resources */,
+				4D7F07A720A3C25F00764CA3 /* Guinea-Bissau-flag.png in Resources */,
 				4DFE624B20A3441400A601B7 /* login_background.jpg in Resources */,
+				4D7F07A420A3C25F00764CA3 /* Austria-flag.png in Resources */,
+				4D7F078720A3C25F00764CA3 /* San-Marino-flag.png in Resources */,
+				4D7F07FB20A3C25F00764CA3 /* Ghana-flag.png in Resources */,
+				4D7F07F220A3C25F00764CA3 /* Netherlands-flag.png in Resources */,
+				4D7F07FC20A3C25F00764CA3 /* New-Zealand-flag.png in Resources */,
+				4D7F077D20A3C25F00764CA3 /* Brazil-flag.png in Resources */,
+				4D7F077820A3C25F00764CA3 /* Paraguay-flag.png in Resources */,
+				4D7F079620A3C25F00764CA3 /* Vietnam-flag.png in Resources */,
+				4D7F078620A3C25F00764CA3 /* Chinese-Taipei-flag.png in Resources */,
+				4D7F078220A3C25F00764CA3 /* England-flag.png in Resources */,
+				4D7F067E20A3AE6100764CA3 /* man.png in Resources */,
+				4D7F079320A3C25F00764CA3 /* Uzbekistan-flag.png in Resources */,
+				4D7F076D20A3C25F00764CA3 /* Great-Britain-flag.png in Resources */,
+				4D7F07C320A3C25F00764CA3 /* Latvia-flag.png in Resources */,
+				4D7F068120A3B6CF00764CA3 /* playersTableBackground.jpeg in Resources */,
+				4D7F079520A3C25F00764CA3 /* Tonga-flag.png in Resources */,
+				4D7F07BE20A3C25F00764CA3 /* Barbados-flag.png in Resources */,
+				4D7F077C20A3C25F00764CA3 /* Madagascar-flag.png in Resources */,
+				4D7F078920A3C25F00764CA3 /* Burundi.png in Resources */,
+				4D7F076F20A3C25F00764CA3 /* Eritrea-Flag.png in Resources */,
+				4D7F07CF20A3C25F00764CA3 /* Aruba.png in Resources */,
+				4D7F07C020A3C25F00764CA3 /* Singapore-flag.png in Resources */,
+				4D7F07D320A3C25F00764CA3 /* Liberia-flag.png in Resources */,
+				4D7F07D720A3C25F00764CA3 /* Finland-flag.png in Resources */,
+				4D7F07C420A3C25F00764CA3 /* Tajikistan-flag.png in Resources */,
+				4D7F081020A3C25F00764CA3 /* Belarus-flag.png in Resources */,
+				4D7F075E20A3C25F00764CA3 /* Sri-Lanka-flag.png in Resources */,
+				4D7F076920A3C25F00764CA3 /* Kuwait-flag.png in Resources */,
+				4D7F07A120A3C25F00764CA3 /* Sierra-Leone-flag.png in Resources */,
+				4D7F080720A3C25F00764CA3 /* Zimbabwe-flag.png in Resources */,
+				4D7F07C520A3C25F00764CA3 /* Macedonia-flag.png in Resources */,
+				4D7F076C20A3C25F00764CA3 /* Grenada-flag.png in Resources */,
+				4D7F076420A3C25F00764CA3 /* Armenia.png in Resources */,
+				4D7F07F520A3C25F00764CA3 /* Turkey-flag.png in Resources */,
+				4D7F080A20A3C25F00764CA3 /* Israel-flag.png in Resources */,
+				4D7F07FA20A3C25F00764CA3 /* Iceland-flag.png in Resources */,
+				4D7F07DA20A3C25F00764CA3 /* Mexico-flag.png in Resources */,
+				4D7F07D920A3C25F00764CA3 /* Bhutan-flag.png in Resources */,
+				4D7F078B20A3C25F00764CA3 /* Belgium-flag.png in Resources */,
+				4D7F07ED20A3C25F00764CA3 /* Maldives-flag.png in Resources */,
+				4D7F07A920A3C25F00764CA3 /* Germany-flag.png in Resources */,
+				4D7F076220A3C25F00764CA3 /* Slovakia-flag.png in Resources */,
+				4D7F07CC20A3C25F00764CA3 /* Comoros-flag.png in Resources */,
+				4D7F080520A3C25F00764CA3 /* DR-Congo-flag.png in Resources */,
+				4D7F081A20A3C25F00764CA3 /* Poland-flag.png in Resources */,
+				4D7F07E820A3C25F00764CA3 /* Kenya-flag.png in Resources */,
+				4D7F07B820A3C25F00764CA3 /* Panama-flag.png in Resources */,
+				4D7F07B020A3C25F00764CA3 /* Central-African-Republic-Flag.png in Resources */,
+				4D7F078C20A3C25F00764CA3 /* Kazakhstan-flag.png in Resources */,
+				4D7F075320A3C25F00764CA3 /* Mongolia-flag.png in Resources */,
+				4D7F07CE20A3C25F00764CA3 /* Lithuania-flag.png in Resources */,
+				4D7F075B20A3C25F00764CA3 /* Antigua-and-Barbuda-flag.png in Resources */,
+				4D7F075520A3C25F00764CA3 /* Nepal-flag.png in Resources */,
+				4D7F07A220A3C25F00764CA3 /* Bulgaria-flag.png in Resources */,
+				4D7F07AD20A3C25F00764CA3 /* Mozambique-flag.png in Resources */,
+				4D7F079A20A3C25F00764CA3 /* Nigeria-flag.png in Resources */,
+				4D7F07A520A3C25F00764CA3 /* Hungary-flag.png in Resources */,
+				4D7F07D020A3C25F00764CA3 /* Guam-flag.png in Resources */,
+				4D7F075620A3C25F00764CA3 /* Morocco-flag.png in Resources */,
+				4D7F067820A3ADB600764CA3 /* soccer.png in Resources */,
+				4D7F07D620A3C25F00764CA3 /* Oman-flag.png in Resources */,
+				4D7F079020A3C25F00764CA3 /* Guatemala-flag.png in Resources */,
+				4D7F077420A3C25F00764CA3 /* Cyprus-flag.png in Resources */,
+				4D7F077E20A3C25F00764CA3 /* Saint-Kitts-and-Nevis-flag.png in Resources */,
+				4D7F077620A3C25F00764CA3 /* Guinea-flag.png in Resources */,
+				4D7F080820A3C25F00764CA3 /* Slovenia-flag.png in Resources */,
+				4D7F07B320A3C25F00764CA3 /* Nicaragua-flag.png in Resources */,
+				4D7F07C120A3C25F00764CA3 /* Spain-flag.png in Resources */,
+				4D7F07B720A3C25F00764CA3 /* Pakistan-flag.png in Resources */,
+				4D7F07CD20A3C25F00764CA3 /* The-Gambia-flag.png in Resources */,
+				4D7F077B20A3C25F00764CA3 /* Peru-flag.png in Resources */,
+				4D7F079920A3C25F00764CA3 /* Honduras-flag.png in Resources */,
+				4D7F077720A3C25F00764CA3 /* Venezuela-flag.png in Resources */,
+				4D7F07EF20A3C25F00764CA3 /* Iraq-flag.png in Resources */,
+				4D7F077520A3C25F00764CA3 /* Greece-flag.png in Resources */,
+				4D7F07FD20A3C25F00764CA3 /* Saint-Vincent-and-the-Grenadines-flag.png in Resources */,
+				4D7F07BC20A3C25F00764CA3 /* Myanmar-flag.png in Resources */,
+				4D7F077120A3C25F00764CA3 /* Moldova-flag.png in Resources */,
+				4D7F07A820A3C25F00764CA3 /* Mauritius-flag.png in Resources */,
+				4D7F07B220A3C25F00764CA3 /* El-Salvador-flag.png in Resources */,
+				4D7F07F120A3C25F00764CA3 /* Japan-flag.png in Resources */,
+				4D7F080620A3C25F00764CA3 /* France-flag.png in Resources */,
+				4D7F075D20A3C25F00764CA3 /* Saint-Lucia-flag.png in Resources */,
+				4D7F07D420A3C25F00764CA3 /* Jamaica-flag.png in Resources */,
+				4D7F07DF20A3C25F00764CA3 /* Saudi-Arabia-flag.png in Resources */,
+				4D7F080E20A3C25F00764CA3 /* Ireland-flag.png in Resources */,
+				4D7F07FE20A3C25F00764CA3 /* Guyana-flag.png in Resources */,
+				4D7F07CB20A3C25F00764CA3 /* Luxembourg-flag.png in Resources */,
+				4D7F077920A3C25F00764CA3 /* Jordan-flag.png in Resources */,
+				4D7F081220A3C25F00764CA3 /* Scotland-flag.png in Resources */,
+				4D7F077A20A3C25F00764CA3 /* British-Virgin-Islands-flag.png in Resources */,
+				4D7F07F820A3C25F00764CA3 /* Cuba-flag.png in Resources */,
+				4D7F077220A3C25F00764CA3 /* Sweden-flag.png in Resources */,
+				4D7F079B20A3C25F00764CA3 /* Palau-flag.png in Resources */,
+				4D7F080D20A3C25F00764CA3 /* Timor-Leste-flag.png in Resources */,
+				4D7F080320A3C25F00764CA3 /* Egypt-flag.png in Resources */,
+				4D7F081C20A3C25F00764CA3 /* Algeria-flag.png in Resources */,
+				4D7F07C620A3C25F00764CA3 /* Montenegro-flag.png in Resources */,
+				4D7F07E220A3C25F00764CA3 /* Palestine-flag.png in Resources */,
+				4D7F075820A3C25F00764CA3 /* Sudan-flag.png in Resources */,
+				4D7F07DB20A3C25F00764CA3 /* Italy-flag.png in Resources */,
+				4D7F075F20A3C25F00764CA3 /* Tunisia-flag.png in Resources */,
+				4D7F078120A3C25F00764CA3 /* Cambodia-flag.png in Resources */,
+				4D7F076B20A3C25F00764CA3 /* Hong-Kong-flag.png in Resources */,
+				4D7F077320A3C25F00764CA3 /* Malta-flag.png in Resources */,
+				4D7F081920A3C25F00764CA3 /* South-Africa-flag.png in Resources */,
+				4D7F067620A3ADAF00764CA3 /* love.png in Resources */,
+				4D7F080920A3C25F00764CA3 /* South-Sudan-flag.png in Resources */,
+				4D7F07E920A3C25F00764CA3 /* Benin-flag.png in Resources */,
+				4D7F079420A3C25F00764CA3 /* Samoa-flag.png in Resources */,
+				4D7F07BB20A3C25F00764CA3 /* Brunei-flag.png in Resources */,
+				4D7F07AB20A3C25F00764CA3 /* Iran-flag.png in Resources */,
+				4D7F076320A3C25F00764CA3 /* Dominican-Republic-flag.png in Resources */,
+				4D7F079120A3C25F00764CA3 /* Somalia-flag.png in Resources */,
+				4D7F07B620A3C25F00764CA3 /* Chad-flag.png in Resources */,
+				4D7F07EC20A3C25F00764CA3 /* Syria-flag.png in Resources */,
+				4D7F080020A3C25F00764CA3 /* Estonia-flag.png in Resources */,
+				4D7F078520A3C25F00764CA3 /* Vanuatu-flag.png in Resources */,
+				4D7F081120A3C25F00764CA3 /* Mauritania-flag.png in Resources */,
+				4D7F078820A3C25F00764CA3 /* Laos-flag.png in Resources */,
+				4D7F078E20A3C25F00764CA3 /* Azerbaijan-flag.png in Resources */,
+				4D7F081820A3C25F00764CA3 /* Cayman-Islands-flag.png in Resources */,
+				4D7F081B20A3C25F00764CA3 /* India-flag.png in Resources */,
+				4D7F077020A3C25F00764CA3 /* Qatar-flag.png in Resources */,
+				4D7F079C20A3C25F00764CA3 /* Romania-flag.png in Resources */,
+				4D7F081520A3C25F00764CA3 /* Libya-flag.png in Resources */,
+				4D7F067A20A3ADBC00764CA3 /* info.png in Resources */,
+				4D7F07C920A3C25F00764CA3 /* Philippines-flag.png in Resources */,
+				4D7F07A320A3C25F00764CA3 /* Kyrgyzstan-flag.png in Resources */,
+				4D7F076620A3C25F00764CA3 /* Cameroon-flag.png in Resources */,
+				4D7F07F620A3C25F00764CA3 /* Suriname-flag.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,14 +1148,30 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Goals For Good/Pods-Goals For Good-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary/RxLibrary.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxLibrary.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -231,9 +1186,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D325C0920A2509C00A6D086 /* ViewController.swift in Sources */,
+				4DFF6A9A20A42DA500FDC35B /* DetailedPlayer.swift in Sources */,
+				4D53475720A36EFA008EACB9 /* ProfileViewController.swift in Sources */,
+				4D325C0920A2509C00A6D086 /* LoginViewController.swift in Sources */,
+				4DFF6A8F20A3DA6700FDC35B /* Team.swift in Sources */,
 				4D325C0720A2509C00A6D086 /* AppDelegate.swift in Sources */,
-				4D25137420A35275005BFAC9 /* UserValidator.swift in Sources */,
+				4D7F066F20A380E200764CA3 /* UserProfileService.swift in Sources */,
+				4D7F082220A3C9CA00764CA3 /* NetworkingService.swift in Sources */,
+				4DFF6A9220A3E44D00FDC35B /* CharitiesViewController.swift in Sources */,
+				4DFF6A9820A4259200FDC35B /* PagedTeam.swift in Sources */,
+				4D7F082020A3C6B800764CA3 /* PlayerCellViewController.swift in Sources */,
+				4D53475A20A37E8F008EACB9 /* config.swift in Sources */,
+				4D25137620A352F1005BFAC9 /* UserValidator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
