@@ -502,10 +502,10 @@
 		4D325BFA20A2509C00A6D086 = {
 			isa = PBXGroup;
 			children = (
-				4D325C0520A2509C00A6D086 /* Goals For Good */,
-				4D325C0420A2509C00A6D086 /* Products */,
-				B877834DF90D3DF1A6D2CED7 /* Pods */,
 				FF1ED738571315DEB1AC3D9A /* Frameworks */,
+				4D325C0520A2509C00A6D086 /* Goals For Good */,
+				B877834DF90D3DF1A6D2CED7 /* Pods */,
+				4D325C0420A2509C00A6D086 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -520,15 +520,15 @@
 		4D325C0520A2509C00A6D086 /* Goals For Good */ = {
 			isa = PBXGroup;
 			children = (
+				4D7F067020A38BB900764CA3 /* Controllers */,
+				4DFF6A9020A3DB2A00FDC35B /* Models */,
+				4D53474C20A359AD008EACB9 /* Services */,
+				4D325C1820A250F700A6D086 /* Supporting Files */,
+				4D25137320A350E4005BFAC9 /* Validators */,
+				4D325C1220A2509F00A6D086 /* Info.plist */,
+				4D325C0A20A2509C00A6D086 /* Main.storyboard */,
 				4D53475820A3783C008EACB9 /* README.md */,
 				4D53475920A37E8F008EACB9 /* config.swift */,
-				4D325C0A20A2509C00A6D086 /* Main.storyboard */,
-				4D325C1220A2509F00A6D086 /* Info.plist */,
-				4D7F067020A38BB900764CA3 /* Controllers */,
-				4D53474C20A359AD008EACB9 /* Services */,
-				4DFF6A9020A3DB2A00FDC35B /* Models */,
-				4D25137320A350E4005BFAC9 /* Validators */,
-				4D325C1820A250F700A6D086 /* Supporting Files */,
 			);
 			path = "Goals For Good";
 			sourceTree = "<group>";
@@ -536,11 +536,11 @@
 		4D325C1820A250F700A6D086 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				4DFE624C20A349F900A601B7 /* GoogleService-Info.plist */,
-				4D325C0F20A2509F00A6D086 /* LaunchScreen.storyboard */,
+				4D7F067F20A3AE6B00764CA3 /* Images */,
 				4D325C0620A2509C00A6D086 /* AppDelegate.swift */,
 				4D325C0D20A2509F00A6D086 /* Assets.xcassets */,
-				4D7F067F20A3AE6B00764CA3 /* Images */,
+				4DFE624C20A349F900A601B7 /* GoogleService-Info.plist */,
+				4D325C0F20A2509F00A6D086 /* LaunchScreen.storyboard */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -548,33 +548,33 @@
 		4D53474C20A359AD008EACB9 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				4D7F066E20A380E200764CA3 /* UserProfileService.swift */,
 				4D7F082120A3C9CA00764CA3 /* NetworkingService.swift */,
+				4D7F066E20A380E200764CA3 /* UserProfileService.swift */,
 			);
 			name = Services;
-			path = ..;
+			path = Services;
 			sourceTree = "<group>";
 		};
 		4D7F067020A38BB900764CA3 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				4D7F081F20A3C6B800764CA3 /* PlayerCellViewController.swift */,
-				4D325C0820A2509C00A6D086 /* LoginViewController.swift */,
-				4D53475620A36EFA008EACB9 /* ProfileViewController.swift */,
 				4DFF6A9120A3E44D00FDC35B /* CharitiesViewController.swift */,
-				4DFF6A9B20A4CA8800FDC35B /* PlayersViewController.swift */,
+				4D325C0820A2509C00A6D086 /* LoginViewController.swift */,
+				4D7F081F20A3C6B800764CA3 /* PlayerCellViewController.swift */,
 				4DFF6A9D20A57E4800FDC35B /* PlayerDetailsViewController.swift */,
+				4DFF6A9B20A4CA8800FDC35B /* PlayersViewController.swift */,
+				4D53475620A36EFA008EACB9 /* ProfileViewController.swift */,
 			);
 			name = Controllers;
-			path = ..;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		4D7F067F20A3AE6B00764CA3 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				4D7F068520A3C09600764CA3 /* Tab Icons */,
 				4D7F068620A3C0BC00764CA3 /* Backgrounds */,
 				4D7F068420A3C08500764CA3 /* Flags */,
+				4D7F068520A3C09600764CA3 /* Tab Icons */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -631,11 +631,11 @@
 				4D7F072C20A3C24600764CA3 /* Cuba-flag.png */,
 				4D7F06A820A3C1F200764CA3 /* Cyprus-flag.png */,
 				4D7F068E20A3C1DC00764CA3 /* Czechoslovakia-flag.png */,
+				4D7F073920A3C24E00764CA3 /* DR-Congo-flag.png */,
 				4D7F06E520A3C21900764CA3 /* Denmark-flag.png */,
 				4D7F071220A3C23500764CA3 /* Djibouti-flag.png */,
 				4D7F06B720A3C1FC00764CA3 /* Dominica-flag.png */,
 				4D7F069720A3C1E600764CA3 /* Dominican-Republic-flag.png */,
-				4D7F073920A3C24E00764CA3 /* DR-Congo-flag.png */,
 				4D7F06B420A3C1FA00764CA3 /* Ecuador-flag.png */,
 				4D7F073720A3C24D00764CA3 /* Egypt-flag.png */,
 				4D7F06E620A3C21A00764CA3 /* El-Salvador-flag.png */,
@@ -774,11 +774,11 @@
 				4D7F072920A3C24400764CA3 /* Turkey-flag.png */,
 				4D7F06FE20A3C22900764CA3 /* Turkmenistan-flag.png */,
 				4D7F06DA20A3C21200764CA3 /* Tuvalu-flag.png */,
+				4D7F074B20A3C25A00764CA3 /* USA-flag.png */,
 				4D7F06C120A3C20200764CA3 /* Uganda-flag.png */,
 				4D7F069420A3C1E300764CA3 /* Ukraine-flag.png */,
 				4D7F072220A3C24000764CA3 /* United-Arab-Emirates-flag.png */,
 				4D7F071B20A3C23B00764CA3 /* Uruguay-flag.png */,
-				4D7F074B20A3C25A00764CA3 /* USA-flag.png */,
 				4D7F06C720A3C20600764CA3 /* Uzbekistan-flag.png */,
 				4D7F06B920A3C1FD00764CA3 /* Vanuatu-flag.png */,
 				4D7F06AB20A3C1F400764CA3 /* Venezuela-flag.png */,
@@ -795,10 +795,10 @@
 			isa = PBXGroup;
 			children = (
 				4D7F067B20A3ADC300764CA3 /* id-card.png */,
-				4D7F067520A3ADAF00764CA3 /* love.png */,
-				4D7F067720A3ADB600764CA3 /* soccer.png */,
 				4D7F067920A3ADBC00764CA3 /* info.png */,
+				4D7F067520A3ADAF00764CA3 /* love.png */,
 				4D7F067D20A3AE6100764CA3 /* man.png */,
+				4D7F067720A3ADB600764CA3 /* soccer.png */,
 			);
 			path = "Tab Icons";
 			sourceTree = "<group>";
@@ -815,9 +815,9 @@
 		4DFF6A9020A3DB2A00FDC35B /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				4DFF6A8E20A3DA6700FDC35B /* Team.swift */,
-				4DFF6A9720A4259200FDC35B /* PagedTeam.swift */,
 				4DFF6A9920A42DA500FDC35B /* DetailedPlayer.swift */,
+				4DFF6A9720A4259200FDC35B /* PagedTeam.swift */,
+				4DFF6A8E20A3DA6700FDC35B /* Team.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1210,6 +1210,7 @@
 				4D325C0B20A2509C00A6D086 /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		4D325C0F20A2509F00A6D086 /* LaunchScreen.storyboard */ = {
@@ -1218,6 +1219,7 @@
 				4D325C1020A2509F00A6D086 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -1345,10 +1347,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6TGDJ7X5CN;
 				INFOPLIST_FILE = "Goals For Good/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ahmed.Goals-For-Good";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -1364,10 +1363,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6TGDJ7X5CN;
 				INFOPLIST_FILE = "Goals For Good/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ahmed.Goals-For-Good";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
