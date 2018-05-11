@@ -61,6 +61,8 @@ struct PagedTeam: Decodable {
     }
     
     // represents a team's stats over a season
+    
+    
     struct Stats:Decodable {
         let rank:                           String?
         let wins:                           String?
@@ -86,6 +88,7 @@ struct PagedTeam: Decodable {
         let avg_goals_per_game_scored_away: String?
         
     }
+ 
     
     let team_id:        String?
     let is_national:    String?
@@ -105,5 +108,5 @@ struct PagedTeam: Decodable {
     let sidelined:      [SidelinedPlayer]?
     let transfers_in:   [TransferredIn]?
     let transfers_out:  [TransferredOut]?
-    let statistics:     Stats?
+    let statistics:     [Stats]?
 }

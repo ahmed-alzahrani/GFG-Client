@@ -12,8 +12,8 @@ import UIKit
 class CharitiesViewController: UIViewController {
     
     @IBAction func HitMeTapped(_ sender: UIButton) {
-        print("About to call Networking Services getTeams()!")
-        NetworkingService.shared.getTeams()
-        
+        print("About to call Networking Services getMePlayers()!")
+       // let players = NetworkingService.shared.getMePlayers()
+       // print(players.count)
     }
 }

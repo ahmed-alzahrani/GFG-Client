@@ -236,6 +236,8 @@
 		4DFF6A9220A3E44D00FDC35B /* CharitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFF6A9120A3E44D00FDC35B /* CharitiesViewController.swift */; };
 		4DFF6A9820A4259200FDC35B /* PagedTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFF6A9720A4259200FDC35B /* PagedTeam.swift */; };
 		4DFF6A9A20A42DA500FDC35B /* DetailedPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFF6A9920A42DA500FDC35B /* DetailedPlayer.swift */; };
+		4DFF6A9C20A4CA8800FDC35B /* PlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFF6A9B20A4CA8800FDC35B /* PlayersViewController.swift */; };
+		4DFF6A9E20A57E4800FDC35B /* PlayerDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFF6A9D20A57E4800FDC35B /* PlayerDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -471,6 +473,8 @@
 		4DFF6A9120A3E44D00FDC35B /* CharitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharitiesViewController.swift; sourceTree = "<group>"; };
 		4DFF6A9720A4259200FDC35B /* PagedTeam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagedTeam.swift; sourceTree = "<group>"; };
 		4DFF6A9920A42DA500FDC35B /* DetailedPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedPlayer.swift; sourceTree = "<group>"; };
+		4DFF6A9B20A4CA8800FDC35B /* PlayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersViewController.swift; sourceTree = "<group>"; };
+		4DFF6A9D20A57E4800FDC35B /* PlayerDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDetailsViewController.swift; sourceTree = "<group>"; };
 		C41E259777F0B2A46E0721E5 /* Pods-Goals For Good.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Goals For Good.release.xcconfig"; path = "Pods/Target Support Files/Pods-Goals For Good/Pods-Goals For Good.release.xcconfig"; sourceTree = "<group>"; };
 		F74311942C73164F5DD5DE05 /* Pods_Goals_For_Good.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Goals_For_Good.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -551,21 +555,15 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
-		4D53474F20A36561008EACB9 /* View Controllers */ = {
+		4D7F067020A38BB900764CA3 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				4D7F081F20A3C6B800764CA3 /* PlayerCellViewController.swift */,
 				4D325C0820A2509C00A6D086 /* LoginViewController.swift */,
 				4D53475620A36EFA008EACB9 /* ProfileViewController.swift */,
 				4DFF6A9120A3E44D00FDC35B /* CharitiesViewController.swift */,
-			);
-			path = "View Controllers";
-			sourceTree = "<group>";
-		};
-		4D7F067020A38BB900764CA3 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				4D53474F20A36561008EACB9 /* View Controllers */,
+				4DFF6A9B20A4CA8800FDC35B /* PlayersViewController.swift */,
+				4DFF6A9D20A57E4800FDC35B /* PlayerDetailsViewController.swift */,
 			);
 			name = Controllers;
 			path = ..;
@@ -1186,6 +1184,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DFF6A9C20A4CA8800FDC35B /* PlayersViewController.swift in Sources */,
 				4DFF6A9A20A42DA500FDC35B /* DetailedPlayer.swift in Sources */,
 				4D53475720A36EFA008EACB9 /* ProfileViewController.swift in Sources */,
 				4D325C0920A2509C00A6D086 /* LoginViewController.swift in Sources */,
@@ -1195,6 +1194,7 @@
 				4D7F082220A3C9CA00764CA3 /* NetworkingService.swift in Sources */,
 				4DFF6A9220A3E44D00FDC35B /* CharitiesViewController.swift in Sources */,
 				4DFF6A9820A4259200FDC35B /* PagedTeam.swift in Sources */,
+				4DFF6A9E20A57E4800FDC35B /* PlayerDetailsViewController.swift in Sources */,
 				4D7F082020A3C6B800764CA3 /* PlayerCellViewController.swift in Sources */,
 				4D53475A20A37E8F008EACB9 /* config.swift in Sources */,
 				4D25137620A352F1005BFAC9 /* UserValidator.swift in Sources */,
