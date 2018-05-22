@@ -1,6 +1,0 @@
-framework module Pods_Goals_For_Good {
-  umbrella header "Pods-Goals For Good-umbrella.h"
-
-  export *
-  module * { export * }
-}
