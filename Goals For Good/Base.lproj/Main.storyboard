@@ -472,6 +472,7 @@
         <image name="soccer.png" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="COT-yl-jlg"/>
         <segue reference="98t-J2-uin"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -29,7 +29,7 @@ class PlayerDetailsViewController: UIViewController {
     @IBOutlet weak var heightLabel: UILabel!
     @IBOutlet weak var weightLabel: UILabel!
     
-    var player: DetailedPlayer?
+    var player: Player?
     
     @IBAction func subscribeButton(_ sender: UIButton) {
         if let playerToSubscribe = player {
@@ -50,13 +50,13 @@ class PlayerDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         nameLabel.text = player?.name
-       nationalityLabel.text = player?.nationality
+       nationalityLabel.text = "Nationality"
         ageLabel.text = player?.age
-        birthDateLabel.text = player?.birthdate
+        birthDateLabel.text = "Birth Date"
         positionLabel.text = player?.position
-        birthPlaceLabel.text = player?.birthplace
-        heightLabel.text = player?.height
-        weightLabel.text = player?.weight
+        birthPlaceLabel.text = "Birth Place"
+        heightLabel.text = "Height"
+        weightLabel.text = "Weight"
         
         if ups.amISubscribed(toPlayer: (player?.id)!) {
             unsubscribeButton.isHidden = false

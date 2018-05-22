@@ -15,14 +15,15 @@ class PlayersViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     // these will help us keep the tableView properly populated in the event of a search
-    var players = [DetailedPlayer]()
-    var filteredPlayers = [DetailedPlayer]()
+    var players = [Player]()
+    var filteredPlayers = [Player]()
     
     override func viewDidLoad(){
+        print("viewDidLoad, im calling getMePlayers")
         NetworkingService.shared.getMePlayers(completed: setUpTable)
     }
     
-    private func setUpTable(using: [DetailedPlayer]) {
+    private func setUpTable(using: [Player]) {
         players = using
         filteredPlayers = using
         tableView.rowHeight = 80
@@ -32,7 +33,7 @@ class PlayersViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard segue.identifier == "playerDetails",
         let PlayerDetailsViewController = segue.destination as? PlayerDetailsViewController,
-        let player = sender as AnyObject as? DetailedPlayer
+        let player = sender as AnyObject as? Player
             else { return }
         PlayerDetailsViewController.player = player
     }
@@ -56,10 +57,10 @@ extension PlayersViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PlayerCell", for: indexPath) as! PlayerCellViewController
-        cell.playerNameLabel.text = players[indexPath.row].common_name
+        cell.playerNameLabel.text = players[indexPath.row].name
         cell.positionLabel.text = players[indexPath.row].position
         cell.teamLabel.text = players[indexPath.row].team
-        cell.leagueLabel.text! = "Premier League"
+        cell.leagueLabel.text = players[indexPath.row].league
         print(cell.playerNameLabel.text!)
         return cell
     }
