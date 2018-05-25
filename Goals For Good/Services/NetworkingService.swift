@@ -10,12 +10,12 @@ import Foundation
 import Alamofire
 
 struct NetworkingService {
-    
+
     typealias FinishedDownload = ([Player]) -> ()
     static let shared = NetworkingService()
     private init() {}
-    
-    
+
+
     private func getPlayers(playerCount: Int) -> [Player]{
         var count = 0
         var players = [Player]()
@@ -36,8 +36,8 @@ struct NetworkingService {
                 print("error serializing JSON", jsonErr)
             }
         }.resume()
-        
-        // we can hardCode the count in this func to 17 bc we KNOW we only have access to 17 competitions through api.football-api.com
+
+        // we can hardCode the count in this func to 1 bc we KNOW we only have access to 17 competitions through api.football-api.com but we're currently only using 1
         while (count < 1){
             continue
         }
@@ -46,13 +46,40 @@ struct NetworkingService {
         print("returning the players")
         return players
     }
-    
+
+    private func getPlayerDetails(with: String) -> DetailedPlayer? {
+        var count = 0
+        var player: DetailedPlayer?
+        let urlString = "http://localhost:8080/getPlayer/" + with
+        guard let url = URL(string: urlString) else { return nil }
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
+            guard let data = data else {
+                print("failed getting data")
+                return }
+            do {
+                player = try
+                    JSONDecoder().decode(DetailedPlayer.self, from: data)
+                count += 1
+            } catch let jsonErr {
+                print("error serializing JSON", jsonErr)
+            }
+        }.resume()
+        while (count < 1) {
+            continue
+        }
+        return player
+    }
+
+    // here getMePlayers has a hard-coded player count, maybe an initial call to the server to recieve the player count?
     func getMePlayers(completed: FinishedDownload) {
-        print("calling getPlayers!")
         let players = getPlayers(playerCount: 580)
-        print("calling get players!")
         completed(players)
     }
-}
-    
 
+
+    func getPlayer(withID: String) -> DetailedPlayer? {
+        let player = getPlayerDetails(with: withID)
+        return player
+    }
+
+}

@@ -13,10 +13,10 @@ import FirebaseFirestore
 class LoginViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    
+
     let validator = UserValidator()
     let ups = UserProfileService()
-    
+
     @IBAction func loginTapped(_ sender: UIButton) {
         if let email = emailTextField.text, let password = passwordTextField.text {
             Auth.auth().signIn(withEmail: email, password: password, completion: { (user, error) in
@@ -28,7 +28,7 @@ class LoginViewController: UIViewController {
             })
         }
     }
-    
+
     // user taps create account button
     @IBAction func createAccountTapped(_ sender: UIButton) {
         if let email = emailTextField.text, let password = passwordTextField.text {
@@ -53,4 +53,3 @@ class LoginViewController: UIViewController {
         }
     }
 }
-
