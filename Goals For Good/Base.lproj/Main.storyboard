@@ -115,10 +115,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="H9I-Ej-35p">
-                                <rect key="frame" x="16" y="154" width="343" height="486"/>
+                                <rect key="frame" x="16" y="76" width="343" height="564"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="486" id="Lua-Sw-tG6"/>
+                                    <constraint firstAttribute="height" constant="564" id="Q33-Fu-2gk"/>
                                 </constraints>
                                 <color key="separatorColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -129,42 +129,51 @@
                                             <rect key="frame" x="0.0" y="0.0" width="343" height="73.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="grZ-Ba-gSS">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Player Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="grZ-Ba-gSS">
                                                     <rect key="frame" x="8" y="0.0" width="172" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Position:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vbE-eR-yAi">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Position:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vbE-eR-yAi">
                                                     <rect key="frame" x="8" y="52" width="110" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="League" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="itt-lC-9o9">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="League" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="itt-lC-9o9">
                                                     <rect key="frame" x="206" y="0.0" width="106" height="20"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="106" id="Ly6-Cg-AIp"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Team" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J2h-6O-aLT">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Team" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J2h-6O-aLT">
                                                     <rect key="frame" x="206" y="52" width="106" height="20"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ttP-MV-sdM">
-                                                    <rect key="frame" x="313" y="0.0" width="30" height="20"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="vbE-eR-yAi" firstAttribute="top" secondItem="grZ-Ba-gSS" secondAttribute="bottom" constant="22" id="0mN-be-vGV"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="itt-lC-9o9" secondAttribute="trailing" constant="15" id="DzX-2x-0aS"/>
+                                                <constraint firstItem="grZ-Ba-gSS" firstAttribute="leading" secondItem="PSA-hk-s4X" secondAttribute="leadingMargin" constant="-8" id="MGX-6d-Eev"/>
+                                                <constraint firstItem="vbE-eR-yAi" firstAttribute="centerY" secondItem="J2h-6O-aLT" secondAttribute="centerY" id="ZAg-48-SDT"/>
+                                                <constraint firstItem="vbE-eR-yAi" firstAttribute="top" secondItem="J2h-6O-aLT" secondAttribute="top" id="ZuP-9k-5ro"/>
+                                                <constraint firstItem="itt-lC-9o9" firstAttribute="trailing" secondItem="J2h-6O-aLT" secondAttribute="trailing" id="afT-SP-44T"/>
+                                                <constraint firstItem="itt-lC-9o9" firstAttribute="leading" secondItem="J2h-6O-aLT" secondAttribute="leading" id="mqb-xi-rcI"/>
+                                                <constraint firstItem="itt-lC-9o9" firstAttribute="leading" secondItem="grZ-Ba-gSS" secondAttribute="trailing" constant="26" id="ncN-yy-b8z"/>
+                                                <constraint firstItem="J2h-6O-aLT" firstAttribute="leading" secondItem="vbE-eR-yAi" secondAttribute="trailing" constant="88" id="s5h-qi-9yx"/>
+                                                <constraint firstItem="grZ-Ba-gSS" firstAttribute="top" secondItem="PSA-hk-s4X" secondAttribute="top" id="suu-8R-5lp"/>
+                                                <constraint firstItem="J2h-6O-aLT" firstAttribute="top" secondItem="itt-lC-9o9" secondAttribute="bottom" constant="32" id="tdH-bB-kgU"/>
+                                                <constraint firstItem="grZ-Ba-gSS" firstAttribute="top" secondItem="itt-lC-9o9" secondAttribute="top" id="vY5-Pv-7Pw"/>
+                                                <constraint firstItem="grZ-Ba-gSS" firstAttribute="leading" secondItem="vbE-eR-yAi" secondAttribute="leading" id="wFy-jc-ygQ"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="flagImage" destination="ttP-MV-sdM" id="VQa-5z-mcP"/>
                                             <outlet property="leagueLabel" destination="itt-lC-9o9" id="veu-zG-IqP"/>
                                             <outlet property="playerNameLabel" destination="grZ-Ba-gSS" id="FCi-dO-cgT"/>
                                             <outlet property="positionLabel" destination="vbE-eR-yAi" id="ubd-RG-InA"/>
@@ -178,24 +187,27 @@
                                 </connections>
                             </tableView>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="YIP-If-Jw7">
-                                <rect key="frame" x="16" y="98" width="343" height="56"/>
+                                <rect key="frame" x="16" y="20" width="343" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Pur-eq-izj" id="LL4-GM-TtW"/>
+                                </connections>
                             </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Pu5-bb-3Rq" firstAttribute="bottom" secondItem="H9I-Ej-35p" secondAttribute="bottom" constant="27" id="DiC-b8-9bt"/>
-                            <constraint firstItem="H9I-Ej-35p" firstAttribute="trailing" secondItem="XAg-mZ-PTg" secondAttribute="trailingMargin" id="H6y-Zj-idK"/>
-                            <constraint firstItem="YIP-If-Jw7" firstAttribute="bottom" secondItem="H9I-Ej-35p" secondAttribute="top" id="K45-on-XKq"/>
-                            <constraint firstItem="YIP-If-Jw7" firstAttribute="leading" secondItem="H9I-Ej-35p" secondAttribute="leading" id="Ph4-Jq-g1M"/>
-                            <constraint firstItem="H9I-Ej-35p" firstAttribute="leading" secondItem="XAg-mZ-PTg" secondAttribute="leadingMargin" id="dAV-XN-xrz"/>
-                            <constraint firstItem="YIP-If-Jw7" firstAttribute="trailing" secondItem="H9I-Ej-35p" secondAttribute="trailing" id="wEK-fu-umT"/>
+                            <constraint firstItem="YIP-If-Jw7" firstAttribute="leading" secondItem="H9I-Ej-35p" secondAttribute="leading" id="KDt-yd-U0v"/>
+                            <constraint firstItem="Pu5-bb-3Rq" firstAttribute="bottom" secondItem="H9I-Ej-35p" secondAttribute="bottom" constant="27" id="PYX-7V-Efu"/>
+                            <constraint firstItem="H9I-Ej-35p" firstAttribute="trailing" secondItem="XAg-mZ-PTg" secondAttribute="trailingMargin" id="VLz-AV-ncs"/>
+                            <constraint firstItem="YIP-If-Jw7" firstAttribute="top" secondItem="Pu5-bb-3Rq" secondAttribute="top" id="eGQ-sR-Uss"/>
+                            <constraint firstItem="H9I-Ej-35p" firstAttribute="leading" secondItem="XAg-mZ-PTg" secondAttribute="leadingMargin" id="jha-pu-cdU"/>
+                            <constraint firstItem="YIP-If-Jw7" firstAttribute="trailing" secondItem="H9I-Ej-35p" secondAttribute="trailing" id="jkA-dE-rZW"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Pu5-bb-3Rq"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Players" image="man.png" id="2JP-ab-7J2"/>
                     <connections>
-                        <outlet property="searchBar" destination="YIP-If-Jw7" id="pX3-gF-Abn"/>
+                        <outlet property="searchBar" destination="YIP-If-Jw7" id="nrW-v4-JJ2"/>
                         <outlet property="tableView" destination="H9I-Ej-35p" id="pEI-44-eOG"/>
                         <segue destination="Hik-2l-EO8" kind="presentation" identifier="playerDetails" id="COT-yl-jlg"/>
                     </connections>

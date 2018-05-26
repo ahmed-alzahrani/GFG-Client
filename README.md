@@ -23,3 +23,5 @@ __25/05/18__
 - added NetworkingService call to get an individual player in greater Detail when a user taps that player in the tableview
 
 - changed PlayerDetailsViewController to have a DetailedPlayer? instead of Player? at file scope, the necessary change was made to the segue preparations in PlayersViewController
+
+- Added search bar functionality, now players can be searched by name, team, league, position, age, id, or number to find them quicker in the tableView

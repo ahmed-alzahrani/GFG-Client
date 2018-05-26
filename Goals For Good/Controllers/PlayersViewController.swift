@@ -10,9 +10,11 @@ import Foundation
 import UIKit
 
 class PlayersViewController: UIViewController {
-
+    
+    
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
+    let searchBarValidator = SearchBarValidator()
 
     // these will help us keep the tableView properly populated in the event of a search
     var players = [Player]()
@@ -58,10 +60,27 @@ extension PlayersViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PlayerCell", for: indexPath) as! PlayerCellViewController
-        cell.playerNameLabel.text = players[indexPath.row].name
-        cell.positionLabel.text = players[indexPath.row].position
-        cell.teamLabel.text = players[indexPath.row].team
-        cell.leagueLabel.text = players[indexPath.row].league
+        cell.playerNameLabel.text = filteredPlayers[indexPath.row].name
+        cell.positionLabel.text = filteredPlayers[indexPath.row].position
+        cell.teamLabel.text = filteredPlayers[indexPath.row].team
+        cell.leagueLabel.text = filteredPlayers[indexPath.row].league
         return cell
     }
 }
+
+extension PlayersViewController: UISearchBarDelegate {
+    
+    // generates the filtered list of products based on the user's search
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        filteredPlayers = players.filter({ player -> Bool in
+            guard let text = searchBar.text else { return false }
+            if (text == "") {
+                return true
+            } else {
+                return searchBarValidator.searchValidator(player: player, text: text)
+            }
+        })
+        self.tableView.reloadData()
+    }
+}
+

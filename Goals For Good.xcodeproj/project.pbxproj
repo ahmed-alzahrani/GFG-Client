@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		00B465CAD63E8100C4DF307C /* Pods_Goals_For_Good.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F74311942C73164F5DD5DE05 /* Pods_Goals_For_Good.framework */; };
+		4D03DAF720B8F1F400AEFAB9 /* SearchBarValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D03DAF620B8F1F400AEFAB9 /* SearchBarValidator.swift */; };
 		4D25137620A352F1005BFAC9 /* UserValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D25137520A352F1005BFAC9 /* UserValidator.swift */; };
 		4D325C0720A2509C00A6D086 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D325C0620A2509C00A6D086 /* AppDelegate.swift */; };
 		4D325C0920A2509C00A6D086 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D325C0820A2509C00A6D086 /* LoginViewController.swift */; };
@@ -240,6 +241,7 @@
 
 /* Begin PBXFileReference section */
 		025EE025BFCAF3E905ABE6BF /* Pods-Goals For Good.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Goals For Good.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Goals For Good/Pods-Goals For Good.debug.xcconfig"; sourceTree = "<group>"; };
+		4D03DAF620B8F1F400AEFAB9 /* SearchBarValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarValidator.swift; sourceTree = "<group>"; };
 		4D25137520A352F1005BFAC9 /* UserValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserValidator.swift; sourceTree = "<group>"; };
 		4D325C0320A2509C00A6D086 /* Goals For Good.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Goals For Good.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D325C0620A2509C00A6D086 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -491,6 +493,7 @@
 			isa = PBXGroup;
 			children = (
 				4D25137520A352F1005BFAC9 /* UserValidator.swift */,
+				4D03DAF620B8F1F400AEFAB9 /* SearchBarValidator.swift */,
 			);
 			path = Validators;
 			sourceTree = "<group>";
@@ -1179,6 +1182,7 @@
 				4DFF6A9C20A4CA8800FDC35B /* PlayersViewController.swift in Sources */,
 				4DFF6A9A20A42DA500FDC35B /* DetailedPlayer.swift in Sources */,
 				4D53475720A36EFA008EACB9 /* ProfileViewController.swift in Sources */,
+				4D03DAF720B8F1F400AEFAB9 /* SearchBarValidator.swift in Sources */,
 				4D325C0920A2509C00A6D086 /* LoginViewController.swift in Sources */,
 				4D97176F20B3BDDC009AEC97 /* Player.swift in Sources */,
 				4D325C0720A2509C00A6D086 /* AppDelegate.swift in Sources */,
