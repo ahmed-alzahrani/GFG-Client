@@ -25,3 +25,18 @@ __25/05/18__
 - changed PlayerDetailsViewController to have a DetailedPlayer? instead of Player? at file scope, the necessary change was made to the segue preparations in PlayersViewController
 
 - Added search bar functionality, now players can be searched by name, team, league, position, age, id, or number to find them quicker in the tableView
+
+
+__30/05/18__
+
+- added a Decodable model for Charity object based on returned JSON from web app
+
+- added retrieval of Charity info from web app in NetworkingService
+
+- added CharitiesViewController and custom cell CharityCellViewController for tabBars's charity tab, similar to the playerController
+
+- Removed a few deprecated outlets from PlayerCellViewController
+
+- override the prepare for segue in PlayerDetailsViewController to return to the players table view with the tab bar, as opposed to without
+
+- added a searchBar validator function for the charities search bar

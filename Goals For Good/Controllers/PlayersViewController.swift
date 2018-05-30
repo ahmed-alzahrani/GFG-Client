@@ -77,7 +77,7 @@ extension PlayersViewController: UISearchBarDelegate {
             if (text == "") {
                 return true
             } else {
-                return searchBarValidator.searchValidator(player: player, text: text)
+                return searchBarValidator.playerValidator(player: player, text: text)
             }
         })
         self.tableView.reloadData()

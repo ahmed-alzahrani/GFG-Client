@@ -11,12 +11,31 @@ import Alamofire
 
 struct NetworkingService {
 
-    typealias FinishedDownload = ([Player]) -> ()
+    typealias FinishedPlayers = ([Player]) -> ()
+    typealias FinishedCharities = ([Charity]) -> ()
     static let shared = NetworkingService()
     private init() {}
-
-
-    private func getPlayers(playerCount: Int) -> [Player]{
+    
+    // Public API
+    func getMePlayers(completed: FinishedPlayers) {
+        let players = getPlayers()
+        completed(players)
+    }
+    
+    func getPlayer(withID: String) -> DetailedPlayer? {
+        let player = getPlayerDetails(with: withID)
+        return player
+    }
+    
+    
+    func getMeCharities(completed: FinishedCharities) {
+        print("im inside get me charities... about to make a call to get the charities")
+        let charities = getCharities()
+        completed(charities)
+    }
+    
+    // Private Implementation
+    private func getPlayers() -> [Player]{
         var count = 0
         var players = [Player]()
         // we need to return the standings of each competition to access each team
@@ -37,11 +56,10 @@ struct NetworkingService {
             }
         }.resume()
 
-        // we can hardCode the count in this func to 1 bc we KNOW we only have access to 17 competitions through api.football-api.com but we're currently only using 1
+        // we can hardCode the count in this func to 1 bc we're only making and waiting on 1 async call
         while (count < 1){
             continue
         }
-        // because we continue until our count hits 17, we wont print and return too early before all the async calls are made
         print(players.count)
         print("returning the players")
         return players
@@ -69,17 +87,30 @@ struct NetworkingService {
         }
         return player
     }
-
-    // here getMePlayers has a hard-coded player count, maybe an initial call to the server to recieve the player count?
-    func getMePlayers(completed: FinishedDownload) {
-        let players = getPlayers(playerCount: 580)
-        completed(players)
+    
+    private func getCharities() -> [Charity] {
+       var count = 0
+        var charities = [Charity]()
+        let urlString = "http://localhost:8080/charities"
+        guard let url = URL(string: urlString) else { return [Charity]() }
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
+            guard let data = data else {
+                print("failed getting data")
+                return }
+            do {
+                charities += try
+                    JSONDecoder().decode([Charity].self, from: data)
+                count += 1
+            } catch let jsonErr {
+                print("error serializing JSON", jsonErr)
+            }
+        }.resume()
+        
+        while (count < 1) {
+            continue
+        }
+        print(charities.count)
+        print("returning the charities")
+        return charities
     }
-
-
-    func getPlayer(withID: String) -> DetailedPlayer? {
-        let player = getPlayerDetails(with: withID)
-        return player
-    }
-
 }
