@@ -11,14 +11,9 @@ import UIKit
 
 class PlayerDetailsViewController: UIViewController {
     let ups = UserProfileService()
-    
-    
-    @IBOutlet weak var playerImage: UIImageView!
-    
+
     @IBOutlet weak var subscribeButton: UIButton!
     @IBOutlet weak var unsubscribeButton: UIButton!
-    @IBOutlet weak var backButton: UIButton!
-    
 
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var nationalityLabel: UILabel!
@@ -28,9 +23,9 @@ class PlayerDetailsViewController: UIViewController {
     @IBOutlet weak var birthPlaceLabel: UILabel!
     @IBOutlet weak var heightLabel: UILabel!
     @IBOutlet weak var weightLabel: UILabel!
-    
+
     var player: DetailedPlayer?
-    
+
     @IBAction func subscribeButton(_ sender: UIButton) {
         if let playerToSubscribe = player {
             ups.subscribeToPlayer(toPlayer: playerToSubscribe.id!, playerName: playerToSubscribe.name!)
@@ -38,7 +33,7 @@ class PlayerDetailsViewController: UIViewController {
         unsubscribeButton.isHidden = false
         subscribeButton.isHidden = true
     }
-    
+
     @IBAction func unsubScribeButton(_ sender: UIButton) {
         if let playerToUnsubscribe = player {
             ups.unsubscribeToPlayer(toPlayer: playerToUnsubscribe.id!)
@@ -46,7 +41,7 @@ class PlayerDetailsViewController: UIViewController {
         subscribeButton.isHidden = false
         unsubscribeButton.isHidden = true
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         nameLabel.text = player?.name
@@ -57,7 +52,7 @@ class PlayerDetailsViewController: UIViewController {
         birthPlaceLabel.text = player?.birthplace
         heightLabel.text = player?.height
         weightLabel.text = player?.weight
-        
+
         if ups.amISubscribed(toPlayer: (player?.id)!) {
             unsubscribeButton.isHidden = false
             subscribeButton.isHidden = true
@@ -66,5 +61,10 @@ class PlayerDetailsViewController: UIViewController {
             unsubscribeButton.isHidden = true
         }
     }
-    
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let tabBarController = segue.destination as! UITabBarController
+        tabBarController.selectedIndex = 1
+    }
+
 }

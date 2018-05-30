@@ -14,5 +14,4 @@ class PlayerCellViewController: UITableViewCell {
     @IBOutlet weak var positionLabel: UILabel!
     @IBOutlet weak var leagueLabel: UILabel!
     @IBOutlet weak var teamLabel: UILabel!
-    @IBOutlet weak var flagImage: UIImageView!
 }
