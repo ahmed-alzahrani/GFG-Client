@@ -39,7 +39,7 @@ struct NetworkingService {
         var count = 0
         var players = [Player]()
         // we need to return the standings of each competition to access each team
-        let urlString = "http://localhost:8080/allPlayers"
+        let urlString = "http://localhost:8080/players"
         print("querying... " + urlString)
         guard let url = URL(string: urlString) else { return [Player]()}
         URLSession.shared.dataTask(with: url) { (data, response, error) in
@@ -68,7 +68,7 @@ struct NetworkingService {
     private func getPlayerDetails(with: String) -> DetailedPlayer? {
         var count = 0
         var player: DetailedPlayer?
-        let urlString = "http://localhost:8080/getPlayer/" + with
+        let urlString = "http://localhost:8080/player/" + with
         guard let url = URL(string: urlString) else { return nil }
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             guard let data = data else {

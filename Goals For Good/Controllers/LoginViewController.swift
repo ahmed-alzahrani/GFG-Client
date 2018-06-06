@@ -7,6 +7,8 @@
 //
 
 import UIKit
+
+// deprecated, should be moved into UPS, the VC for logging in doesn't need to know about or communicate with Firebase
 import FirebaseAuth
 import FirebaseFirestore
 
@@ -39,7 +41,7 @@ class LoginViewController: UIViewController {
                         return
                     }
                     if user != nil{
-                        self.ups.addNewUser(documentId: user!.uid, email: user!.email!)
+                        self.ups.addUser(documentId: user!.uid, email: user!.email!)
                     }
                     Auth.auth().currentUser?.sendEmailVerification(completion: { (error) in
                         if let fireBaseError = error {

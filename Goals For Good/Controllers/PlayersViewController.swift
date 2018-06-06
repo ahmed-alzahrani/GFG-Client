@@ -44,7 +44,7 @@ class PlayersViewController: UIViewController {
 
 extension PlayersViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "playerDetails", sender: players[indexPath.row])
+        performSegue(withIdentifier: "playerDetails", sender: filteredPlayers[indexPath.row])
     }
 }
 

@@ -40,3 +40,9 @@ __30/05/18__
 - override the prepare for segue in PlayerDetailsViewController to return to the players table view with the tab bar, as opposed to without
 
 - added a searchBar validator function for the charities search bar
+
+__05/06/18__
+
+- Fixed player table view glitch that displayed players based on filtering, but would interperate the player to show details based on indices from regular players array
+
+- Routed calls to add a user to the Firestore DB, as well as add/remove players from the user's subscription list through the server from UPS

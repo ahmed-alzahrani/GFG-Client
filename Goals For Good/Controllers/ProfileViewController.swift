@@ -11,7 +11,6 @@ import UIKit
 
 class ProfileViewController: UIViewController {
     
-    
     @IBAction func logoutTapped(_ sender: Any) {
         print("This user is trying to logout")
     }

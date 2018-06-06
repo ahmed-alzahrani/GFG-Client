@@ -28,7 +28,7 @@ class PlayerDetailsViewController: UIViewController {
 
     @IBAction func subscribeButton(_ sender: UIButton) {
         if let playerToSubscribe = player {
-            ups.subscribeToPlayer(toPlayer: playerToSubscribe.id!, playerName: playerToSubscribe.name!)
+            ups.addSubscription(toPlayer: playerToSubscribe.id!, playerName: playerToSubscribe.name!, toCharity: "UNICEF")
         }
         unsubscribeButton.isHidden = false
         subscribeButton.isHidden = true
@@ -36,7 +36,7 @@ class PlayerDetailsViewController: UIViewController {
 
     @IBAction func unsubScribeButton(_ sender: UIButton) {
         if let playerToUnsubscribe = player {
-            ups.unsubscribeToPlayer(toPlayer: playerToUnsubscribe.id!)
+            ups.removeSubscription(toPlayer: playerToUnsubscribe.id!)
         }
         subscribeButton.isHidden = false
         unsubscribeButton.isHidden = true
@@ -53,7 +53,7 @@ class PlayerDetailsViewController: UIViewController {
         heightLabel.text = player?.height
         weightLabel.text = player?.weight
 
-        if ups.amISubscribed(toPlayer: (player?.id)!) {
+        if ups.checkSubscription(toPlayer: (player?.id)!) {
             unsubscribeButton.isHidden = false
             subscribeButton.isHidden = true
         } else {
