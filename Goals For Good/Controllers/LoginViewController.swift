@@ -8,10 +8,6 @@
 
 import UIKit
 
-// deprecated, should be moved into UPS, the VC for logging in doesn't need to know about or communicate with Firebase
-import FirebaseAuth
-import FirebaseFirestore
-
 class LoginViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -21,13 +17,7 @@ class LoginViewController: UIViewController {
 
     @IBAction func loginTapped(_ sender: UIButton) {
         if let email = emailTextField.text, let password = passwordTextField.text {
-            Auth.auth().signIn(withEmail: email, password: password, completion: { (user, error) in
-                if let firebaseError = error {
-                    print(firebaseError.localizedDescription)
-                    return
-                }
-                self.performSegue(withIdentifier: "login", sender: nil)
-            })
+            ups.loginUser(email: email, password: password, view: self)
         }
     }
 
@@ -35,23 +25,15 @@ class LoginViewController: UIViewController {
     @IBAction func createAccountTapped(_ sender: UIButton) {
         if let email = emailTextField.text, let password = passwordTextField.text {
             if (validator.valid(email: email, password: password)) {
-                Auth.auth().createUser(withEmail: email, password: password, completion: {user, error in
-                    if let firebaseError = error {
-                        print(firebaseError.localizedDescription)
-                        return
-                    }
-                    if user != nil{
-                        self.ups.addUser(documentId: user!.uid, email: user!.email!)
-                    }
-                    Auth.auth().currentUser?.sendEmailVerification(completion: { (error) in
-                        if let fireBaseError = error {
-                            print(fireBaseError.localizedDescription)
-                            return
-                        }
-                    })
-                    self.performSegue(withIdentifier: "login", sender: nil)
-                })
+                ups.createUser(email: email, password: password, view: self)
             }
+        }
+    }
+    @IBAction func forgotPassword(_ sender: UIButton) {
+        if let email = emailTextField.text {
+            print("the user has typed in the following email address and selected forgot password")
+            ups.sendPasswordReset(email: email)
+            
         }
     }
 }

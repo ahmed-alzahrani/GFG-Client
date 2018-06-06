@@ -50,14 +50,13 @@ struct NetworkingService {
                 players += try
                     JSONDecoder().decode([Player].self, from: data)
                 count += 1
-                print("count is... \(count)")
             } catch let jsonErr {
                 print("error serializing JSON", jsonErr)
             }
         }.resume()
 
         // we can hardCode the count in this func to 1 bc we're only making and waiting on 1 async call
-        while (count < 1){
+         while (count < 1){
             continue
         }
         print(players.count)

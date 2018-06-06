@@ -46,3 +46,11 @@ __05/06/18__
 - Fixed player table view glitch that displayed players based on filtering, but would interperate the player to show details based on indices from regular players array
 
 - Routed calls to add a user to the Firestore DB, as well as add/remove players from the user's subscription list through the server from UPS
+
+__06/06/18__
+
+- Migrated user auth responsibilities on logging in / creating new user from LoginViewController to UserProfileService
+
+- Added 'Forgot Password' button on to Login screen, need to add flow that sends them a link to reset their email
+
+- Added UI flow for logging out from the profile page, as well as navigating in between user profile and the user's subscriptions page
