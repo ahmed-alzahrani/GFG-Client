@@ -54,3 +54,9 @@ __06/06/18__
 - Added 'Forgot Password' button on to Login screen, need to add flow that sends them a link to reset their email
 
 - Added UI flow for logging out from the profile page, as well as navigating in between user profile and the user's subscriptions page
+
+__07/06/18__
+
+- Minor UI fixes, including login form and reducing warnings from 9 --> 3 by fixing some constraints
+
+- Added PickerView to detailed player view to allow users to assign a charity to each subscription. Charities populate the Picker View and the subscription button is disabled until a charity is chosen to prevent a subscription being submitted without a charity

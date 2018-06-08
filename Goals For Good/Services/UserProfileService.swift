@@ -12,7 +12,7 @@ import FirebaseFirestore
 import FirebaseAuth
 
 struct UserProfileService {
-    
+
     func createUser(email: String, password: String, view: UIViewController) {
         Auth.auth().createUser(withEmail: email, password: password, completion: {user, error in
             if let firebaseError = error {
@@ -42,10 +42,10 @@ struct UserProfileService {
             print("Request: \(String(describing: response.request))")
             print("Response: \(String(describing: response.response))")
             print("Result: \(response.result)")
-            
+
         }
     }
-    
+
     // should this take in a UIVC so its more general, or a LGVC subclass
     func loginUser(email: String, password: String, view: UIViewController) {
         Auth.auth().signIn(withEmail: email, password: password, completion: { (user, error) in
@@ -56,7 +56,7 @@ struct UserProfileService {
             view.performSegue(withIdentifier: "login", sender: nil)
         })
     }
-    
+
     func logout() {
         do {
             try Auth.auth().signOut()
@@ -64,7 +64,7 @@ struct UserProfileService {
             print("Failed to sign out with error", err)
         }
     }
-    
+
     func checkSubscription(toPlayer: String) -> Bool {
         var bool = false
         if let user = Auth.auth().currentUser {
@@ -75,18 +75,18 @@ struct UserProfileService {
             ]
             let url = "http://localhost:8080/amISubscribed"
             Alamofire.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON { response in
-                
+
                 switch response.result {
                 case .failure(let error):
                     // handle some error
                     print(error)
-                    
+
                 case .success(let data):
                     guard let json = data as? [String: AnyObject] else {
                         print("failed to get expected response from webserver")
                         return
                     }
-                    
+
                     guard let result = json["result"] as? Bool else {
                         print("failed to get result value from the server")
                         return
@@ -99,15 +99,22 @@ struct UserProfileService {
         // for some reason checkSubscription asynch doesnt block
         return bool
     }
-    
-    func addSubscription(toPlayer: String, playerName: String, toCharity: String) {
+
+    func addSubscription(toPlayer: String, playerName: String, toCharity: Charity?) {
         if let user = Auth.auth().currentUser {
             let uid = user.uid
+            var charityName = ""
+            var charityId = ""
+            if let charity = toCharity {
+                charityName = charity.name!
+                charityId = charity.id!
+            }
             let parameters: Parameters = [
                 "uid": uid,
                 "playerId": toPlayer,
                 "name": playerName,
-                "charity": toCharity
+                "charityName": charityName,
+                "charityId": charityId
             ]
             let url = "http://localhost:8080/subscribe"
             Alamofire.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON { response in
@@ -115,13 +122,13 @@ struct UserProfileService {
                 case .failure(let error):
                     // handle an error here
                     print(error)
-                
+
                 case .success(let data):
                     guard let json = data as? [String: AnyObject] else {
                         print("failed to get result object from the server")
                         return
                     }
-                    
+
                     guard (json["result"] as? Bool) != nil else {
                         print("failed to get result value from the server")
                         return
@@ -131,7 +138,7 @@ struct UserProfileService {
         }
         // user couldn't be authorized, handle that here
     }
-    
+
     func removeSubscription(toPlayer: String) {
         if let user = Auth.auth().currentUser {
             let uid = user.uid
@@ -146,13 +153,13 @@ struct UserProfileService {
                 case .failure(let error) :
                     // handle error here
                     print(error)
-                    
+
                 case .success(let data):
                     guard let json = data as? [String: AnyObject] else {
                         print("failed to get result object from the server")
                         return
                     }
-                    
+
                     guard (json["result"] as? Bool) != nil else {
                         print("failed to get result value from the server")
                         return
@@ -163,7 +170,7 @@ struct UserProfileService {
         }
         // user couldn't be authorized, handle that here
     }
-    
+
     func sendPasswordReset(email: String) {
         Auth.auth().sendPasswordReset(withEmail: email) { (error) in
             if let err = error {

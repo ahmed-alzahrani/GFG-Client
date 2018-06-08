@@ -21,7 +21,6 @@ class PlayersViewController: UIViewController {
     var filteredPlayers = [Player]()
 
     override func viewDidLoad(){
-        print("viewDidLoad, im calling getMePlayers")
         NetworkingService.shared.getMePlayers(completed: setUpTable)
     }
 
