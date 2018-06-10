@@ -10,26 +10,32 @@ import Foundation
 import UIKit
 
 class CharitiesViewController: UIViewController {
-    
+
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     let searchBarValidator = SearchBarValidator()
-    
+
     var charities = [Charity]()
     var filteredCharities = [Charity]()
-    
+
     override func viewDidLoad() {
-        print("ViewDidLoad, need to call getMeCharities")
-        NetworkingService.shared.getMeCharities(completed: setUpTable)
+        NetworkingService.shared.getCharities(completed: setupTable)
     }
-    
-    private func setUpTable(using: [Charity]) {
+    private func setupTable(using: [Charity]) {
         charities = using
         filteredCharities = using
-        tableView.rowHeight = 80
-        tableView.reloadData()
+
+        DispatchQueue.main.async(execute: {() -> Void in
+            self.tableView?.rowHeight = 80
+            self.tableView?.reloadData()
+        })
     }
-    
+
+    private func setupCharities(using: [Charity]) {
+        charities = using
+        filteredCharities = using
+    }
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         print("preparing for segue to the charity details page")
     }
@@ -42,15 +48,15 @@ extension CharitiesViewController: UITableViewDelegate {
 }
 
 extension CharitiesViewController: UITableViewDataSource {
-    
+
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return filteredCharities.count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CharityCell", for: indexPath) as! CharityCellViewController
         cell.nameLabel.text = filteredCharities[indexPath.row].name
@@ -61,7 +67,7 @@ extension CharitiesViewController: UITableViewDataSource {
 }
 
 extension CharitiesViewController: UISearchBarDelegate {
-    
+
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         filteredCharities = charities.filter({ charity -> Bool in
             guard let text = searchBar.text else { return false }
@@ -74,4 +80,3 @@ extension CharitiesViewController: UISearchBarDelegate {
         self.tableView.reloadData()
     }
 }
-

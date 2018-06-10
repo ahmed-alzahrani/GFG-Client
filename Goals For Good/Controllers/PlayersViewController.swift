@@ -21,14 +21,16 @@ class PlayersViewController: UIViewController {
     var filteredPlayers = [Player]()
 
     override func viewDidLoad(){
-        NetworkingService.shared.getMePlayers(completed: setUpTable)
+        NetworkingService.shared.getPlayers(completed: setUpTable)
     }
 
     private func setUpTable(using: [Player]) {
         players = using
         filteredPlayers = using
-        tableView.rowHeight = 80
-        tableView.reloadData()
+        DispatchQueue.main.async(execute: {() -> Void in
+            self.tableView?.rowHeight = 80
+            self.tableView?.reloadData()
+        })
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -36,8 +38,7 @@ class PlayersViewController: UIViewController {
         let PlayerDetailsViewController = segue.destination as? PlayerDetailsViewController,
         let player = sender as AnyObject as? Player
             else { return }
-        let detailedPlayer = NetworkingService.shared.getPlayer(withID: player.id!)
-        PlayerDetailsViewController.player = detailedPlayer
+        NetworkingService.shared.getPlayer(with: player.id!, completed: PlayerDetailsViewController.setupPlayer)
     }
 }
 

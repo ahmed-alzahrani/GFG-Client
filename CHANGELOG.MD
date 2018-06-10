@@ -52,3 +52,7 @@ __08/06/18__
 - Added dependency and installation / running info to the README
 
 - Removed deprecated Firestore pod
+
+__09/06/18__
+
+- Improved flow of async calls from NetworkService to use their own completion handlers in the relevant view controllers, as well as threading to allow these UI edits to happen in the main thread despite the calls running in a background thread

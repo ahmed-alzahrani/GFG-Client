@@ -31,19 +31,7 @@ class PlayerDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        initializeLabels()
-        NetworkingService.shared.getMeCharities(completed: assignCharities)
-
-        if ups.checkSubscription(toPlayer: (player?.id)!) {
-            print("youre not subscribed to this player")
-            unsubscribeButton.isHidden = false
-            subscribeButton.isHidden = true
-        } else {
-            print("youre subscribed to this player already")
-            subscribeButton.isHidden = false
-            unsubscribeButton.isHidden = true
-        }
-        subscribeButton.isUserInteractionEnabled = false
+        NetworkingService.shared.getCharities(completed: assignCharities)
         createCharityPicker()
         createToolbar()
     }
@@ -75,19 +63,30 @@ class PlayerDetailsViewController: UIViewController {
         view.endEditing(true)
     }
 
-    private func initializeLabels() {
-        nameLabel.text = player?.name
-        nationalityLabel.text = player?.nationality
-        ageLabel.text = player?.age
-        birthDateLabel.text = player?.birthdate
-        positionLabel.text = player?.position
-        birthPlaceLabel.text = player?.birthplace
-        heightLabel.text = player?.height
-        weightLabel.text = player?.weight
-    }
-
     private func assignCharities(using: [Charity]) {
         charities = using
+    }
+ 
+    func setupPlayer(using: DetailedPlayer) {
+        player = using
+        DispatchQueue.main.async(execute: {() -> Void in
+            if self.ups.checkSubscription(toPlayer: using.id!) {
+                self.unsubscribeButton.isHidden = false
+                self.subscribeButton.isHidden = true
+            } else {
+                self.subscribeButton.isHidden = false
+                self.unsubscribeButton.isHidden = true
+            }
+            self.subscribeButton.isUserInteractionEnabled = false
+            self.nameLabel.text = self.player?.name
+            self.nationalityLabel.text = self.player?.nationality
+            self.ageLabel.text = self.player?.age
+            self.birthDateLabel.text = self.player?.birthdate
+            self.positionLabel.text = self.player?.position
+            self.birthPlaceLabel.text = self.player?.birthplace
+            self.heightLabel.text = self.player?.height
+            self.weightLabel.text = self.player?.weight
+        })
     }
 
     @IBAction func subscribeButton(_ sender: UIButton) {

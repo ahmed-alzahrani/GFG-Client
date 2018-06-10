@@ -8,108 +8,65 @@
 
 import Foundation
 import Alamofire
+import PromiseKit
 
 struct NetworkingService {
 
     typealias FinishedPlayers = ([Player]) -> ()
     typealias FinishedCharities = ([Charity]) -> ()
+    typealias FinishedPlayer = (DetailedPlayer) -> ()
     static let shared = NetworkingService()
     private init() {}
-    
-    // Public API
-    func getMePlayers(completed: FinishedPlayers) {
-        let players = getPlayers()
-        completed(players)
+
+    private func getReq(with: String) -> URLRequest {
+        return URLRequest(url: URL(string: with)!)
     }
-    
-    func getPlayer(withID: String) -> DetailedPlayer? {
-        let player = getPlayerDetails(with: withID)
-        return player
-    }
-    
-    
-    func getMeCharities(completed: FinishedCharities) {
-        print("im inside get me charities... about to make a call to get the charities")
-        let charities = getCharities()
-        completed(charities)
-    }
-    
-    // Private Implementation
-    private func getPlayers() -> [Player]{
-        var count = 0
-        var players = [Player]()
-        // we need to return the standings of each competition to access each team
-        let urlString = "http://localhost:8080/players"
-        print("querying... " + urlString)
-        guard let url = URL(string: urlString) else { return [Player]()}
+
+    func getPlayers(completed: @escaping FinishedPlayers) {
+        guard let url = URL(string: "http://localhost:8080/players") else { return }
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             guard let data = data else {
                 print("failed getting data")
                 return }
             do {
-                players += try
-                    JSONDecoder().decode([Player].self, from: data)
-                count += 1
+                let players = try JSONDecoder().decode([Player].self, from: data)
+                completed(players)
             } catch let jsonErr {
                 print("error serializing JSON", jsonErr)
             }
         }.resume()
-
-        // we can hardCode the count in this func to 1 bc we're only making and waiting on 1 async call
-         while (count < 1){
-            continue
-        }
-        print(players.count)
-        print("returning the players")
-        return players
     }
 
-    private func getPlayerDetails(with: String) -> DetailedPlayer? {
-        var count = 0
-        var player: DetailedPlayer?
+    func getPlayer(with: String, completed: @escaping FinishedPlayer) {
         let urlString = "http://localhost:8080/player/" + with
-        guard let url = URL(string: urlString) else { return nil }
+        guard let url = URL(string: urlString) else { return }
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             guard let data = data else {
                 print("failed getting data")
                 return }
             do {
-                player = try
-                    JSONDecoder().decode(DetailedPlayer.self, from: data)
-                count += 1
+                let player = try JSONDecoder().decode(DetailedPlayer.self, from: data)
+                completed(player)
             } catch let jsonErr {
                 print("error serializing JSON", jsonErr)
             }
         }.resume()
-        while (count < 1) {
-            continue
-        }
-        return player
     }
     
-    private func getCharities() -> [Charity] {
-       var count = 0
-        var charities = [Charity]()
+
+    func getCharities(completed: @escaping FinishedCharities) {
         let urlString = "http://localhost:8080/charities"
-        guard let url = URL(string: urlString) else { return [Charity]() }
-        URLSession.shared.dataTask(with: url) { (data, response, error) in
+        let url = URL(string: urlString)
+        URLSession.shared.dataTask(with: url!) { (data, response, error) in
             guard let data = data else {
                 print("failed getting data")
                 return }
             do {
-                charities += try
-                    JSONDecoder().decode([Charity].self, from: data)
-                count += 1
+                let charities = try JSONDecoder().decode([Charity].self, from: data)
+                    completed(charities)
             } catch let jsonErr {
                 print("error serializing JSON", jsonErr)
             }
         }.resume()
-        
-        while (count < 1) {
-            continue
-        }
-        print(charities.count)
-        print("returning the charities")
-        return charities
     }
 }

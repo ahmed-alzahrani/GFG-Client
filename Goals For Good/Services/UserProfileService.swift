@@ -8,7 +8,6 @@
 
 import Foundation
 import Alamofire
-import FirebaseFirestore
 import FirebaseAuth
 
 struct UserProfileService {
@@ -56,6 +55,14 @@ struct UserProfileService {
             view.performSegue(withIdentifier: "login", sender: nil)
         })
     }
+    
+    func sendPasswordReset(email: String) {
+        Auth.auth().sendPasswordReset(withEmail: email) { (error) in
+            if let err = error {
+                print(err)
+            }
+        }
+    }
 
     func logout() {
         do {
@@ -65,6 +72,7 @@ struct UserProfileService {
         }
     }
 
+    // checkSubscription POST req needs to be changed to be properly async to actually work, returns bool and not result
     func checkSubscription(toPlayer: String) -> Bool {
         var bool = false
         if let user = Auth.auth().currentUser {
@@ -100,6 +108,7 @@ struct UserProfileService {
         return bool
     }
 
+    // add subscription call WORKS, but will need to be reworked to be properly async like the rest of the calls
     func addSubscription(toPlayer: String, playerName: String, toCharity: Charity?) {
         if let user = Auth.auth().currentUser {
             let uid = user.uid
@@ -139,6 +148,7 @@ struct UserProfileService {
         // user couldn't be authorized, handle that here
     }
 
+    // remove subscription call WORKS, but will need to be reworked to be properly async like the rest of the calls
     func removeSubscription(toPlayer: String) {
         if let user = Auth.auth().currentUser {
             let uid = user.uid
@@ -169,13 +179,5 @@ struct UserProfileService {
             }
         }
         // user couldn't be authorized, handle that here
-    }
-
-    func sendPasswordReset(email: String) {
-        Auth.auth().sendPasswordReset(withEmail: email) { (error) in
-            if let err = error {
-                print(err)
-            }
-        }
     }
 }
