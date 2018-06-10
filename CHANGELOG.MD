@@ -56,3 +56,9 @@ __08/06/18__
 __09/06/18__
 
 - Improved flow of async calls from NetworkService to use their own completion handlers in the relevant view controllers, as well as threading to allow these UI edits to happen in the main thread despite the calls running in a background thread
+
+__10/06/18__
+
+- Added new Models to model the request body of POST requests
+
+- Removed deprecated Alamofire pod and reverted POST reqs in User Profile Service to recommended best practice with vanilla URLSession

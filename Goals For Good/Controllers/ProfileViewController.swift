@@ -22,5 +22,4 @@ class ProfileViewController: UIViewController {
     @IBAction func Subscriptions(_ sender: UIButton) {
         self.performSegue(withIdentifier: "subscriptions", sender: nil)
     }
-
 }

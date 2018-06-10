@@ -9,7 +9,6 @@ target 'Goals For Good' do
 
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
-  pod 'Alamofire'
 
   inhibit_all_warnings!
 

@@ -11,7 +11,12 @@ import Alamofire
 import FirebaseAuth
 
 struct UserProfileService {
+    
+    //TODO MONDAY: SEPERATE INTO SUBSCRIPTIONSERVICE AND USER AUTH SERVICE
+    
+    typealias FinishedReq = (Bool) -> ()
 
+    // Auth functions
     func createUser(email: String, password: String, view: UIViewController) {
         Auth.auth().createUser(withEmail: email, password: password, completion: {user, error in
             if let firebaseError = error {
@@ -71,113 +76,135 @@ struct UserProfileService {
             print("Failed to sign out with error", err)
         }
     }
-
-    // checkSubscription POST req needs to be changed to be properly async to actually work, returns bool and not result
-    func checkSubscription(toPlayer: String) -> Bool {
-        var bool = false
+    
+    // User Subscription Information
+    
+    func checkSubscription(player: String, completed: @escaping FinishedReq) {
         if let user = Auth.auth().currentUser {
-            let uid = user.uid
-            let parameters: Parameters = [
-                "uid": uid,
-                "playerId": toPlayer
-            ]
-            let url = "http://localhost:8080/amISubscribed"
-            Alamofire.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON { response in
-
-                switch response.result {
-                case .failure(let error):
-                    // handle some error
-                    print(error)
-
-                case .success(let data):
-                    guard let json = data as? [String: AnyObject] else {
-                        print("failed to get expected response from webserver")
+            let params = SubCheckParams(uid: user.uid, playerId: player)
+            
+            guard let uploadData = try? JSONEncoder().encode(params) else {
+                return
+            }
+            
+            var req = URLRequest(url: URL(string: "http://localhost:8080/amISubscribed")!)
+            req.httpMethod = "POST"
+            req.setValue("application/json", forHTTPHeaderField: "Content-Type")
+            
+            let task = URLSession.shared.uploadTask(with: req, from: uploadData) { data, response, error in
+                if let error = error {
+                    print("error: \(error)")
+                    return
+                }
+                guard let response = response as? HTTPURLResponse, (200...299).contains(response.statusCode) else {
+                    print("server error")
+                    return
+                }
+                
+                if let mimeType = response.mimeType,
+                mimeType == "application/json",
+                let data = data {
+                    
+                    guard let json = (try? JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers)) as? [String: Any] else {
+                        print("Not Containing JSON")
                         return
                     }
-
+                    
                     guard let result = json["result"] as? Bool else {
-                        print("failed to get result value from the server")
+                        print("couldn't get result from JSON")
                         return
                     }
-                    bool = result
+                    
+                    completed(result)
                 }
             }
+            task.resume()
         }
-        // if this executes it means for whatever reason there isn't a logged in user, this will need to be handled but for now return false
-        // for some reason checkSubscription asynch doesnt block
-        return bool
     }
-
-    // add subscription call WORKS, but will need to be reworked to be properly async like the rest of the calls
-    func addSubscription(toPlayer: String, playerName: String, toCharity: Charity?) {
+    
+    func addSubscription(toPlayer: String, playerName: String, toCharity: Charity, completed: @escaping FinishedReq) {
         if let user = Auth.auth().currentUser {
-            let uid = user.uid
-            var charityName = ""
-            var charityId = ""
-            if let charity = toCharity {
-                charityName = charity.name!
-                charityId = charity.id!
+            let params = AddSubParams(uid: user.uid, playerId: toPlayer, name: playerName, charityName: toCharity.name!, charityId: toCharity.id!)
+            
+            guard let uploadData = try? JSONEncoder().encode(params) else {
+                return
             }
-            let parameters: Parameters = [
-                "uid": uid,
-                "playerId": toPlayer,
-                "name": playerName,
-                "charityName": charityName,
-                "charityId": charityId
-            ]
-            let url = "http://localhost:8080/subscribe"
-            Alamofire.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON { response in
-                switch response.result {
-                case .failure(let error):
-                    // handle an error here
-                    print(error)
-
-                case .success(let data):
-                    guard let json = data as? [String: AnyObject] else {
-                        print("failed to get result object from the server")
+            
+            var req = URLRequest(url: URL(string: "http://localhost:8080/subscribe")!)
+            req.httpMethod = "POST"
+            req.setValue("application/json", forHTTPHeaderField: "Content-type")
+            
+            let task = URLSession.shared.uploadTask(with: req, from: uploadData) { data, response, error in
+                if let error = error {
+                    print("errror: \(error)")
+                    return
+                }
+                guard let response = response as? HTTPURLResponse, (200...299).contains(response.statusCode) else {
+                    print("server error")
+                    return
+                }
+                
+                if let mimeType = response.mimeType,
+                mimeType == "application/json",
+                    let data = data {
+                    
+                    guard let json = (try? JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers)) as? [String: Any] else {
+                        print("Not containing JSON")
                         return
                     }
-
-                    guard (json["result"] as? Bool) != nil else {
-                        print("failed to get result value from the server")
+                    
+                    guard let result = json["result"] as? Bool else {
+                        print("couldn't get result from JSON")
                         return
                     }
+                    completed(result)
                 }
             }
+            task.resume()
         }
-        // user couldn't be authorized, handle that here
+        // handle no current user here
     }
-
-    // remove subscription call WORKS, but will need to be reworked to be properly async like the rest of the calls
-    func removeSubscription(toPlayer: String) {
+    
+    func removeSubscription(player: String, completed: @escaping FinishedReq) {
         if let user = Auth.auth().currentUser {
-            let uid = user.uid
-            print(uid)
-            let parameters: Parameters = [
-                "uid": uid,
-                "playerId": toPlayer
-            ]
-            let url = "http://localhost:8080/unsubscribe"
-            Alamofire.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON { response in
-                switch response.result {
-                case .failure(let error) :
-                    // handle error here
-                    print(error)
-
-                case .success(let data):
-                    guard let json = data as? [String: AnyObject] else {
-                        print("failed to get result object from the server")
+            let params = RemoveSubParams(uid: user.uid, playerId: player)
+            
+            guard let uploadData = try? JSONEncoder().encode(params) else {
+                return
+            }
+            
+            var req = URLRequest(url: URL(string: "http://localhost:8080/unsubscribe")!)
+            req.httpMethod = "POST"
+            req.setValue("application/json", forHTTPHeaderField: "Content-Type")
+            
+            let task = URLSession.shared.uploadTask(with: req, from: uploadData) { data, response, error in
+                if let error = error {
+                    print("error: \(error)")
+                    return
+                }
+                
+                guard let response = response as? HTTPURLResponse, (200...299).contains(response.statusCode) else {
+                    print("server error")
+                    return
+                }
+                
+                if let mimeType = response.mimeType,
+                mimeType == "application/json",
+                    let data = data {
+                    
+                    guard let json = (try? JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers)) as? [String: Any] else {
+                        print("Not containing JSON")
                         return
                     }
-
-                    guard (json["result"] as? Bool) != nil else {
-                        print("failed to get result value from the server")
+                    
+                    guard let result = json["result"] as? Bool else {
+                        print("couldn't get result from JSON")
                         return
                     }
-
+                    completed(result)
                 }
             }
+            task.resume()
         }
-        // user couldn't be authorized, handle that here
     }
 }

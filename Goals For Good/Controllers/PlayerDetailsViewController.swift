@@ -70,13 +70,6 @@ class PlayerDetailsViewController: UIViewController {
     func setupPlayer(using: DetailedPlayer) {
         player = using
         DispatchQueue.main.async(execute: {() -> Void in
-            if self.ups.checkSubscription(toPlayer: using.id!) {
-                self.unsubscribeButton.isHidden = false
-                self.subscribeButton.isHidden = true
-            } else {
-                self.subscribeButton.isHidden = false
-                self.unsubscribeButton.isHidden = true
-            }
             self.subscribeButton.isUserInteractionEnabled = false
             self.nameLabel.text = self.player?.name
             self.nationalityLabel.text = self.player?.nationality
@@ -86,23 +79,53 @@ class PlayerDetailsViewController: UIViewController {
             self.birthPlaceLabel.text = self.player?.birthplace
             self.heightLabel.text = self.player?.height
             self.weightLabel.text = self.player?.weight
+            
+            if let id = self.player?.id {
+                self.ups.checkSubscription(player: id, completed: self.setupSubButtons)
+            }
+        })
+    }
+    
+    func setupSubButtons(subbed: Bool) {
+        DispatchQueue.main.async(execute: {() -> Void in
+            if (subbed) {
+                self.subscribeButton.isHidden = true
+                self.unsubscribeButton.isHidden = false
+            } else {
+                self.subscribeButton.isHidden = false
+                self.unsubscribeButton.isHidden = true
+            }
         })
     }
 
     @IBAction func subscribeButton(_ sender: UIButton) {
-        if let playerToSubscribe = player {
-            ups.addSubscription(toPlayer: playerToSubscribe.id!, playerName: playerToSubscribe.name!, toCharity: selectedCharity)
+        if let playerToSubscribe = player, let charityToSubscribe = selectedCharity {
+            ups.addSubscription(toPlayer: playerToSubscribe.id!, playerName: playerToSubscribe.name!, toCharity: charityToSubscribe, completed: subscribeComplete)
         }
-        unsubscribeButton.isHidden = false
-        subscribeButton.isHidden = true
+    }
+    
+    private func subscribeComplete(success: Bool) {
+        if (success) {
+            DispatchQueue.main.async(execute: {() -> Void in
+                self.unsubscribeButton.isHidden = false
+                self.subscribeButton.isHidden = true
+            })
+        }
     }
 
     @IBAction func unsubScribeButton(_ sender: UIButton) {
         if let playerToUnsubscribe = player {
-            ups.removeSubscription(toPlayer: playerToUnsubscribe.id!)
+            ups.removeSubscription(player: playerToUnsubscribe.id!, completed: unsubscribeComplete)
         }
-        subscribeButton.isHidden = false
-        unsubscribeButton.isHidden = true
+    }
+    
+    private func unsubscribeComplete(success: Bool) {
+        if (success) {
+            DispatchQueue.main.async(execute: {() -> Void in
+                self.subscribeButton.isHidden = false
+                self.unsubscribeButton.isHidden = true
+            })
+        }
     }
 }
 
