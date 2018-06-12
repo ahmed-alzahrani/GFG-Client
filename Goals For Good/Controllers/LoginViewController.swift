@@ -14,7 +14,7 @@ class LoginViewController: UIViewController {
     
     let auth = AuthService()
     let validator = UserValidator()
-    let ups = UserProfileService()
+    let sub = SubscriptionService()
 
     @IBAction func loginTapped(_ sender: UIButton) {
         if let email = emailTextField.text, let password = passwordTextField.text {

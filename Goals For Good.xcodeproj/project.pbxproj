@@ -18,7 +18,7 @@
 		4D4EA68120CF49D900435850 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4EA68020CF49D900435850 /* AuthService.swift */; };
 		4D53475720A36EFA008EACB9 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D53475620A36EFA008EACB9 /* ProfileViewController.swift */; };
 		4D6BCE5020CCDAFB001AE5E6 /* Requests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6BCE4F20CCDAFB001AE5E6 /* Requests.swift */; };
-		4D7F066F20A380E200764CA3 /* UserProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7F066E20A380E200764CA3 /* UserProfileService.swift */; };
+		4D7F066F20A380E200764CA3 /* SubscriptionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7F066E20A380E200764CA3 /* SubscriptionService.swift */; };
 		4D7F067620A3ADAF00764CA3 /* love.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F067520A3ADAF00764CA3 /* love.png */; };
 		4D7F067820A3ADB600764CA3 /* soccer.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F067720A3ADB600764CA3 /* soccer.png */; };
 		4D7F067A20A3ADBC00764CA3 /* info.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F067920A3ADBC00764CA3 /* info.png */; };
@@ -258,7 +258,7 @@
 		4D53475620A36EFA008EACB9 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		4D53475820A3783C008EACB9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		4D6BCE4F20CCDAFB001AE5E6 /* Requests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requests.swift; sourceTree = "<group>"; };
-		4D7F066E20A380E200764CA3 /* UserProfileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileService.swift; sourceTree = "<group>"; };
+		4D7F066E20A380E200764CA3 /* SubscriptionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionService.swift; sourceTree = "<group>"; };
 		4D7F067520A3ADAF00764CA3 /* love.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = love.png; sourceTree = "<group>"; };
 		4D7F067720A3ADB600764CA3 /* soccer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = soccer.png; sourceTree = "<group>"; };
 		4D7F067920A3ADBC00764CA3 /* info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info.png; sourceTree = "<group>"; };
@@ -556,7 +556,7 @@
 			children = (
 				4D7F082120A3C9CA00764CA3 /* NetworkingService.swift */,
 				4D4EA68020CF49D900435850 /* AuthService.swift */,
-				4D7F066E20A380E200764CA3 /* UserProfileService.swift */,
+				4D7F066E20A380E200764CA3 /* SubscriptionService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -1187,7 +1187,7 @@
 				4D6BCE5020CCDAFB001AE5E6 /* Requests.swift in Sources */,
 				4D97176F20B3BDDC009AEC97 /* Player.swift in Sources */,
 				4D325C0720A2509C00A6D086 /* AppDelegate.swift in Sources */,
-				4D7F066F20A380E200764CA3 /* UserProfileService.swift in Sources */,
+				4D7F066F20A380E200764CA3 /* SubscriptionService.swift in Sources */,
 				4D7F082220A3C9CA00764CA3 /* NetworkingService.swift in Sources */,
 				4DFF6A9220A3E44D00FDC35B /* CharitiesViewController.swift in Sources */,
 				4DBEF02F20BCB600001CDBCD /* Charity.swift in Sources */,

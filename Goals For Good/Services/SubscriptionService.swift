@@ -9,7 +9,7 @@
 import Foundation
 import FirebaseAuth
 
-struct UserProfileService {
+struct SubscriptionService {
     
     typealias FinishedReq = (Bool) -> ()
     

@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 class PlayerDetailsViewController: UIViewController {
-    let ups = UserProfileService()
+    let sub = SubscriptionService()
 
     // outlets
     @IBOutlet weak var subscribeButton: UIButton!
@@ -81,7 +81,7 @@ class PlayerDetailsViewController: UIViewController {
             self.weightLabel.text = self.player?.weight
             
             if let id = self.player?.id {
-                self.ups.checkSubscription(player: id, completed: self.setupSubButtons)
+                self.sub.checkSubscription(player: id, completed: self.setupSubButtons)
             }
         })
     }
@@ -100,7 +100,7 @@ class PlayerDetailsViewController: UIViewController {
 
     @IBAction func subscribeButton(_ sender: UIButton) {
         if let playerToSubscribe = player, let charityToSubscribe = selectedCharity {
-            ups.addSubscription(toPlayer: playerToSubscribe.id!, playerName: playerToSubscribe.name!, toCharity: charityToSubscribe, completed: subscribeComplete)
+            sub.addSubscription(toPlayer: playerToSubscribe.id!, playerName: playerToSubscribe.name!, toCharity: charityToSubscribe, completed: subscribeComplete)
         }
     }
     
@@ -115,7 +115,7 @@ class PlayerDetailsViewController: UIViewController {
 
     @IBAction func unsubScribeButton(_ sender: UIButton) {
         if let playerToUnsubscribe = player {
-            ups.removeSubscription(player: playerToUnsubscribe.id!, completed: unsubscribeComplete)
+            sub.removeSubscription(player: playerToUnsubscribe.id!, completed: unsubscribeComplete)
         }
     }
     
