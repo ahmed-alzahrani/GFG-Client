@@ -67,4 +67,4 @@ __11/06/18__
 
 - Migrated auth responsibilities from UPS --> AuthService
 
-- Renamed UPS --> SubscriptionService
+- Renamed UPS --> SubscriptionService and NetworkingService --> DataService

@@ -231,7 +231,7 @@
 		4D7F081D20A3C25F00764CA3 /* China-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F075120A3C25E00764CA3 /* China-flag.png */; };
 		4D7F081E20A3C25F00764CA3 /* Monaco-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F075220A3C25F00764CA3 /* Monaco-flag.png */; };
 		4D7F082020A3C6B800764CA3 /* PlayerCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7F081F20A3C6B800764CA3 /* PlayerCellViewController.swift */; };
-		4D7F082220A3C9CA00764CA3 /* NetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7F082120A3C9CA00764CA3 /* NetworkingService.swift */; };
+		4D7F082220A3C9CA00764CA3 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7F082120A3C9CA00764CA3 /* DataService.swift */; };
 		4D97176F20B3BDDC009AEC97 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D97176E20B3BDDC009AEC97 /* Player.swift */; };
 		4DBEF02F20BCB600001CDBCD /* Charity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBEF02E20BCB600001CDBCD /* Charity.swift */; };
 		4DBEF03120BE4189001CDBCD /* CharityCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBEF03020BE4189001CDBCD /* CharityCellViewController.swift */; };
@@ -471,7 +471,7 @@
 		4D7F075120A3C25E00764CA3 /* China-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "China-flag.png"; sourceTree = "<group>"; };
 		4D7F075220A3C25F00764CA3 /* Monaco-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Monaco-flag.png"; sourceTree = "<group>"; };
 		4D7F081F20A3C6B800764CA3 /* PlayerCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCellViewController.swift; sourceTree = "<group>"; };
-		4D7F082120A3C9CA00764CA3 /* NetworkingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingService.swift; sourceTree = "<group>"; };
+		4D7F082120A3C9CA00764CA3 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		4D97176E20B3BDDC009AEC97 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		4DBEF02E20BCB600001CDBCD /* Charity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Charity.swift; sourceTree = "<group>"; };
 		4DBEF03020BE4189001CDBCD /* CharityCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharityCellViewController.swift; sourceTree = "<group>"; };
@@ -554,7 +554,7 @@
 		4D53474C20A359AD008EACB9 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				4D7F082120A3C9CA00764CA3 /* NetworkingService.swift */,
+				4D7F082120A3C9CA00764CA3 /* DataService.swift */,
 				4D4EA68020CF49D900435850 /* AuthService.swift */,
 				4D7F066E20A380E200764CA3 /* SubscriptionService.swift */,
 			);
@@ -1188,7 +1188,7 @@
 				4D97176F20B3BDDC009AEC97 /* Player.swift in Sources */,
 				4D325C0720A2509C00A6D086 /* AppDelegate.swift in Sources */,
 				4D7F066F20A380E200764CA3 /* SubscriptionService.swift in Sources */,
-				4D7F082220A3C9CA00764CA3 /* NetworkingService.swift in Sources */,
+				4D7F082220A3C9CA00764CA3 /* DataService.swift in Sources */,
 				4DFF6A9220A3E44D00FDC35B /* CharitiesViewController.swift in Sources */,
 				4DBEF02F20BCB600001CDBCD /* Charity.swift in Sources */,
 				4DBEF03120BE4189001CDBCD /* CharityCellViewController.swift in Sources */,

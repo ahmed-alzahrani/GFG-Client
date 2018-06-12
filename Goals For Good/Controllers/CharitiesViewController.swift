@@ -19,7 +19,7 @@ class CharitiesViewController: UIViewController {
     var filteredCharities = [Charity]()
 
     override func viewDidLoad() {
-        NetworkingService.shared.getCharities(completed: setupTable)
+        DataService.shared.getCharities(completed: setupTable)
     }
     private func setupTable(using: [Charity]) {
         charities = using

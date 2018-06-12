@@ -10,12 +10,12 @@ import Foundation
 import Alamofire
 import PromiseKit
 
-struct NetworkingService {
+struct DataService {
 
     typealias FinishedPlayers = ([Player]) -> ()
     typealias FinishedCharities = ([Charity]) -> ()
     typealias FinishedPlayer = (DetailedPlayer) -> ()
-    static let shared = NetworkingService()
+    static let shared = DataService()
     private init() {}
 
     private func getReq(with: String) -> URLRequest {

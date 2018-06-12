@@ -21,7 +21,7 @@ class PlayersViewController: UIViewController {
     var filteredPlayers = [Player]()
 
     override func viewDidLoad(){
-        NetworkingService.shared.getPlayers(completed: setUpTable)
+        DataService.shared.getPlayers(completed: setUpTable)
     }
 
     private func setUpTable(using: [Player]) {
@@ -38,7 +38,7 @@ class PlayersViewController: UIViewController {
         let PlayerDetailsViewController = segue.destination as? PlayerDetailsViewController,
         let player = sender as AnyObject as? Player
             else { return }
-        NetworkingService.shared.getPlayer(with: player.id!, completed: PlayerDetailsViewController.setupPlayer)
+        DataService.shared.getPlayer(with: player.id!, completed: PlayerDetailsViewController.setupPlayer)
     }
 }
 

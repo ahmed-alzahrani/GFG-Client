@@ -31,7 +31,7 @@ class PlayerDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        NetworkingService.shared.getCharities(completed: assignCharities)
+        DataService.shared.getCharities(completed: assignCharities)
         createCharityPicker()
         createToolbar()
     }
