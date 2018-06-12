@@ -11,13 +11,14 @@ import UIKit
 class LoginViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-
+    
+    let auth = AuthService()
     let validator = UserValidator()
     let ups = UserProfileService()
 
     @IBAction func loginTapped(_ sender: UIButton) {
         if let email = emailTextField.text, let password = passwordTextField.text {
-            ups.loginUser(email: email, password: password, view: self)
+            auth.loginUser(email: email, password: password, view: self)
         }
     }
 
@@ -25,14 +26,14 @@ class LoginViewController: UIViewController {
     @IBAction func createAccountTapped(_ sender: UIButton) {
         if let email = emailTextField.text, let password = passwordTextField.text {
             if (validator.valid(email: email, password: password)) {
-                ups.createUser(email: email, password: password, view: self)
+                auth.createUser(email: email, password: password, view: self)
             }
         }
     }
     @IBAction func forgotPassword(_ sender: UIButton) {
         if let email = emailTextField.text {
             print("the user has typed in the following email address and selected forgot password")
-            ups.sendPasswordReset(email: email)
+            auth.sendPasswordReset(email: email)
             
         }
     }

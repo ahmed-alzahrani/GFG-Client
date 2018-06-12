@@ -15,6 +15,7 @@
 		4D325C0C20A2509C00A6D086 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D325C0A20A2509C00A6D086 /* Main.storyboard */; };
 		4D325C0E20A2509F00A6D086 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D325C0D20A2509F00A6D086 /* Assets.xcassets */; };
 		4D325C1120A2509F00A6D086 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D325C0F20A2509F00A6D086 /* LaunchScreen.storyboard */; };
+		4D4EA68120CF49D900435850 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4EA68020CF49D900435850 /* AuthService.swift */; };
 		4D53475720A36EFA008EACB9 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D53475620A36EFA008EACB9 /* ProfileViewController.swift */; };
 		4D6BCE5020CCDAFB001AE5E6 /* Requests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6BCE4F20CCDAFB001AE5E6 /* Requests.swift */; };
 		4D7F066F20A380E200764CA3 /* UserProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7F066E20A380E200764CA3 /* UserProfileService.swift */; };
@@ -253,6 +254,7 @@
 		4D325C0D20A2509F00A6D086 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D325C1020A2509F00A6D086 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D325C1220A2509F00A6D086 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D4EA68020CF49D900435850 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		4D53475620A36EFA008EACB9 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		4D53475820A3783C008EACB9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		4D6BCE4F20CCDAFB001AE5E6 /* Requests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requests.swift; sourceTree = "<group>"; };
@@ -553,6 +555,7 @@
 			isa = PBXGroup;
 			children = (
 				4D7F082120A3C9CA00764CA3 /* NetworkingService.swift */,
+				4D4EA68020CF49D900435850 /* AuthService.swift */,
 				4D7F066E20A380E200764CA3 /* UserProfileService.swift */,
 			);
 			path = Services;
@@ -1190,6 +1193,7 @@
 				4DBEF02F20BCB600001CDBCD /* Charity.swift in Sources */,
 				4DBEF03120BE4189001CDBCD /* CharityCellViewController.swift in Sources */,
 				4DFF6A9E20A57E4800FDC35B /* PlayerDetailsViewController.swift in Sources */,
+				4D4EA68120CF49D900435850 /* AuthService.swift in Sources */,
 				4D7F082020A3C6B800764CA3 /* PlayerCellViewController.swift in Sources */,
 				4D25137620A352F1005BFAC9 /* UserValidator.swift in Sources */,
 			);

@@ -62,3 +62,7 @@ __10/06/18__
 - Added new Models to model the request body of POST requests
 
 - Removed deprecated Alamofire pod and reverted POST reqs in User Profile Service to recommended best practice with vanilla URLSession [here](https://developer.apple.com/documentation/foundation/url_loading_system/uploading_data_to_a_website).
+
+__11/06/18__
+
+- Migrated auth responsibilities from UPS --> AuthService

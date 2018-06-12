@@ -11,10 +11,11 @@ import UIKit
 import FirebaseAuth
 
 class ProfileViewController: UIViewController {
+    
+    let auth = AuthService()
 
     @IBAction func logoutTapped(_ sender: Any) {
-        let ups = UserProfileService()
-        ups.logout()
+        auth.logout()
         self.performSegue(withIdentifier: "logout", sender: nil)
 
     }
