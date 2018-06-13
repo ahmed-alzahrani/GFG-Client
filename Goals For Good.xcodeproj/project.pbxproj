@@ -15,6 +15,9 @@
 		4D325C0C20A2509C00A6D086 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D325C0A20A2509C00A6D086 /* Main.storyboard */; };
 		4D325C0E20A2509F00A6D086 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D325C0D20A2509F00A6D086 /* Assets.xcassets */; };
 		4D325C1120A2509F00A6D086 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D325C0F20A2509F00A6D086 /* LaunchScreen.storyboard */; };
+		4D403C2020D06DB700B112A2 /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D403C1F20D06DB700B112A2 /* Subscription.swift */; };
+		4D403C2820D09A4200B112A2 /* QuickLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D403C2720D09A4200B112A2 /* QuickLogin.swift */; };
+		4D403C2A20D09B8300B112A2 /* SubscriptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D403C2920D09B8300B112A2 /* SubscriptionsViewController.swift */; };
 		4D4EA68120CF49D900435850 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4EA68020CF49D900435850 /* AuthService.swift */; };
 		4D53475720A36EFA008EACB9 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D53475620A36EFA008EACB9 /* ProfileViewController.swift */; };
 		4D6BCE5020CCDAFB001AE5E6 /* Requests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6BCE4F20CCDAFB001AE5E6 /* Requests.swift */; };
@@ -241,6 +244,7 @@
 		4DFF6A9A20A42DA500FDC35B /* DetailedPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFF6A9920A42DA500FDC35B /* DetailedPlayer.swift */; };
 		4DFF6A9C20A4CA8800FDC35B /* PlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFF6A9B20A4CA8800FDC35B /* PlayersViewController.swift */; };
 		4DFF6A9E20A57E4800FDC35B /* PlayerDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFF6A9D20A57E4800FDC35B /* PlayerDetailsViewController.swift */; };
+		4DFF6F6820D0B4EF002F9F89 /* SubscriptionCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFF6F6720D0B4EF002F9F89 /* SubscriptionCellViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -254,6 +258,9 @@
 		4D325C0D20A2509F00A6D086 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D325C1020A2509F00A6D086 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D325C1220A2509F00A6D086 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D403C1F20D06DB700B112A2 /* Subscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subscription.swift; sourceTree = "<group>"; };
+		4D403C2720D09A4200B112A2 /* QuickLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuickLogin.swift; sourceTree = "<group>"; };
+		4D403C2920D09B8300B112A2 /* SubscriptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionsViewController.swift; sourceTree = "<group>"; };
 		4D4EA68020CF49D900435850 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		4D53475620A36EFA008EACB9 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		4D53475820A3783C008EACB9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -481,6 +488,7 @@
 		4DFF6A9920A42DA500FDC35B /* DetailedPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedPlayer.swift; sourceTree = "<group>"; };
 		4DFF6A9B20A4CA8800FDC35B /* PlayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersViewController.swift; sourceTree = "<group>"; };
 		4DFF6A9D20A57E4800FDC35B /* PlayerDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDetailsViewController.swift; sourceTree = "<group>"; };
+		4DFF6F6720D0B4EF002F9F89 /* SubscriptionCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionCellViewController.swift; sourceTree = "<group>"; };
 		C41E259777F0B2A46E0721E5 /* Pods-Goals For Good.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Goals For Good.release.xcconfig"; path = "Pods/Target Support Files/Pods-Goals For Good/Pods-Goals For Good.release.xcconfig"; sourceTree = "<group>"; };
 		F74311942C73164F5DD5DE05 /* Pods_Goals_For_Good.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Goals_For_Good.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -500,8 +508,8 @@
 		4D25137320A350E4005BFAC9 /* Validators */ = {
 			isa = PBXGroup;
 			children = (
-				4D25137520A352F1005BFAC9 /* UserValidator.swift */,
 				4D03DAF620B8F1F400AEFAB9 /* SearchBarValidator.swift */,
+				4D25137520A352F1005BFAC9 /* UserValidator.swift */,
 			);
 			path = Validators;
 			sourceTree = "<group>";
@@ -535,6 +543,7 @@
 				4D325C1220A2509F00A6D086 /* Info.plist */,
 				4D325C0A20A2509C00A6D086 /* Main.storyboard */,
 				4D53475820A3783C008EACB9 /* README.md */,
+				4D403C2620D09A1100B112A2 /* ignore */,
 			);
 			path = "Goals For Good";
 			sourceTree = "<group>";
@@ -551,11 +560,19 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		4D403C2620D09A1100B112A2 /* ignore */ = {
+			isa = PBXGroup;
+			children = (
+				4D403C2720D09A4200B112A2 /* QuickLogin.swift */,
+			);
+			name = ignore;
+			sourceTree = "<group>";
+		};
 		4D53474C20A359AD008EACB9 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				4D7F082120A3C9CA00764CA3 /* DataService.swift */,
 				4D4EA68020CF49D900435850 /* AuthService.swift */,
+				4D7F082120A3C9CA00764CA3 /* DataService.swift */,
 				4D7F066E20A380E200764CA3 /* SubscriptionService.swift */,
 			);
 			path = Services;
@@ -564,13 +581,13 @@
 		4D7F067020A38BB900764CA3 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				4DFF6F6920D0B55A002F9F89 /* Table Cell View Controllers */,
 				4DFF6A9120A3E44D00FDC35B /* CharitiesViewController.swift */,
-				4DBEF03020BE4189001CDBCD /* CharityCellViewController.swift */,
 				4D325C0820A2509C00A6D086 /* LoginViewController.swift */,
-				4D7F081F20A3C6B800764CA3 /* PlayerCellViewController.swift */,
 				4DFF6A9D20A57E4800FDC35B /* PlayerDetailsViewController.swift */,
 				4DFF6A9B20A4CA8800FDC35B /* PlayersViewController.swift */,
 				4D53475620A36EFA008EACB9 /* ProfileViewController.swift */,
+				4D403C2920D09B8300B112A2 /* SubscriptionsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -821,12 +838,23 @@
 		4DFF6A9020A3DB2A00FDC35B /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				4DFF6A9920A42DA500FDC35B /* DetailedPlayer.swift */,
 				4DBEF02E20BCB600001CDBCD /* Charity.swift */,
+				4DFF6A9920A42DA500FDC35B /* DetailedPlayer.swift */,
 				4D97176E20B3BDDC009AEC97 /* Player.swift */,
 				4D6BCE4F20CCDAFB001AE5E6 /* Requests.swift */,
+				4D403C1F20D06DB700B112A2 /* Subscription.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		4DFF6F6920D0B55A002F9F89 /* Table Cell View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4DBEF03020BE4189001CDBCD /* CharityCellViewController.swift */,
+				4D7F081F20A3C6B800764CA3 /* PlayerCellViewController.swift */,
+				4DFF6F6720D0B4EF002F9F89 /* SubscriptionCellViewController.swift */,
+			);
+			path = "Table Cell View Controllers";
 			sourceTree = "<group>";
 		};
 		B877834DF90D3DF1A6D2CED7 /* Pods */ = {
@@ -1180,19 +1208,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DFF6A9C20A4CA8800FDC35B /* PlayersViewController.swift in Sources */,
+				4D403C2A20D09B8300B112A2 /* SubscriptionsViewController.swift in Sources */,
 				4DFF6A9A20A42DA500FDC35B /* DetailedPlayer.swift in Sources */,
 				4D53475720A36EFA008EACB9 /* ProfileViewController.swift in Sources */,
 				4D03DAF720B8F1F400AEFAB9 /* SearchBarValidator.swift in Sources */,
 				4D325C0920A2509C00A6D086 /* LoginViewController.swift in Sources */,
 				4D6BCE5020CCDAFB001AE5E6 /* Requests.swift in Sources */,
+				4D403C2020D06DB700B112A2 /* Subscription.swift in Sources */,
 				4D97176F20B3BDDC009AEC97 /* Player.swift in Sources */,
 				4D325C0720A2509C00A6D086 /* AppDelegate.swift in Sources */,
+				4D403C2820D09A4200B112A2 /* QuickLogin.swift in Sources */,
 				4D7F066F20A380E200764CA3 /* SubscriptionService.swift in Sources */,
 				4D7F082220A3C9CA00764CA3 /* DataService.swift in Sources */,
 				4DFF6A9220A3E44D00FDC35B /* CharitiesViewController.swift in Sources */,
 				4DBEF02F20BCB600001CDBCD /* Charity.swift in Sources */,
 				4DBEF03120BE4189001CDBCD /* CharityCellViewController.swift in Sources */,
 				4DFF6A9E20A57E4800FDC35B /* PlayerDetailsViewController.swift in Sources */,
+				4DFF6F6820D0B4EF002F9F89 /* SubscriptionCellViewController.swift in Sources */,
 				4D4EA68120CF49D900435850 /* AuthService.swift in Sources */,
 				4D7F082020A3C6B800764CA3 /* PlayerCellViewController.swift in Sources */,
 				4D25137620A352F1005BFAC9 /* UserValidator.swift in Sources */,

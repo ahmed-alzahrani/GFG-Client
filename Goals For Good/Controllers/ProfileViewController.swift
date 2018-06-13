@@ -13,6 +13,7 @@ import FirebaseAuth
 class ProfileViewController: UIViewController {
     
     let auth = AuthService()
+    let sub = SubscriptionService()
 
     @IBAction func logoutTapped(_ sender: Any) {
         auth.logout()
@@ -21,6 +22,7 @@ class ProfileViewController: UIViewController {
     }
 
     @IBAction func Subscriptions(_ sender: UIButton) {
+
         self.performSegue(withIdentifier: "subscriptions", sender: nil)
     }
 }

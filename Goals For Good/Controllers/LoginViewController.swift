@@ -37,4 +37,9 @@ class LoginViewController: UIViewController {
             
         }
     }
+    
+    @IBAction func quickLogin(_ sender: UIButton) {
+        let quick = QuickLogin()
+        quick.quickLogin(with: self)
+    }
 }

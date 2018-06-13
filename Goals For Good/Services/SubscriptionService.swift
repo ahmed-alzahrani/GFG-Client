@@ -12,6 +12,7 @@ import FirebaseAuth
 struct SubscriptionService {
     
     typealias FinishedReq = (Bool) -> ()
+    typealias FinishedSubs = ([Subscription]) -> ()
     
     func checkSubscription(player: String, completed: @escaping FinishedReq) {
         if let user = Auth.auth().currentUser {
@@ -139,6 +140,27 @@ struct SubscriptionService {
                 }
             }
             task.resume()
+        }
+    }
+    
+    func getSubscriptions(completed: @escaping FinishedSubs) {
+        if let user = Auth.auth().currentUser {
+            print("got the current user")
+            let urlString = "http://localhost:8080/subscriptions/" + user.uid
+            guard let url = URL(string: urlString) else { return }
+            print("got the url..")
+            print(urlString)
+            URLSession.shared.dataTask(with: url) { (data, response, error) in
+                guard let data = data else {
+                    print("failed getting data")
+                    return }
+                do {
+                    let subscriptions = try JSONDecoder().decode([Subscription].self, from: data)
+                    completed(subscriptions)
+                } catch let jsonErr {
+                    print("error serializing JSON", jsonErr)
+                }
+            }.resume()
         }
     }
 }

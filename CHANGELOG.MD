@@ -68,3 +68,15 @@ __11/06/18__
 - Migrated auth responsibilities from UPS --> AuthService
 
 - Renamed UPS --> SubscriptionService and NetworkingService --> DataService
+
+__12/06/18__
+
+- Added Quick Login button, when working on the client, you can populate the /ignore/QuickLogin.swift with an email/pass combo to login with one click while testing
+
+- added a search bar validator for subscriptions
+
+- Added a FinshedSubs typealias as well as a getSubscriptions method to the SubscriptionService, this returns a JSON array from the server of the current user's subscriptions to populate the table view on the page
+
+- Added Subscription Codable model in order to serialize JSON from the server
+
+- Moved all UITabelViewCell subclasses to their own sub-directory of Controllers titled Table Cell View Controllers

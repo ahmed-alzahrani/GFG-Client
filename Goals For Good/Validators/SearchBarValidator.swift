@@ -17,4 +17,8 @@ struct SearchBarValidator {
     func charityValidator(charity: Charity, text: String) -> Bool {
         return charity.name!.contains(text) || charity.id!.contains(text) || charity.website!.contains(text) || charity.description!.contains(text)
     }
+    
+    func subscriptionValidator(subscription: Subscription, text: String) -> Bool {
+        return subscription.id!.contains(String(text)) || subscription.charity!.contains(String(text)) || subscription.charityId!.contains(String(text)) || subscription.name!.contains(String(text))
+    }
 }
