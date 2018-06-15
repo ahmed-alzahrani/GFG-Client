@@ -57,9 +57,9 @@ struct SubscriptionService {
         }
     }
     
-    func addSubscription(toPlayer: String, playerName: String, toCharity: Charity, completed: @escaping FinishedReq) {
+    func addSubscription(toPlayer: String, playerName: String, teamId: String, teamName: String, toCharity: Charity, completed: @escaping FinishedReq) {
         if let user = Auth.auth().currentUser {
-            let params = AddSubParams(uid: user.uid, playerId: toPlayer, name: playerName, charityName: toCharity.name!, charityId: toCharity.id!)
+            let params = AddSubParams(uid: user.uid, playerId: toPlayer, name: playerName, team: teamId, teamName: teamName, charityName: toCharity.name!, charityId: toCharity.id!)
             
             guard let uploadData = try? JSONEncoder().encode(params) else {
                 return

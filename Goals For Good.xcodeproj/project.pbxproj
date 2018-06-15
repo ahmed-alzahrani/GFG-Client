@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		00B465CAD63E8100C4DF307C /* Pods_Goals_For_Good.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F74311942C73164F5DD5DE05 /* Pods_Goals_For_Good.framework */; };
 		4D03DAF720B8F1F400AEFAB9 /* SearchBarValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D03DAF620B8F1F400AEFAB9 /* SearchBarValidator.swift */; };
+		4D0B7EAB20D3385900A14078 /* MatchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0B7EAA20D3385900A14078 /* MatchesViewController.swift */; };
+		4D0B7EAD20D3389C00A14078 /* MatchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0B7EAC20D3389C00A14078 /* MatchCell.swift */; };
 		4D25137620A352F1005BFAC9 /* UserValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D25137520A352F1005BFAC9 /* UserValidator.swift */; };
 		4D325C0720A2509C00A6D086 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D325C0620A2509C00A6D086 /* AppDelegate.swift */; };
 		4D325C0920A2509C00A6D086 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D325C0820A2509C00A6D086 /* LoginViewController.swift */; };
@@ -19,6 +21,7 @@
 		4D403C2820D09A4200B112A2 /* QuickLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D403C2720D09A4200B112A2 /* QuickLogin.swift */; };
 		4D403C2A20D09B8300B112A2 /* SubscriptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D403C2920D09B8300B112A2 /* SubscriptionsViewController.swift */; };
 		4D4EA68120CF49D900435850 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4EA68020CF49D900435850 /* AuthService.swift */; };
+		4D51972C20D31CC5002E42C6 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D51972B20D31CC5002E42C6 /* Match.swift */; };
 		4D53475720A36EFA008EACB9 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D53475620A36EFA008EACB9 /* ProfileViewController.swift */; };
 		4D6BCE5020CCDAFB001AE5E6 /* Requests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6BCE4F20CCDAFB001AE5E6 /* Requests.swift */; };
 		4D7F066F20A380E200764CA3 /* SubscriptionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7F066E20A380E200764CA3 /* SubscriptionService.swift */; };
@@ -233,23 +236,25 @@
 		4D7F081C20A3C25F00764CA3 /* Algeria-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F075020A3C25D00764CA3 /* Algeria-flag.png */; };
 		4D7F081D20A3C25F00764CA3 /* China-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F075120A3C25E00764CA3 /* China-flag.png */; };
 		4D7F081E20A3C25F00764CA3 /* Monaco-flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F075220A3C25F00764CA3 /* Monaco-flag.png */; };
-		4D7F082020A3C6B800764CA3 /* PlayerCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7F081F20A3C6B800764CA3 /* PlayerCellViewController.swift */; };
+		4D7F082020A3C6B800764CA3 /* PlayerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7F081F20A3C6B800764CA3 /* PlayerCell.swift */; };
 		4D7F082220A3C9CA00764CA3 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7F082120A3C9CA00764CA3 /* DataService.swift */; };
 		4D97176F20B3BDDC009AEC97 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D97176E20B3BDDC009AEC97 /* Player.swift */; };
 		4DBEF02F20BCB600001CDBCD /* Charity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBEF02E20BCB600001CDBCD /* Charity.swift */; };
-		4DBEF03120BE4189001CDBCD /* CharityCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBEF03020BE4189001CDBCD /* CharityCellViewController.swift */; };
+		4DBEF03120BE4189001CDBCD /* CharityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBEF03020BE4189001CDBCD /* CharityCell.swift */; };
 		4DFE624B20A3441400A601B7 /* login_background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4DFE624A20A3441400A601B7 /* login_background.jpg */; };
 		4DFE624D20A349F900A601B7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4DFE624C20A349F900A601B7 /* GoogleService-Info.plist */; };
 		4DFF6A9220A3E44D00FDC35B /* CharitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFF6A9120A3E44D00FDC35B /* CharitiesViewController.swift */; };
 		4DFF6A9A20A42DA500FDC35B /* DetailedPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFF6A9920A42DA500FDC35B /* DetailedPlayer.swift */; };
 		4DFF6A9C20A4CA8800FDC35B /* PlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFF6A9B20A4CA8800FDC35B /* PlayersViewController.swift */; };
 		4DFF6A9E20A57E4800FDC35B /* PlayerDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFF6A9D20A57E4800FDC35B /* PlayerDetailsViewController.swift */; };
-		4DFF6F6820D0B4EF002F9F89 /* SubscriptionCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFF6F6720D0B4EF002F9F89 /* SubscriptionCellViewController.swift */; };
+		4DFF6F6820D0B4EF002F9F89 /* SubscriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFF6F6720D0B4EF002F9F89 /* SubscriptionCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		025EE025BFCAF3E905ABE6BF /* Pods-Goals For Good.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Goals For Good.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Goals For Good/Pods-Goals For Good.debug.xcconfig"; sourceTree = "<group>"; };
 		4D03DAF620B8F1F400AEFAB9 /* SearchBarValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarValidator.swift; sourceTree = "<group>"; };
+		4D0B7EAA20D3385900A14078 /* MatchesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesViewController.swift; sourceTree = "<group>"; };
+		4D0B7EAC20D3389C00A14078 /* MatchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchCell.swift; sourceTree = "<group>"; };
 		4D25137520A352F1005BFAC9 /* UserValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserValidator.swift; sourceTree = "<group>"; };
 		4D325C0320A2509C00A6D086 /* Goals For Good.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Goals For Good.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D325C0620A2509C00A6D086 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -262,6 +267,7 @@
 		4D403C2720D09A4200B112A2 /* QuickLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuickLogin.swift; sourceTree = "<group>"; };
 		4D403C2920D09B8300B112A2 /* SubscriptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionsViewController.swift; sourceTree = "<group>"; };
 		4D4EA68020CF49D900435850 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		4D51972B20D31CC5002E42C6 /* Match.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
 		4D53475620A36EFA008EACB9 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		4D53475820A3783C008EACB9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		4D6BCE4F20CCDAFB001AE5E6 /* Requests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requests.swift; sourceTree = "<group>"; };
@@ -477,18 +483,18 @@
 		4D7F075020A3C25D00764CA3 /* Algeria-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Algeria-flag.png"; sourceTree = "<group>"; };
 		4D7F075120A3C25E00764CA3 /* China-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "China-flag.png"; sourceTree = "<group>"; };
 		4D7F075220A3C25F00764CA3 /* Monaco-flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Monaco-flag.png"; sourceTree = "<group>"; };
-		4D7F081F20A3C6B800764CA3 /* PlayerCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCellViewController.swift; sourceTree = "<group>"; };
+		4D7F081F20A3C6B800764CA3 /* PlayerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCell.swift; sourceTree = "<group>"; };
 		4D7F082120A3C9CA00764CA3 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		4D97176E20B3BDDC009AEC97 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		4DBEF02E20BCB600001CDBCD /* Charity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Charity.swift; sourceTree = "<group>"; };
-		4DBEF03020BE4189001CDBCD /* CharityCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharityCellViewController.swift; sourceTree = "<group>"; };
+		4DBEF03020BE4189001CDBCD /* CharityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharityCell.swift; sourceTree = "<group>"; };
 		4DFE624A20A3441400A601B7 /* login_background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = login_background.jpg; sourceTree = "<group>"; };
 		4DFE624C20A349F900A601B7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4DFF6A9120A3E44D00FDC35B /* CharitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharitiesViewController.swift; sourceTree = "<group>"; };
 		4DFF6A9920A42DA500FDC35B /* DetailedPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedPlayer.swift; sourceTree = "<group>"; };
 		4DFF6A9B20A4CA8800FDC35B /* PlayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersViewController.swift; sourceTree = "<group>"; };
 		4DFF6A9D20A57E4800FDC35B /* PlayerDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDetailsViewController.swift; sourceTree = "<group>"; };
-		4DFF6F6720D0B4EF002F9F89 /* SubscriptionCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionCellViewController.swift; sourceTree = "<group>"; };
+		4DFF6F6720D0B4EF002F9F89 /* SubscriptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionCell.swift; sourceTree = "<group>"; };
 		C41E259777F0B2A46E0721E5 /* Pods-Goals For Good.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Goals For Good.release.xcconfig"; path = "Pods/Target Support Files/Pods-Goals For Good/Pods-Goals For Good.release.xcconfig"; sourceTree = "<group>"; };
 		F74311942C73164F5DD5DE05 /* Pods_Goals_For_Good.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Goals_For_Good.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -581,8 +587,9 @@
 		4D7F067020A38BB900764CA3 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				4DFF6F6920D0B55A002F9F89 /* Table Cell View Controllers */,
+				4DFF6F6920D0B55A002F9F89 /* Custom Table View Cells */,
 				4DFF6A9120A3E44D00FDC35B /* CharitiesViewController.swift */,
+				4D0B7EAA20D3385900A14078 /* MatchesViewController.swift */,
 				4D325C0820A2509C00A6D086 /* LoginViewController.swift */,
 				4DFF6A9D20A57E4800FDC35B /* PlayerDetailsViewController.swift */,
 				4DFF6A9B20A4CA8800FDC35B /* PlayersViewController.swift */,
@@ -839,6 +846,7 @@
 			isa = PBXGroup;
 			children = (
 				4DBEF02E20BCB600001CDBCD /* Charity.swift */,
+				4D51972B20D31CC5002E42C6 /* Match.swift */,
 				4DFF6A9920A42DA500FDC35B /* DetailedPlayer.swift */,
 				4D97176E20B3BDDC009AEC97 /* Player.swift */,
 				4D6BCE4F20CCDAFB001AE5E6 /* Requests.swift */,
@@ -847,14 +855,15 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		4DFF6F6920D0B55A002F9F89 /* Table Cell View Controllers */ = {
+		4DFF6F6920D0B55A002F9F89 /* Custom Table View Cells */ = {
 			isa = PBXGroup;
 			children = (
-				4DBEF03020BE4189001CDBCD /* CharityCellViewController.swift */,
-				4D7F081F20A3C6B800764CA3 /* PlayerCellViewController.swift */,
-				4DFF6F6720D0B4EF002F9F89 /* SubscriptionCellViewController.swift */,
+				4DBEF03020BE4189001CDBCD /* CharityCell.swift */,
+				4D0B7EAC20D3389C00A14078 /* MatchCell.swift */,
+				4D7F081F20A3C6B800764CA3 /* PlayerCell.swift */,
+				4DFF6F6720D0B4EF002F9F89 /* SubscriptionCell.swift */,
 			);
-			path = "Table Cell View Controllers";
+			path = "Custom Table View Cells";
 			sourceTree = "<group>";
 		};
 		B877834DF90D3DF1A6D2CED7 /* Pods */ = {
@@ -1210,6 +1219,7 @@
 				4DFF6A9C20A4CA8800FDC35B /* PlayersViewController.swift in Sources */,
 				4D403C2A20D09B8300B112A2 /* SubscriptionsViewController.swift in Sources */,
 				4DFF6A9A20A42DA500FDC35B /* DetailedPlayer.swift in Sources */,
+				4D0B7EAB20D3385900A14078 /* MatchesViewController.swift in Sources */,
 				4D53475720A36EFA008EACB9 /* ProfileViewController.swift in Sources */,
 				4D03DAF720B8F1F400AEFAB9 /* SearchBarValidator.swift in Sources */,
 				4D325C0920A2509C00A6D086 /* LoginViewController.swift in Sources */,
@@ -1221,12 +1231,14 @@
 				4D7F066F20A380E200764CA3 /* SubscriptionService.swift in Sources */,
 				4D7F082220A3C9CA00764CA3 /* DataService.swift in Sources */,
 				4DFF6A9220A3E44D00FDC35B /* CharitiesViewController.swift in Sources */,
+				4D0B7EAD20D3389C00A14078 /* MatchCell.swift in Sources */,
 				4DBEF02F20BCB600001CDBCD /* Charity.swift in Sources */,
-				4DBEF03120BE4189001CDBCD /* CharityCellViewController.swift in Sources */,
+				4DBEF03120BE4189001CDBCD /* CharityCell.swift in Sources */,
 				4DFF6A9E20A57E4800FDC35B /* PlayerDetailsViewController.swift in Sources */,
-				4DFF6F6820D0B4EF002F9F89 /* SubscriptionCellViewController.swift in Sources */,
+				4DFF6F6820D0B4EF002F9F89 /* SubscriptionCell.swift in Sources */,
 				4D4EA68120CF49D900435850 /* AuthService.swift in Sources */,
-				4D7F082020A3C6B800764CA3 /* PlayerCellViewController.swift in Sources */,
+				4D51972C20D31CC5002E42C6 /* Match.swift in Sources */,
+				4D7F082020A3C6B800764CA3 /* PlayerCell.swift in Sources */,
 				4D25137620A352F1005BFAC9 /* UserValidator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

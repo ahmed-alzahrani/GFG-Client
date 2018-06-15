@@ -7,13 +7,14 @@
 //
 
 import Foundation
-import PromiseKit
+import FirebaseAuth
 
 struct DataService {
 
     typealias FinishedPlayers = ([Player]) -> ()
     typealias FinishedCharities = ([Charity]) -> ()
     typealias FinishedPlayer = (DetailedPlayer) -> ()
+    typealias FinishedMatches = ([Match]) -> ()
     static let shared = DataService()
     private init() {}
 
@@ -67,5 +68,24 @@ struct DataService {
                 print("error serializing JSON", jsonErr)
             }
         }.resume()
+    }
+    
+    func getMatches(completed: @escaping FinishedMatches) {
+        if let user = Auth.auth().currentUser {
+            let urlString = "http://localhost:8080/matches/" + user.uid
+            guard let url = URL(string: urlString) else { return }
+            URLSession.shared.dataTask(with: url) { (data, response, error) in
+                guard let data = data else {
+                    print("failed getting data")
+                    return }
+                do {
+                    let matches = try JSONDecoder().decode([Match].self, from: data)
+                        completed(matches)
+                } catch let jsonErr {
+                    print("error serializing JSON", jsonErr)
+                }
+            }.resume()
+        }
+        // user could NOT be authenticated
     }
 }

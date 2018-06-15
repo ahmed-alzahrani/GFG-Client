@@ -52,9 +52,10 @@ extension SubscriptionsViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "SubscriptionCell", for: indexPath) as! SubscriptionCellViewController
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SubscriptionCell", for: indexPath) as! SubscriptionCell
         
         cell.playerLabel.text = filteredSubscriptions[indexPath.row].name
+        cell.teamLabel.text = filteredSubscriptions[indexPath.row].teamName
         cell.charityLabel.text = filteredSubscriptions[indexPath.row].charity
         cell.sinceLabel.text = filteredSubscriptions[indexPath.row].time
         return cell

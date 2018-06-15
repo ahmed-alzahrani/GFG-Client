@@ -13,5 +13,7 @@ struct Subscription: Decodable {
     let charity: String?
     let charityId: String?
     let name: String?
+    let team: String?
+    let teamName: String?
     let time: String?
 }

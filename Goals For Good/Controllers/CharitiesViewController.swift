@@ -31,11 +31,6 @@ class CharitiesViewController: UIViewController {
         })
     }
 
-    private func setupCharities(using: [Charity]) {
-        charities = using
-        filteredCharities = using
-    }
-
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         print("preparing for segue to the charity details page")
     }
@@ -58,7 +53,7 @@ extension CharitiesViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CharityCell", for: indexPath) as! CharityCellViewController
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CharityCell", for: indexPath) as! CharityCell
         cell.nameLabel.text = filteredCharities[indexPath.row].name
         cell.idLabel.text = filteredCharities[indexPath.row].id
         cell.websiteLabel.text = filteredCharities[indexPath.row].website

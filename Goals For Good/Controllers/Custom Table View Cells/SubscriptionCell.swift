@@ -9,9 +9,10 @@
 import Foundation
 import UIKit
 
-class SubscriptionCellViewController: UITableViewCell {
+class SubscriptionCell: UITableViewCell {
     @IBOutlet weak var playerLabel: UILabel!
     @IBOutlet weak var charityLabel: UILabel!
     @IBOutlet weak var sinceLabel: UILabel!
+    @IBOutlet weak var teamLabel: UILabel!
     
 }

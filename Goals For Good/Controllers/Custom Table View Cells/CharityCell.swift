@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class CharityCellViewController: UITableViewCell {
+class CharityCell: UITableViewCell {
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var websiteLabel: UILabel!

@@ -100,7 +100,7 @@ class PlayerDetailsViewController: UIViewController {
 
     @IBAction func subscribeButton(_ sender: UIButton) {
         if let playerToSubscribe = player, let charityToSubscribe = selectedCharity {
-            sub.addSubscription(toPlayer: playerToSubscribe.id!, playerName: playerToSubscribe.name!, toCharity: charityToSubscribe, completed: subscribeComplete)
+            sub.addSubscription(toPlayer: playerToSubscribe.id!, playerName: playerToSubscribe.name!,teamId: playerToSubscribe.teamid!, teamName: playerToSubscribe.team!, toCharity: charityToSubscribe, completed: subscribeComplete)
         }
     }
     

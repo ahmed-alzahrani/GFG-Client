@@ -18,6 +18,8 @@ struct AddSubParams: Codable {
     let uid: String?
     let playerId: String?
     let name: String?
+    let team: String?
+    let teamName: String?
     let charityName: String?
     let charityId: String?
 }

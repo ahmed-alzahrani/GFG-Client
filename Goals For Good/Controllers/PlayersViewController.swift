@@ -59,7 +59,7 @@ extension PlayersViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "PlayerCell", for: indexPath) as! PlayerCellViewController
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PlayerCell", for: indexPath) as! PlayerCell
         cell.playerNameLabel.text = filteredPlayers[indexPath.row].name
         cell.positionLabel.text = filteredPlayers[indexPath.row].position
         cell.teamLabel.text = filteredPlayers[indexPath.row].team
