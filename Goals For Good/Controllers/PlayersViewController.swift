@@ -35,10 +35,10 @@ class PlayersViewController: UIViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard segue.identifier == "playerDetails",
-        let PlayerDetailsViewController = segue.destination as? PlayerDetailsViewController,
+        let destination = segue.destination as? PlayerDetailsViewController,
         let player = sender as AnyObject as? Player
             else { return }
-        DataService.shared.getPlayer(with: player.id!, completed: PlayerDetailsViewController.setupPlayer)
+        DataService.shared.getPlayer(with: player.id!, completed: destination.setupPlayer)
     }
 }
 

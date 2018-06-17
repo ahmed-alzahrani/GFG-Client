@@ -21,4 +21,8 @@ struct SearchBarValidator {
     func subscriptionValidator(subscription: Subscription, text: String) -> Bool {
         return subscription.id!.contains(String(text)) || subscription.charity!.contains(String(text)) || subscription.charityId!.contains(String(text)) || subscription.name!.contains(String(text))
     }
+    
+    func matchValidator(match: Match, text: String) -> Bool {
+        return match.comp_id!.contains(String(text)) || match.visitorteam_name!.contains(String(text)) || match.localteam_name!.contains(String(text)) || match.venue!.contains(String(text))
+    }
 }

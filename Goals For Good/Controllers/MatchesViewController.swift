@@ -26,7 +26,7 @@ class MatchesViewController: UIViewController {
         filteredMatches = using
         
         DispatchQueue.main.async(execute: {() -> Void in
-            self.tableView?.rowHeight = 80
+            self.tableView?.rowHeight = 105
             self.tableView?.reloadData()
         })
     }
@@ -54,8 +54,9 @@ extension MatchesViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "matchCell", for: indexPath) as! MatchCell
-        cell.homeTeamLabel.text = filteredMatches[indexPath.row].localteam_name
-        cell.awayTeamLabel.text = filteredMatches[indexPath.row].visitorteam_name
+        
+        let fixture = filteredMatches[indexPath.row].localteam_name! + " v. " + filteredMatches[indexPath.row].visitorteam_name!
+        cell.fixtureLabel.text = fixture
         cell.competitionLabel.text = filteredMatches[indexPath.row].comp_id
         cell.dateLabel.text = filteredMatches[indexPath.row].formatted_date
         cell.venueLabel.text = filteredMatches[indexPath.row].venue
@@ -63,4 +64,17 @@ extension MatchesViewController: UITableViewDataSource {
     }
 }
 
-// add searchBar extension in here
+extension MatchesViewController: UISearchBarDelegate {
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        filteredMatches = matches.filter({ match -> Bool in
+            guard let text = searchBar.text else { return false }
+            if (text == "") {
+                return true
+            } else {
+                return searchBarValidator.matchValidator(match: match, text: text)
+            }
+        })
+        self.tableView.reloadData()
+    }
+}

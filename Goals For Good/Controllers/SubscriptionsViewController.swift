@@ -33,11 +33,20 @@ class SubscriptionsViewController: UIViewController {
         
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.identifier == "subscriptionDetails",
+            let destination = segue.destination as? SubscriptionDetailsViewController,
+        let subscription = sender as AnyObject as? Subscription
+            else { return }
+        destination.setupSubscription(using: subscription)
+    }
+    
 }
 
 extension SubscriptionsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("perform segue with identifier the row of the subscription here")
+        performSegue(withIdentifier: "subscriptionDetails", sender: filteredSubscriptions[indexPath.row])
     }
 }
 

@@ -88,4 +88,20 @@ struct DataService {
         }
         // user could NOT be authenticated
     }
+    
+    func getPlayerMatches(completed: @escaping FinishedMatches, withId: String) {
+        let urlString = "http://localhost:8080/playerMatches/" + withId
+        guard let url = URL(string: urlString) else { return }
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
+            guard let data = data else {
+                print("failed getting data")
+                return }
+            do {
+                let matches = try JSONDecoder().decode([Match].self, from: data)
+                completed(matches)
+            } catch let jsonErr {
+                print("error serializing JSON", jsonErr)
+            }
+        }.resume()
+    }
 }

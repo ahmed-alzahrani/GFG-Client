@@ -81,7 +81,7 @@ __12/06/18__
 
 - Moved all UITabelViewCell subclasses to their own sub-directory of Controllers titled Table Cell View Controllers
 
-__15/05/18__
+__15/06/18__
 
 - added new fields to subscriptions being added / retrieved including team id and team name
 
@@ -90,3 +90,9 @@ __15/05/18__
 - renamed table cell view controllers and segregated them in their own sub-directory of View Controllers
 
 - added MatchesViewController and MatchCell / configured the Matches page to function similarly to Players/Charities/Subscriptions pages, a searchable tableView to show the user data, in this case, all of the matches featuring players that the user has subscribed to for the next month
+
+__16/06/18__
+
+- Finished implementing of Matches table view
+
+- Added SubscriptionDetailsViewController UI, this includes a nav bar who's title is set depending on the name of the player who this subscription is described by, a picker view for changing the charity of the subscription and a table view showing specifically the matches involving that player for the next month

@@ -23,6 +23,7 @@
 		4D4EA68120CF49D900435850 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4EA68020CF49D900435850 /* AuthService.swift */; };
 		4D51972C20D31CC5002E42C6 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D51972B20D31CC5002E42C6 /* Match.swift */; };
 		4D53475720A36EFA008EACB9 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D53475620A36EFA008EACB9 /* ProfileViewController.swift */; };
+		4D6A87F320D5DC1D00DDCD27 /* SubscriptionDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6A87F220D5DC1D00DDCD27 /* SubscriptionDetailsViewController.swift */; };
 		4D6BCE5020CCDAFB001AE5E6 /* Requests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6BCE4F20CCDAFB001AE5E6 /* Requests.swift */; };
 		4D7F066F20A380E200764CA3 /* SubscriptionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7F066E20A380E200764CA3 /* SubscriptionService.swift */; };
 		4D7F067620A3ADAF00764CA3 /* love.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F067520A3ADAF00764CA3 /* love.png */; };
@@ -270,6 +271,7 @@
 		4D51972B20D31CC5002E42C6 /* Match.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
 		4D53475620A36EFA008EACB9 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		4D53475820A3783C008EACB9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		4D6A87F220D5DC1D00DDCD27 /* SubscriptionDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionDetailsViewController.swift; sourceTree = "<group>"; };
 		4D6BCE4F20CCDAFB001AE5E6 /* Requests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requests.swift; sourceTree = "<group>"; };
 		4D7F066E20A380E200764CA3 /* SubscriptionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionService.swift; sourceTree = "<group>"; };
 		4D7F067520A3ADAF00764CA3 /* love.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = love.png; sourceTree = "<group>"; };
@@ -590,6 +592,7 @@
 				4DFF6F6920D0B55A002F9F89 /* Custom Table View Cells */,
 				4DFF6A9120A3E44D00FDC35B /* CharitiesViewController.swift */,
 				4D0B7EAA20D3385900A14078 /* MatchesViewController.swift */,
+				4D6A87F220D5DC1D00DDCD27 /* SubscriptionDetailsViewController.swift */,
 				4D325C0820A2509C00A6D086 /* LoginViewController.swift */,
 				4DFF6A9D20A57E4800FDC35B /* PlayerDetailsViewController.swift */,
 				4DFF6A9B20A4CA8800FDC35B /* PlayersViewController.swift */,
@@ -1231,6 +1234,7 @@
 				4D7F066F20A380E200764CA3 /* SubscriptionService.swift in Sources */,
 				4D7F082220A3C9CA00764CA3 /* DataService.swift in Sources */,
 				4DFF6A9220A3E44D00FDC35B /* CharitiesViewController.swift in Sources */,
+				4D6A87F320D5DC1D00DDCD27 /* SubscriptionDetailsViewController.swift in Sources */,
 				4D0B7EAD20D3389C00A14078 /* MatchCell.swift in Sources */,
 				4DBEF02F20BCB600001CDBCD /* Charity.swift in Sources */,
 				4DBEF03120BE4189001CDBCD /* CharityCell.swift in Sources */,

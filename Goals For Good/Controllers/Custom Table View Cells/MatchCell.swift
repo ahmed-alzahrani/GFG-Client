@@ -10,9 +10,7 @@ import Foundation
 import UIKit
 
 class MatchCell: UITableViewCell {
-    
-    @IBOutlet weak var homeTeamLabel: UILabel!
-    @IBOutlet weak var awayTeamLabel: UILabel!
+    @IBOutlet weak var fixtureLabel: UILabel!
     @IBOutlet weak var competitionLabel: UILabel!
     @IBOutlet weak var venueLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
