@@ -28,3 +28,10 @@ struct RemoveSubParams: Codable {
     let uid: String?
     let playerId: String?
 }
+
+struct UpdateSubParams: Codable {
+    let uid: String?
+    let playerId: String?
+    let charityName: String?
+    let charityId: String?
+}

@@ -96,3 +96,13 @@ __16/06/18__
 - Finished implementing of Matches table view
 
 - Added SubscriptionDetailsViewController UI, this includes a nav bar who's title is set depending on the name of the player who this subscription is described by, a picker view for changing the charity of the subscription and a table view showing specifically the matches involving that player for the next month
+
+__18/06/18__
+
+- Added UI picker view and unsubscribe / update charity subscription functionality in Subscription details VC
+
+- Added UpdateSubParams Codable JSON model
+
+- Changed charity model so charity/charityId are var instead of let so they can be updated if the user updates the charity in their subscription
+
+- Migrated cells into Views directory

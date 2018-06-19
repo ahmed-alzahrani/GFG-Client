@@ -143,6 +143,50 @@ struct SubscriptionService {
         }
     }
     
+    func updateSubscription(player: String, charity: Charity, completed: @escaping FinishedReq) {
+        if let user = Auth.auth().currentUser {
+            let params = UpdateSubParams(uid: user.uid, playerId: player, charityName: charity.name, charityId: charity.id)
+            
+            guard let uploadData = try? JSONEncoder().encode(params) else {
+                return
+            }
+            
+            var req = URLRequest(url: URL(string: "http://localhost:8080/updateSubscription")!)
+            req.httpMethod = "POST"
+            req.setValue("application/json", forHTTPHeaderField: "Content-Type")
+            
+            let task = URLSession.shared.uploadTask(with: req, from: uploadData) { data, response, error in
+                if let error = error {
+                    print("error: \(error)")
+                    return
+                }
+                
+                guard let response = response as? HTTPURLResponse, (200...299).contains(response.statusCode) else {
+                    print("server error")
+                    return
+                }
+                
+                if let mimeType = response.mimeType,
+                mimeType == "application/json",
+                    let data = data {
+                    
+                    guard let json = (try? JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers)) as? [String: Any] else {
+                        print("Not containing JSON")
+                        return
+                    }
+                    
+                    guard let result = json["result"] as? Bool else {
+                        print("couldn't get result from JSON")
+                        return
+                    }
+                    completed(result)
+                    
+                }
+            }
+            task.resume()
+        }
+    }
+    
     func getSubscriptions(completed: @escaping FinishedSubs) {
         if let user = Auth.auth().currentUser {
             print("got the current user")

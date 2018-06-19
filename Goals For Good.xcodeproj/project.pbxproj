@@ -543,6 +543,7 @@
 		4D325C0520A2509C00A6D086 /* Goals For Good */ = {
 			isa = PBXGroup;
 			children = (
+				4DFF6F6920D0B55A002F9F89 /* Views */,
 				4D7F067020A38BB900764CA3 /* Controllers */,
 				4DFF6A9020A3DB2A00FDC35B /* Models */,
 				4D53474C20A359AD008EACB9 /* Services */,
@@ -589,7 +590,6 @@
 		4D7F067020A38BB900764CA3 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				4DFF6F6920D0B55A002F9F89 /* Custom Table View Cells */,
 				4DFF6A9120A3E44D00FDC35B /* CharitiesViewController.swift */,
 				4D0B7EAA20D3385900A14078 /* MatchesViewController.swift */,
 				4D6A87F220D5DC1D00DDCD27 /* SubscriptionDetailsViewController.swift */,
@@ -858,7 +858,7 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		4DFF6F6920D0B55A002F9F89 /* Custom Table View Cells */ = {
+		4DFF6F6920D0B55A002F9F89 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				4DBEF03020BE4189001CDBCD /* CharityCell.swift */,
@@ -866,7 +866,7 @@
 				4D7F081F20A3C6B800764CA3 /* PlayerCell.swift */,
 				4DFF6F6720D0B4EF002F9F89 /* SubscriptionCell.swift */,
 			);
-			path = "Custom Table View Cells";
+			path = Views;
 			sourceTree = "<group>";
 		};
 		B877834DF90D3DF1A6D2CED7 /* Pods */ = {

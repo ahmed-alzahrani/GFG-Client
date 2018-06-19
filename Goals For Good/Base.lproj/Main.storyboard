@@ -786,8 +786,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2R9-bs-q8g">
-                                <rect key="frame" x="144" y="294" width="87" height="30"/>
+                                <rect key="frame" x="272" y="312" width="67" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <state key="normal" title="Unsubscribe"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Upcoming Matches" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6rf-lU-Y2c">
@@ -852,6 +853,15 @@
                                     <outlet property="delegate" destination="pgv-7K-h93" id="bjt-El-d2i"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZYs-RW-tfg">
+                                <rect key="frame" x="7" y="322" width="108" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <state key="normal" title="Update Subscription"/>
+                                <connections>
+                                    <action selector="updateSubscriptionTapped:" destination="pgv-7K-h93" eventType="touchUpInside" id="gdb-Cd-Klb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="myw-kx-m3i"/>
@@ -861,6 +871,7 @@
                         <outlet property="navBar" destination="fwI-zi-xvi" id="vSs-lH-dxe"/>
                         <outlet property="subscribedLabel" destination="LTq-b4-hmC" id="Yyi-EH-Mkj"/>
                         <outlet property="tableView" destination="xpJ-OB-beT" id="ncp-OH-fNa"/>
+                        <outlet property="updateButton" destination="ZYs-RW-tfg" id="KCA-d3-ttv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Pm-hi-HWm" userLabel="First Responder" sceneMemberID="firstResponder"/>

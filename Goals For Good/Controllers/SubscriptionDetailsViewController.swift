@@ -15,18 +15,57 @@ class SubscriptionDetailsViewController: UIViewController {
     @IBOutlet weak var charity: UITextField!
     @IBOutlet weak var subscribedLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var updateButton: UIButton!
     
     
+    let sub = SubscriptionService()
     var subscription: Subscription?
     var charities: [Charity]?
     var selectedCharity: Charity?
     var matches = [Match]()
     var filteredMatches = [Match]()
     
+    
+    @IBAction func unsubscribeTapped(_ sender: UIButton) {
+        if let toRemove = subscription {
+            sub.removeSubscription(player: toRemove.id!, completed: handleUnsubscribe)
+        }
+    }
+    
+    @IBAction func updateSubscriptionTapped(_ sender: UIButton) {
+        if let toRemove = subscription, let newCharity = selectedCharity {
+            sub.updateSubscription(player: toRemove.id!, charity: newCharity, completed: handleUpdate)
+        }
+    }
+    
+    
+    private func handleUnsubscribe(result: Bool) {
+        if (result) {
+            performSegue(withIdentifier: "backToSubscriptions", sender: nil)
+        } else {
+            print("the unsubscribe process was unsuccessful")
+        }
+        
+    }
+    
+    private func handleUpdate(result: Bool) {
+        if (result) {
+            subscription?.charity = selectedCharity?.name
+            subscription?.charityId = selectedCharity?.id
+            
+            print("ok lets look at the subscription now... ")
+            print(subscription?.charity! ?? "error")
+            print(subscription?.charityId! ?? "error")
+        } else {
+            print("the subscription update was unsuccessful")
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navBar.title = subscription?.name
         subscribedLabel.text = subscription?.time
+        charity.text = subscription?.charity!
         DataService.shared.getCharities(completed: assignCharities)
         createCharityPicker()
         createToolbar()
@@ -76,25 +115,6 @@ class SubscriptionDetailsViewController: UIViewController {
     }
 }
 
-extension SubscriptionDetailsViewController: UIPickerViewDelegate, UIPickerViewDataSource {
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return (charities?.count)!
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return charities![row].name!
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        selectedCharity = charities![row]
-        charity.text = selectedCharity?.name!
-    }
-}
-
 extension SubscriptionDetailsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("perform segue with identifier the row of the match here")
@@ -119,5 +139,25 @@ extension SubscriptionDetailsViewController: UITableViewDataSource {
         cell.dateLabel.text = filteredMatches[indexPath.row].formatted_date
         cell.venueLabel.text = filteredMatches[indexPath.row].venue
         return cell
+    }
+}
+
+extension SubscriptionDetailsViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return (charities?.count)!
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return charities![row].name!
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        updateButton.isUserInteractionEnabled = true
+        selectedCharity = charities![row]
+        charity.text = selectedCharity?.name!
     }
 }

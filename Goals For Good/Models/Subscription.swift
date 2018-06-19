@@ -10,8 +10,8 @@ import Foundation
 
 struct Subscription: Decodable {
     let id: String?
-    let charity: String?
-    let charityId: String?
+    var charity: String?
+    var charityId: String?
     let name: String?
     let team: String?
     let teamName: String?

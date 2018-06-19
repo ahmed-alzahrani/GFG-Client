@@ -5,7 +5,7 @@ class QuickLogin {
   let auth = AuthService()
 
   func quickLogin(with: UIViewController) {
-    auth.loginUser(email: "ahmedalzahrani94@gmail.com", password: "Spursfan94!", view: with)
+    auth.loginUser(email: "Enter email here", password: "Enter password here", view: with)
 
   }
 }
