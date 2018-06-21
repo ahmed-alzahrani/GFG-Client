@@ -24,7 +24,11 @@ class PlayerDetailsViewController: UIViewController {
     @IBOutlet weak var heightLabel: UILabel!
     @IBOutlet weak var weightLabel: UILabel!
     @IBOutlet weak var charity: UITextField!
-
+    @IBOutlet weak var tableView: UITableView!
+    
+    var matches = [Match]()
+    var filteredMatches = [Match]()
+    
     var player: DetailedPlayer?
     var charities: [Charity]?
     var selectedCharity: Charity?
@@ -84,6 +88,18 @@ class PlayerDetailsViewController: UIViewController {
                 self.sub.checkSubscription(player: id, completed: self.setupSubButtons)
             }
         })
+        DataService.shared.getPlayerMatches(completed: setupTable, withId: using.teamid!)
+    }
+    
+    private func setupTable(using: [Match]) {
+        print("setting up the matches")
+        matches = using
+        filteredMatches = using
+        
+        DispatchQueue.main.async(execute: {() -> Void in
+            self.tableView?.rowHeight = 105
+            self.tableView?.reloadData()
+        })
     }
     
     func setupSubButtons(subbed: Bool) {
@@ -126,6 +142,33 @@ class PlayerDetailsViewController: UIViewController {
                 self.unsubscribeButton.isHidden = true
             })
         }
+    }
+}
+
+extension PlayerDetailsViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("perform segue with identifier the row of the match here")
+    }
+}
+
+extension PlayerDetailsViewController: UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return filteredMatches.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "matchCell", for: indexPath) as! MatchCell
+        
+        let fixture = filteredMatches[indexPath.row].localteam_name! + " v. " + filteredMatches[indexPath.row].visitorteam_name!
+        cell.fixtureLabel.text = fixture
+        cell.competitionLabel.text = filteredMatches[indexPath.row].comp_id
+        cell.dateLabel.text = filteredMatches[indexPath.row].formatted_date
+        cell.venueLabel.text = filteredMatches[indexPath.row].venue
+        return cell
     }
 }
 

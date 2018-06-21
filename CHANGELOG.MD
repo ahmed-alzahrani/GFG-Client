@@ -106,3 +106,7 @@ __18/06/18__
 - Changed charity model so charity/charityId are var instead of let so they can be updated if the user updates the charity in their subscription
 
 - Migrated cells into Views directory
+
+__21/06/18__
+
+- Re-worked PlayerDetailsViewController UI and added in an upcoming matches table view similarly to SubscriptionDetailsViewController
