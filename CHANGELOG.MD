@@ -110,3 +110,11 @@ __18/06/18__
 __21/06/18__
 
 - Re-worked PlayerDetailsViewController UI and added in an upcoming matches table view similarly to SubscriptionDetailsViewController
+
+__24/06/18__
+
+- Implemented some UI re-design, specifically for all table views
+
+- added charities/match detail view controller classes and storyboard VC objects
+
+- Refactored Controller classes to belong to appropriate sub-directory (ie: Charity/Match/Player/Subscription)

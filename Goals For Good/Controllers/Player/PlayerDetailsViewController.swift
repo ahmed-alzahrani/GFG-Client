@@ -25,6 +25,8 @@ class PlayerDetailsViewController: UIViewController {
     @IBOutlet weak var weightLabel: UILabel!
     @IBOutlet weak var charity: UITextField!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var navBar: UINavigationBar!
+    
     
     var matches = [Match]()
     var filteredMatches = [Match]()
@@ -87,6 +89,7 @@ class PlayerDetailsViewController: UIViewController {
             if let id = self.player?.id {
                 self.sub.checkSubscription(player: id, completed: self.setupSubButtons)
             }
+            self.navBar.topItem?.title = self.player?.name
         })
         DataService.shared.getPlayerMatches(completed: setupTable, withId: using.teamid!)
     }
