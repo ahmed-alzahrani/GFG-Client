@@ -10,19 +10,6 @@ import Foundation
 
 struct Match: Codable {
     
-    struct Event: Codable {
-        let id: String?
-        let type: String?
-        let minute: String?
-        let extra_min: String?
-        let team: String?
-        let player: String?
-        let player_id: String?
-        let assist: String?
-        let assist_id: String?
-        let result: String?
-    }
-    
     let id: String?
     let comp_id: String?
     let formatted_date: String?
@@ -46,4 +33,17 @@ struct Match: Codable {
     let penalty_local: String?
     let penalty_visitor: String?
     let events: [Event]
+}
+
+struct Event: Codable {
+    let id: String?
+    let type: String?
+    let minute: String?
+    let extra_min: String?
+    let team: String?
+    let player: String?
+    let player_id: String?
+    let assist: String?
+    let assist_id: String?
+    let result: String?
 }

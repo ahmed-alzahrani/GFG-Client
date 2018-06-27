@@ -11,6 +11,7 @@
 		4D03DAF720B8F1F400AEFAB9 /* SearchBarValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D03DAF620B8F1F400AEFAB9 /* SearchBarValidator.swift */; };
 		4D0B7EAB20D3385900A14078 /* MatchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0B7EAA20D3385900A14078 /* MatchesViewController.swift */; };
 		4D0B7EAD20D3389C00A14078 /* MatchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0B7EAC20D3389C00A14078 /* MatchCell.swift */; };
+		4D1007A720E080770035DD90 /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1007A620E080770035DD90 /* EventCell.swift */; };
 		4D25137620A352F1005BFAC9 /* UserValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D25137520A352F1005BFAC9 /* UserValidator.swift */; };
 		4D325C0720A2509C00A6D086 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D325C0620A2509C00A6D086 /* AppDelegate.swift */; };
 		4D325C0920A2509C00A6D086 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D325C0820A2509C00A6D086 /* LoginViewController.swift */; };
@@ -258,6 +259,7 @@
 		4D03DAF620B8F1F400AEFAB9 /* SearchBarValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarValidator.swift; sourceTree = "<group>"; };
 		4D0B7EAA20D3385900A14078 /* MatchesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesViewController.swift; sourceTree = "<group>"; };
 		4D0B7EAC20D3389C00A14078 /* MatchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchCell.swift; sourceTree = "<group>"; };
+		4D1007A620E080770035DD90 /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
 		4D25137520A352F1005BFAC9 /* UserValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserValidator.swift; sourceTree = "<group>"; };
 		4D325C0320A2509C00A6D086 /* Goals For Good.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Goals For Good.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D325C0620A2509C00A6D086 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -903,6 +905,7 @@
 				4D0B7EAC20D3389C00A14078 /* MatchCell.swift */,
 				4D7F081F20A3C6B800764CA3 /* PlayerCell.swift */,
 				4DFF6F6720D0B4EF002F9F89 /* SubscriptionCell.swift */,
+				4D1007A620E080770035DD90 /* EventCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1277,6 +1280,7 @@
 				4D6A87F320D5DC1D00DDCD27 /* SubscriptionDetailsViewController.swift in Sources */,
 				4D0B7EAD20D3389C00A14078 /* MatchCell.swift in Sources */,
 				4DBEF02F20BCB600001CDBCD /* Charity.swift in Sources */,
+				4D1007A720E080770035DD90 /* EventCell.swift in Sources */,
 				4DBEF03120BE4189001CDBCD /* CharityCell.swift in Sources */,
 				4DFF6A9E20A57E4800FDC35B /* PlayerDetailsViewController.swift in Sources */,
 				4DFF6F6820D0B4EF002F9F89 /* SubscriptionCell.swift in Sources */,

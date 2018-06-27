@@ -118,3 +118,13 @@ __24/06/18__
 - added charities/match detail view controller classes and storyboard VC objects
 
 - Refactored Controller classes to belong to appropriate sub-directory (ie: Charity/Match/Player/Subscription)
+
+__26/06/18__
+
+- Seperated Event model from Match model, to allow for EventCell to properly incorporate Event objects
+
+- PlayerDetailsViewController prepare for segue now prepares for segue to MatchDetailsViewController as well as back to the Players view in the UITabBarController
+
+- Began implementation of MatchDetailsViewController, still need to configure match Events tableView data source
+
+- Implemented EventCell

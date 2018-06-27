@@ -42,11 +42,6 @@ class PlayerDetailsViewController: UIViewController {
         createToolbar()
     }
 
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let tabBarController = segue.destination as! UITabBarController
-        tabBarController.selectedIndex = 1
-    }
-
     private func createCharityPicker() {
         let charityPicker = UIPickerView()
         charityPicker.delegate = self
@@ -146,11 +141,23 @@ class PlayerDetailsViewController: UIViewController {
             })
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "matchDetails") {
+            guard let destination = segue.destination as? MatchDetailsViewController,
+            let match = sender as AnyObject as? Match
+                else { return }
+            destination.setupMatch(matchToUse: match)
+        } else {
+            let tabBarController = segue.destination as! UITabBarController
+            tabBarController.selectedIndex = 1
+        }
+    }
 }
 
 extension PlayerDetailsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("perform segue with identifier the row of the match here")
+        performSegue(withIdentifier: "matchDetails", sender: filteredMatches[indexPath.row])
     }
 }
 
@@ -166,11 +173,19 @@ extension PlayerDetailsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "matchCell", for: indexPath) as! MatchCell
         
-        let fixture = filteredMatches[indexPath.row].localteam_name! + " v. " + filteredMatches[indexPath.row].visitorteam_name!
-        cell.fixtureLabel.text = fixture
-        cell.competitionLabel.text = filteredMatches[indexPath.row].comp_id
-        cell.dateLabel.text = filteredMatches[indexPath.row].formatted_date
-        cell.venueLabel.text = filteredMatches[indexPath.row].venue
+        let match = filteredMatches[indexPath.row]
+        cell.fixtureLabel.text = match.localteam_name! + " v. " + match.visitorteam_name!
+        cell.competitionLabel.text = match.comp_id
+        cell.dateLabel.text = match.formatted_date
+        cell.venueLabel.text = match.venue
+        
+      //  let fixture = filteredMatches[indexPath.row].localteam_name! + " v. " + filteredMatches[indexPath.row].visitorteam_name!
+      //  cell.fixtureLabel.text = fixture
+      //  cell.competitionLabel.text = filteredMatches[indexPath.row].comp_id
+      //  cell.dateLabel.text = filteredMatches[indexPath.row].formatted_date
+      //  cell.venueLabel.text = filteredMatches[indexPath.row].venue
+        
+        
         return cell
     }
 }
